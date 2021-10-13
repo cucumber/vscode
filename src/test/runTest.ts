@@ -1,5 +1,4 @@
 import path from 'path'
-
 import { runTests } from 'vscode-test'
 
 async function main() {

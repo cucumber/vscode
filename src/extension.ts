@@ -1,6 +1,3 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
-import path from 'path'
 import vscode from 'vscode'
 import {
   LanguageClient,
@@ -11,19 +8,10 @@ import {
 
 let client: LanguageClient
 
-const isDebugMode = () => process.env.VSCODE_DEBUG_MODE === 'true'
-
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-  let serverModule: string
-  if (isDebugMode()) {
-    serverModule = context.asAbsolutePath(
-      path.join('../../language-server/javascript/bin/cucumber-language-server.js')
-    )
-  } else {
-    serverModule = require.resolve('@cucumber/language-server/bin/cucumber-language-server.js')
-  }
+  const serverModule = require.resolve('@cucumber/language-server/bin/cucumber-language-server.js')
   const debugOptions = { execArgv: ['--nolazy', '--inspect=6009'] }
 
   const serverOptions: ServerOptions = {
