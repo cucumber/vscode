@@ -11,7 +11,7 @@ let client: LanguageClient
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-  const serverModule = require.resolve('@cucumber/language-server/bin/cucumber-language-server.js')
+  const serverModule = require.resolve('@cucumber/language-server/bin/cucumber-language-server.cjs')
   const debugOptions = { execArgv: ['--nolazy', '--inspect=6009'] }
 
   const serverOptions: ServerOptions = {
@@ -27,7 +27,7 @@ export function activate(context: vscode.ExtensionContext) {
     documentSelector: [{ scheme: 'file', language: 'gherkin' }],
   }
 
-  client = new LanguageClient('cucumber', 'Cucumber Language Server', serverOptions, clientOptions)
+  client = new LanguageClient('Cucumber', 'Cucumber Language Server', serverOptions, clientOptions)
 
   const disposeClient = client.start()
   context.subscriptions.push(disposeClient)
