@@ -78,13 +78,13 @@
     "test": "node ./dist/src/test/runTest.js"
   },
   "dependencies": {
-    "vscode-languageclient": "7.0.0",
-    "@cucumber/language-server": "^0.4.0"
+    "@cucumber/language-server": "^0.4.0",
+    "vscode-languageclient": "7.0.0"
   },
   "devDependencies": {
-    "@types/vscode": "1.63.1",
     "@types/glob": "7.2.0",
     "@types/mocha": "9.1.0",
+    "@types/vscode": "1.63.1",
     "@typescript-eslint/eslint-plugin": "5.10.0",
     "@typescript-eslint/parser": "5.10.0",
     "eslint": "8.7.0",
