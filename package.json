@@ -40,7 +40,33 @@
         ],
         "configuration": "./language-configuration.json"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Cucumber",
+      "properties": {
+        "cucumber.features": {
+          "description": "Feature file globs",
+          "type": [
+            "array"
+          ],
+          "required": false
+        },
+        "cucumber.glue": {
+          "description": "Glue code globs",
+          "type": [
+            "array"
+          ],
+          "required": false
+        },
+        "cucumber.parameterTypes": {
+          "markdownDescription": "[Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types)",
+          "type": [
+            "array"
+          ],
+          "required": false
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
