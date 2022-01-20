@@ -79,7 +79,7 @@
   },
   "dependencies": {
     "vscode-languageclient": "7.0.0",
-    "@cucumber/language-server": "^0.3.3"
+    "@cucumber/language-server": "^0.4.0"
   },
   "devDependencies": {
     "@types/vscode": "1.63.1",
