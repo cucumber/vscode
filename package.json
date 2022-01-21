@@ -29,9 +29,9 @@
       {
         "id": "gherkin",
         "aliases": [
-          "feature",
-          "gherkin",
           "Gherkin",
+          "gherkin",
+          "feature",
           "cucumber"
         ],
         "extensions": [
