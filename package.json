@@ -74,6 +74,7 @@
     "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
     "esbuild": "npm run esbuild-base -- --sourcemap",
     "esbuild-watch": "npm run esbuild-base -- --sourcemap --watch",
+    "esbuild-server": "esbuild ./node_modules/@cucumber/language-server/bin/cucumber-language-server.cjs --bundle --outfile=out/server.js --format=cjs --platform=node --minify",
     "compile": "tsc --build",
     "pretest": "npm run compile",
     "eslint": "eslint src --ext ts",
