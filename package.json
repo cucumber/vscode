@@ -3,7 +3,7 @@
   "displayName": "Cucumber",
   "description": "Official Cucumber VSCode extension",
   "version": "0.0.1",
-  "publisher": "Cucumber",
+  "publisher": "CucumberOpen",
   "engines": {
     "vscode": "^1.63.2"
   },
