@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "publisher": "Cucumber",
   "engines": {
-    "vscode": "^1.59.0"
+    "vscode": "^1.63.2"
   },
   "categories": [
     "Programming Languages",
@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git://github.com/cucumber/vscode.git"
   },
-  "icon": "https://raw.githubusercontent.com/cucumber/vscode/main/images/icon-128x128.png",
+  "icon": "images/icon-128x128.png",
   "activationEvents": [
     "onLanguage:gherkin"
   ],
@@ -70,23 +70,27 @@
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
+    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
+    "esbuild": "npm run esbuild-base -- --sourcemap",
     "compile": "tsc --build",
     "watch": "tsc --build --watch",
     "pretest": "npm run compile",
     "eslint": "eslint src --ext ts",
     "eslint-fix": "eslint src --ext ts --max-warnings 0 --fix",
-    "test": "node ./dist/src/test/runTest.js"
+    "test": "node ./dist/src/test/runTest.js",
+    "package": "vsce package"
   },
   "dependencies": {
-    "@cucumber/language-server": "^0.4.0",
+    "@cucumber/language-server": "0.4.0",
     "vscode-languageclient": "7.0.0"
   },
   "devDependencies": {
     "@types/glob": "7.2.0",
     "@types/mocha": "9.1.0",
     "@types/vscode": "1.63.1",
-    "@typescript-eslint/eslint-plugin": "5.10.0",
-    "@typescript-eslint/parser": "5.10.0",
+    "@typescript-eslint/eslint-plugin": "5.10.1",
+    "@typescript-eslint/parser": "5.10.1",
+    "esbuild": "0.14.14",
     "eslint": "8.7.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-import": "2.25.4",
@@ -94,12 +98,12 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-simple-import-sort": "7.0.0",
     "glob": "7.2.0",
-    "mocha": "9.1.4",
-    "npm-check-updates": "12.1.0",
+    "mocha": "9.2.0",
+    "npm-check-updates": "12.2.1",
     "prettier": "2.5.1",
     "pretty-quick": "3.1.3",
-    "typescript": "4.5.4",
-    "vsce": "2.6.3",
+    "typescript": "4.5.5",
+    "vsce": "2.6.5",
     "vscode-test": "1.6.1"
   }
 }

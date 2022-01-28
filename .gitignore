@@ -17,3 +17,5 @@ storybook-static
 *-go
 *.iml
 .vscode-test
+cucumber-0.0.1.vsix
+out/
