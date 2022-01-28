@@ -17,9 +17,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/cucumber/cucumber.git"
+    "url": "git://github.com/cucumber/vscode.git"
   },
-  "icon": "images/icon.png",
+  "icon": "https://raw.githubusercontent.com/cucumber/vscode/main/images/icon-128x128.png",
   "activationEvents": [
     "onLanguage:gherkin"
   ],
