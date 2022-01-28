@@ -19,3 +19,4 @@ storybook-static
 .vscode-test
 cucumber-0.0.1.vsix
 out/
+.DS_Store
