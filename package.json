@@ -9,11 +9,14 @@
   },
   "categories": [
     "Programming Languages",
-    "Snippets"
+    "Formatters",
+    "Linters",
+    "Testing"
   ],
   "keywords": [
     "Cucumber",
-    "Gherkin"
+    "Gherkin",
+    "Feature"
   ],
   "repository": {
     "type": "git",
@@ -30,13 +33,11 @@
         "id": "gherkin",
         "aliases": [
           "Gherkin",
-          "gherkin",
-          "feature",
-          "cucumber"
+          "Feature",
+          "Cucumber"
         ],
         "extensions": [
-          ".feature",
-          ".feature.md"
+          ".feature"
         ],
         "configuration": "./language-configuration.json"
       }
@@ -45,21 +46,21 @@
       "title": "Cucumber",
       "properties": {
         "cucumber.features": {
-          "description": "Feature file globs",
+          "description": "Globs to locate feature files",
           "type": [
             "array"
           ],
           "required": false
         },
         "cucumber.glue": {
-          "description": "Glue code globs",
+          "description": "Globs to locate glue code aka step definitions and hooks",
           "type": [
             "array"
           ],
           "required": false
         },
         "cucumber.parameterTypes": {
-          "markdownDescription": "[Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types)",
+          "markdownDescription": "The parameterTypes setting can be used to define [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are not directly visible in the source code.\n\nFor example, if you're using the actor parameter type from [@cucumber/screenplay](https://github.com/cucumber/screenplay.js#actors) you'll have to declare this in the parameterTypes setting:\n\n```json\n\"cucumber\": {\n  \"parameterTypes\": [\n    { \"name\": \"actor\", \"regexp\": \"[A-Z][a-z]+\" }\n  ]\n}\n```\n",
           "type": [
             "array"
           ],
