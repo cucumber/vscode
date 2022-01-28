@@ -79,7 +79,8 @@
     "eslint": "eslint src --ext ts",
     "eslint-fix": "eslint src --ext ts --max-warnings 0 --fix",
     "test": "node ./dist/src/test/runTest.js",
-    "package": "vsce package"
+    "package": "vsce package",
+    "publish": "vsce publish"
   },
   "dependencies": {
     "@cucumber/language-server": "0.4.0",

@@ -8,8 +8,8 @@ First, update `package.json`:
 
     npx npm-check-updates --upgrade
 
-After upgrading dependencies, *undo* the upgrading of `@types/vscode` and revert it to `^1.63.2`.
-This is because we don't want to force users to have the latest version of vscode.
+After upgrading dependencies, *undo* the upgrading of `@types/vscode` and revert it to `^1.63.2`. This is because we
+don't want to force users to have the latest version of vscode.
 
 Install new dependencies:
 
@@ -24,6 +24,19 @@ Do a manual test:
     code .
 
 Run the extension (opens a new window) and check:
+
 * Syntax highlighting
 * Auto-complete
 * Formatting
+
+Update the changelog...
+
+Package it
+    
+    npm run package
+
+(You can igonre the esbuild WARNING)
+
+Publish it
+
+    npm run publish
