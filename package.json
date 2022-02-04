@@ -60,7 +60,7 @@
           "required": false
         },
         "cucumber.parameterTypes": {
-          "markdownDescription": "The parameterTypes setting can be used to define [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are not directly visible in the source code.\n\nFor example, if you're using the actor parameter type from [@cucumber/screenplay](https://github.com/cucumber/screenplay.js#actors) you'll have to declare this in the parameterTypes setting:\n\n```json\n\"cucumber\": {\n  \"parameterTypes\": [\n    { \"name\": \"actor\", \"regexp\": \"[A-Z][a-z]+\" }\n  ]\n}\n```\n",
+          "markdownDescription": "The parameterTypes setting can be used to define [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are not directly visible in the source code.\n\nFor example, if you're using the actor parameter type from [@cucumber/screenplay](https://github.com/cucumber/screenplay.js#actors) you'll have to declare this in the parameterTypes setting:\n\n```json\n{\n  \"cucumber\": {\n    \"parameterTypes\": [\n      { \"name\": \"actor\", \"regexp\": \"[A-Z][a-z]+\" }\n    ]\n  }\n}\n```",
           "type": [
             "array"
           ],
@@ -79,6 +79,8 @@
     "eslint": "eslint src --ext ts",
     "eslint-fix": "eslint src --ext ts --max-warnings 0 --fix",
     "test": "node ./dist/src/test/runTest.js",
+    "prepublishOnly": "npm run update-settings-docs",
+    "update-settings-docs": "./scripts/update-settings-docs.sh",
     "package": "vsce package",
     "publish": "vsce publish"
   },

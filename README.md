@@ -100,3 +100,20 @@ Ensure that you've read through the extensions guidelines and follow the best pr
 * [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
 **Enjoy!**
+
+### Settings
+[//]: # (<parameterTypes>)
+The parameterTypes setting can be used to define [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are not directly visible in the source code.
+
+For example, if you're using the actor parameter type from [@cucumber/screenplay](https://github.com/cucumber/screenplay.js#actors) you'll have to declare this in the parameterTypes setting:
+
+```json
+{
+  "cucumber": {
+    "parameterTypes": [
+      { "name": "actor", "regexp": "[A-Z][a-z]+" }
+    ]
+  }
+}
+```
+[//]: # (</parameterTypes>)
