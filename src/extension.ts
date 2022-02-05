@@ -12,7 +12,7 @@ let client: LanguageClient
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-  const serverModule = context.asAbsolutePath(path.join('out', 'server.js'))
+  const serverModule = context.asAbsolutePath(path.join('out', 'cucumber-language-server.js'))
   console.log('Cucumber Extension: Loading LSP server from ' + serverModule)
   const debugOptions = { execArgv: ['--nolazy', '--inspect=6009'] }
 
