@@ -19,6 +19,10 @@ don't want to force users to have the latest version of vscode.
 
     npm test
 
+## Build it
+
+    npm run build
+
 ## Do a manual test:
 
     code .
@@ -34,8 +38,6 @@ Update the changelog...
 ## Package it
     
     npm run package
-
-(You can igonre the esbuild WARNING)
 
 ## Publish it
 
