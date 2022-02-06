@@ -60,7 +60,7 @@
           "required": false
         },
         "cucumber.parameterTypes": {
-          "markdownDescription": "The parameterTypes setting can be used to define [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are not directly visible in the source code.\n\nFor example, if you're using the actor parameter type from [@cucumber/screenplay](https://github.com/cucumber/screenplay.js#actors) you'll have to declare this in the parameterTypes setting:\n\n```json\n{\n  \"cucumber\": {\n    \"parameterTypes\": [\n      { \"name\": \"actor\", \"regexp\": \"[A-Z][a-z]+\" }\n    ]\n  }\n}\n```",
+          "markdownDescription": "The parameterTypes setting can be used to define [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are not directly visible in the source code.\n\nFor example, if you're using the actor parameter type from [@cucumber/screenplay](https://github.com/cucumber/screenplay.js#actors) you'll have to declare this in the parameterTypes setting:\n\n```json\n{\n  \"cucumber.parameterTypes\": [\n    { \"name\": \"actor\", \"regexp\": \"[A-Z][a-z]+\" }\n  ]\n}\n```",
           "type": [
             "array"
           ],

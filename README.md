@@ -109,11 +109,9 @@ For example, if you're using the actor parameter type from [@cucumber/screenplay
 
 ```json
 {
-  "cucumber": {
-    "parameterTypes": [
-      { "name": "actor", "regexp": "[A-Z][a-z]+" }
-    ]
-  }
+  "cucumber.parameterTypes": [
+    { "name": "actor", "regexp": "[A-Z][a-z]+" }
+  ]
 }
 ```
 [//]: # (</parameterTypes>)
