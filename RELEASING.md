@@ -11,19 +11,23 @@ First, update `package.json`:
 After upgrading dependencies, *undo* the upgrading of `@types/vscode` and revert it to `^1.63.2`. This is because we
 don't want to force users to have the latest version of vscode.
 
-Install new dependencies:
+## Install new dependencies:
 
     npm install
 
-Test that it still works:
+## Test that it still works:
 
     npm test
 
-Do a manual test:
+## Build it
+
+    npm run build
+
+## Do a manual test:
 
     code .
 
-Run the extension (opens a new window) and check:
+## Run the extension (opens a new window) and check:
 
 * Syntax highlighting
 * Auto-complete
@@ -31,12 +35,14 @@ Run the extension (opens a new window) and check:
 
 Update the changelog...
 
-Package it
+## Package it
     
     npm run package
 
-(You can igonre the esbuild WARNING)
-
-Publish it
+## Publish it
 
     npm run publish
+
+## Manual publish
+
+Alternatively, the extension can be uploaded via the [marketplace](https://marketplace.visualstudio.com/manage/publishers/cucumberopen)
