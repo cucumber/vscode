@@ -1,3 +1,5 @@
+[![test-javascript](https://github.com/cucumber/vscode/actions/workflows/test.yml/badge.svg)](https://github.com/cucumber/vscode/actions/workflows/test.yml)
+
 # VSCode Cucumber Extension
 
 This is the official Cucumber extension for VSCode
