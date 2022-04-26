@@ -21,4 +21,5 @@ jobs:
         node-version: 16.x
         cache: 'npm'
     - run: npm install-ci-test
+    - run: npm run build
     - run: npm run eslint
