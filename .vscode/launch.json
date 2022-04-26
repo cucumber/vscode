@@ -14,7 +14,7 @@
       "log": true,
       "preLaunchTask": {
         "type": "npm",
-        "script": "watch"
+        "script": "build"
       }
     },
     {
