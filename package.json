@@ -72,9 +72,9 @@
   "scripts": {
     "vscode:prepublish": "npm run esbuild-extension && npm run esbuild-server",
     "esbuild-extension": "esbuild ./src/extension.ts --external:vscode --bundle --outfile=out/extension.js --format=cjs --platform=node --minify --sourcemap",
-    "esbuild-server": "esbuild src/cucumber-language-server.ts --bundle --outfile=out/cucumber-language-server.js --format=cjs --platform=node --minify --sourcemap",
-    "copy-wasm": "mkdir -p out && cp node_modules/@cucumber/language-service/*.wasm out && cp node_modules/web-tree-sitter/*.wasm out",
-    "build": "npm run esbuild-extension && npm run esbuild-server && npm run copy-wasm",
+    "esbuild-server": "npm run compile && esbuild dist/src/cucumber-language-server.js --bundle --outfile=out/cucumber-language-server.js --format=cjs --platform=node --sourcemap",
+    "copy-wasm": "mkdir -p out && cp node_modules/@cucumber/language-service/dist/*.wasm out",
+    "build": "npm run esbuild-extension && npm run esbuild-server",
     "compile": "tsc --build",
     "pretest": "npm run compile",
     "eslint": "eslint src --ext ts",
@@ -86,13 +86,13 @@
     "publish": "vsce publish"
   },
   "dependencies": {
-    "@cucumber/language-server": "0.5.1",
+    "@cucumber/language-server": "0.7.0",
     "vscode-languageclient": "7.0.0"
   },
   "devDependencies": {
     "@types/glob": "7.2.0",
     "@types/mocha": "9.1.1",
-    "@types/vscode": "^1.65.0",
+    "@types/vscode": "1.65.0",
     "@typescript-eslint/eslint-plugin": "5.20.0",
     "@typescript-eslint/parser": "5.20.0",
     "esbuild": "0.14.38",

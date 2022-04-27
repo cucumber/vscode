@@ -13,7 +13,6 @@ let client: LanguageClient
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
   const serverModule = context.asAbsolutePath(path.join('out', 'cucumber-language-server.js'))
-  console.log('Cucumber Extension: Loading LSP server from ' + serverModule)
   const debugOptions = { execArgv: ['--nolazy', '--inspect=6009'] }
 
   const serverOptions: ServerOptions = {
@@ -33,8 +32,6 @@ export function activate(context: vscode.ExtensionContext) {
 
   const disposeClient = client.start()
   context.subscriptions.push(disposeClient)
-
-  console.log('Cucumber extension activated')
 }
 
 // this method is called when your extension is deactivated
