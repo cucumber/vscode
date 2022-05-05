@@ -86,7 +86,7 @@
     "publish": "vsce publish"
   },
   "dependencies": {
-    "@cucumber/language-server": "0.7.0",
+    "@cucumber/language-server": "0.7.1",
     "vscode-languageclient": "7.0.0"
   },
   "devDependencies": {
