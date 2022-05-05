@@ -8,14 +8,16 @@ This extension is maintained by the [Cucumber team](https://github.com/cucumber/
 
 ## Features
 
-- [Auto completion](#auto-completion) of Gherkin steps
-- [Syntax highlighting](#syntax-highlighting)
-- [Formatting](#formatting) (pretty printing)
-- Language support
-  - C#
-  - Java
-  - PHP
-  - TypeScript
+- [x] [Auto completion](#auto-completion) of Gherkin steps
+- [x] [Syntax highlighting](#syntax-highlighting)
+- [x] [Formatting](#formatting) (pretty printing)
+- [x] Language support
+  - [x] C#
+  - [x] Java
+  - [ ] [JavaScript - help needed](https://github.com/cucumber/language-service/issues/42)
+  - [x] PHP
+  - [ ] [Ruby - help needed](https://github.com/cucumber/language-service/issues/41)
+  - [x] TypeScript
 
 ### Auto completion
 
@@ -72,8 +74,10 @@ Default value:
 ```json
 {
   "cucumber.glue": [
-    "src/test/**/*.java",
-    "features/**/*.ts"
+    "src/test/**/*.java", 
+    "features/**/*.ts", 
+    "features/**/*.php", 
+    "*specs*/**/.cs"
   ]
 }
 ```
@@ -83,15 +87,23 @@ Default value:
 [//]: # (<parameterTypes>)
 The `cucumber.parameterTypes` setting can be used to define [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are not directly visible in the source code.
 
-For example, if you're using the actor parameter type from [@cucumber/screenplay](https://github.com/cucumber/screenplay.js#actors) you'll have to declare this in the parameterTypes setting:
+Default value:
 
 ```json
+{
+  "cucumber.parameterTypes": []
+}
+```
+
+For example, if you're using the `actor` parameter type from [@cucumber/screenplay](https://github.com/cucumber/screenplay.js#actors) you'll have to declare this in the `parameterTypes` setting:
+
+````json
 {
   "cucumber.parameterTypes": [
     { "name": "actor", "regexp": "[A-Z][a-z]+" }
   ]
 }
-```
+````
 [//]: # (</parameterTypes>)
 
 ## Feedback

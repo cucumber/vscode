@@ -11,18 +11,33 @@ function section {
 
 function jsonReplace {
   file=$1
-  path=$2
+  variable=$2
   value=$3
+  json=$4
 
-  json=$(jq --arg value "${value}" "${path} = \$value" "${file}")
+  if [ "${json}" = 1 ]; then
+    json=$(jq --argjson value "${value}" "${variable} = \$value" "${file}")
+  else
+    json=$(jq --arg value "${value}" "${variable} = \$value" "${file}")
+  fi
   echo "${json}" > "${file}"
 }
 
 function updateMarkdownDescription {
   marker=$1
   markdown=$(section 'README.md' "${marker}")
-  path=".contributes.configuration.properties.\"cucumber.${marker}\".markdownDescription"
-  jsonReplace 'package.json' "${path}" "${markdown}"
+  jsonReplace \
+    'package.json' \
+    ".contributes.configuration.properties.\"cucumber.${marker}\".markdownDescription" \
+    "${markdown}" \
+    0
+
+  default=$(echo "${markdown}" | sed -n "/^\`\`\`json$/,/^\`\`\`$/p" | tail -n +2 | sed -e '$ d')
+  jsonReplace \
+    'package.json' \
+    ".contributes.configuration.properties.\"cucumber.${marker}\".default" \
+    "${default}" \
+    1
 }
 
 updateMarkdownDescription "features"

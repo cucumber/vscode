@@ -25,7 +25,7 @@ export function activate(context: vscode.ExtensionContext) {
   }
 
   const clientOptions: LanguageClientOptions = {
-    documentSelector: [{ scheme: 'file', language: 'gherkin' }],
+    documentSelector: [{ scheme: 'file', language: 'cucumber' }],
   }
 
   client = new LanguageClient('Cucumber', 'Cucumber Language Server', serverOptions, clientOptions)

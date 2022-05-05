@@ -1,7 +1,7 @@
 {
   "name": "cucumber-official",
   "displayName": "Cucumber",
-  "description": "Official Cucumber VSCode extension",
+  "description": "Cucumber for Visual Studio Code",
   "version": "0.0.1",
   "publisher": "CucumberOpen",
   "engines": {
@@ -24,16 +24,14 @@
   },
   "icon": "images/icon-128x128.png",
   "activationEvents": [
-    "onLanguage:gherkin"
+    "onLanguage:cucumber"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "languages": [
       {
-        "id": "gherkin",
+        "id": "cucumber",
         "aliases": [
-          "Gherkin",
-          "Feature",
           "Cucumber"
         ],
         "extensions": [
@@ -47,24 +45,35 @@
       "properties": {
         "cucumber.features": {
           "markdownDescription": "The `cucumber.features` setting can be used to speciy where the extension\nshould look for `.feature` files.\n\nDefault value:\n\n```json\n{\n  \"cucumber.features\": [\n    \"src/test/**/*.feature\", \n    \"features/**/*.feature\"\n  ]\n}\n```",
-          "type": [
-            "array"
-          ],
-          "required": false
+          "type": "array",
+          "required": false,
+          "default": {
+            "cucumber.features": [
+              "src/test/**/*.feature",
+              "features/**/*.feature"
+            ]
+          }
         },
         "cucumber.glue": {
-          "markdownDescription": "The `cucumber.glue` setting can be used to speciy where the extension\nshould look for source code where step definitions are defined.\n\nDefault value:\n\n```json\n{\n  \"cucumber.glue\": [\n    \"src/test/**/*.java\",\n    \"features/**/*.ts\"\n  ]\n}\n```",
-          "type": [
-            "array"
-          ],
-          "required": false
+          "markdownDescription": "The `cucumber.glue` setting can be used to speciy where the extension\nshould look for source code where step definitions are defined.\n\nDefault value:\n\n```json\n{\n  \"cucumber.glue\": [\n    \"src/test/**/*.java\", \n    \"features/**/*.ts\", \n    \"features/**/*.php\", \n    \"*specs*/**/.cs\"\n  ]\n}\n```",
+          "type": "array",
+          "required": false,
+          "default": {
+            "cucumber.glue": [
+              "src/test/**/*.java",
+              "features/**/*.ts",
+              "features/**/*.php",
+              "*specs*/**/.cs"
+            ]
+          }
         },
         "cucumber.parameterTypes": {
-          "markdownDescription": "The `cucumber.parameterTypes` setting can be used to define [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are not directly visible in the source code.\n\nFor example, if you're using the actor parameter type from [@cucumber/screenplay](https://github.com/cucumber/screenplay.js#actors) you'll have to declare this in the parameterTypes setting:\n\n```json\n{\n  \"cucumber.parameterTypes\": [\n    { \"name\": \"actor\", \"regexp\": \"[A-Z][a-z]+\" }\n  ]\n}\n```",
-          "type": [
-            "array"
-          ],
-          "required": false
+          "markdownDescription": "The `cucumber.parameterTypes` setting can be used to define [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are not directly visible in the source code.\n\nDefault value:\n\n```json\n{\n  \"cucumber.parameterTypes\": []\n}\n```\n\nFor example, if you're using the `actor` parameter type from [@cucumber/screenplay](https://github.com/cucumber/screenplay.js#actors) you'll have to declare this in the `parameterTypes` setting:\n\n````json\n{\n  \"cucumber.parameterTypes\": [\n    { \"name\": \"actor\", \"regexp\": \"[A-Z][a-z]+\" }\n  ]\n}\n````",
+          "type": "array",
+          "required": false,
+          "default": {
+            "cucumber.parameterTypes": []
+          }
         }
       }
     }
