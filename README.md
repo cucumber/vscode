@@ -1,111 +1,87 @@
 [![test-javascript](https://github.com/cucumber/vscode/actions/workflows/test.yml/badge.svg)](https://github.com/cucumber/vscode/actions/workflows/test.yml)
 
-# VSCode Cucumber Extension
+# Cucumber for Visual Studio Code
 
-This is the official Cucumber extension for VSCode
+This extension adds support for using Cucumber with Visual Studio Code, powered by the [Cucumber language server](https://github.com/cucumber/language-server#readme).
+
+This extension is maintained by the [Cucumber team](https://github.com/cucumber/).
 
 ## Features
 
-- [x] Syntax highlighting
-- [ ] Code folding
-- [x] Zero configuration
-  - [ ] Override cucumber messages command in settings
-- [ ] Auto complete
-  - [x] Parameterized snippets
-    - [x] Fuzzy search
-  - [ ] Gherkin keywords
-- [x] Syntax validation
-  - [x] Syntax errors
-  - [x] Undefined steps
-  - [ ] Ambiguous steps
-- [ ] Quick fix for undefined steps
-- [ ] Go to Step Definition(s) from Gherkin step
-- [ ] Go to Gherkin step(s) from Step Definition
-- [x] Formatting
-- [x] I18n support
-- [ ] Platforms
-  - [x] Cucumber-js
-  - [ ] Cucumber-ruby
-  - [ ] Cucumber-jvm
+- [Auto completion](#auto-completion) of Gherkin steps
+- [Syntax highlighting](#syntax-highlighting)
+- [Formatting](#formatting) (pretty printing)
+- Language support
+  - C#
+  - Java
+  - PHP
+  - TypeScript
 
-TODOs:
+### Auto completion
 
-- [x] Logo
-- [ ] Publish
-  - [ ] https://open-vsx.org/
-- [ ] Enable src/test/runTest in CI
+![Autocomplete](images/autocomplete.gif)
 
+When you start typing a step, you will see auto-complete suggestions
+based on existing step definitions and Gherkin steps.
 
+The suggestions are more helpful if your step definitions use
+[Cucumber Expressions](https://github.com/cucumber/cucumber-expressions#readme)
+but you'll also get suggestions if they use Regular Expressions.
 
+### Syntax highlighting
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+![Syntax highlighting](images/syntax-highlighting.gif)
 
-For example if there is an image subfolder under your extension project workspace:
+The syntax highlights highlights Gherkin keywords and step parameters.
+Undefined steps and syntax errors are underlined.
 
-\!\[feature X\]\(images/feature-x.png\)
+### Formatting
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+![Formatting](images/formatting.gif)
 
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+When choosing to format a Gherkin document, it will be formatted
+using two space indentation. Numeric cells are right-aligned (as in Excel),
+and other cells are right-aligned.
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+### `cucumber.features`
+[//]: # (<features>)
+The `cucumber.features` setting can be used to speciy where the extension
+should look for `.feature` files.
 
-For example:
+Default value:
 
-This extension contributes the following settings:
+```json
+{
+  "cucumber.features": [
+    "src/test/**/*.feature", 
+    "features/**/*.feature"
+  ]
+}
+```
+[//]: # (</features>)
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+### `cucumber.glue`
+[//]: # (<glue>)
+The `cucumber.glue` setting can be used to speciy where the extension
+should look for source code where step definitions are defined.
 
-## Known Issues
+Default value:
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+```json
+{
+  "cucumber.glue": [
+    "src/test/**/*.java",
+    "features/**/*.ts"
+  ]
+}
+```
+[//]: # (</glue>)
 
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
-
-### Settings
+### `cucumber.parameterTypes`
 [//]: # (<parameterTypes>)
-The parameterTypes setting can be used to define [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are not directly visible in the source code.
+The `cucumber.parameterTypes` setting can be used to define [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are not directly visible in the source code.
 
 For example, if you're using the actor parameter type from [@cucumber/screenplay](https://github.com/cucumber/screenplay.js#actors) you'll have to declare this in the parameterTypes setting:
 
@@ -117,3 +93,8 @@ For example, if you're using the actor parameter type from [@cucumber/screenplay
 }
 ```
 [//]: # (</parameterTypes>)
+
+## Feedback
+
+If you discover a bug, or have a suggestion for a feature request, please
+submit an [issue](https://github.com/cucumber/vscode/issues).

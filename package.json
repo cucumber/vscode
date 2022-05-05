@@ -46,21 +46,21 @@
       "title": "Cucumber",
       "properties": {
         "cucumber.features": {
-          "description": "Globs to locate feature files",
+          "markdownDescription": "The `cucumber.features` setting can be used to speciy where the extension\nshould look for `.feature` files.\n\nDefault value:\n\n```json\n{\n  \"cucumber.features\": [\n    \"src/test/**/*.feature\", \n    \"features/**/*.feature\"\n  ]\n}\n```",
           "type": [
             "array"
           ],
           "required": false
         },
         "cucumber.glue": {
-          "description": "Globs to locate glue code aka step definitions and hooks",
+          "markdownDescription": "The `cucumber.glue` setting can be used to speciy where the extension\nshould look for source code where step definitions are defined.\n\nDefault value:\n\n```json\n{\n  \"cucumber.glue\": [\n    \"src/test/**/*.java\",\n    \"features/**/*.ts\"\n  ]\n}\n```",
           "type": [
             "array"
           ],
           "required": false
         },
         "cucumber.parameterTypes": {
-          "markdownDescription": "The parameterTypes setting can be used to define [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are not directly visible in the source code.\n\nFor example, if you're using the actor parameter type from [@cucumber/screenplay](https://github.com/cucumber/screenplay.js#actors) you'll have to declare this in the parameterTypes setting:\n\n```json\n{\n  \"cucumber.parameterTypes\": [\n    { \"name\": \"actor\", \"regexp\": \"[A-Z][a-z]+\" }\n  ]\n}\n```",
+          "markdownDescription": "The `cucumber.parameterTypes` setting can be used to define [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are not directly visible in the source code.\n\nFor example, if you're using the actor parameter type from [@cucumber/screenplay](https://github.com/cucumber/screenplay.js#actors) you'll have to declare this in the parameterTypes setting:\n\n```json\n{\n  \"cucumber.parameterTypes\": [\n    { \"name\": \"actor\", \"regexp\": \"[A-Z][a-z]+\" }\n  ]\n}\n```",
           "type": [
             "array"
           ],

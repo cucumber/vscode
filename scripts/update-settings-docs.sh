@@ -25,4 +25,6 @@ function updateMarkdownDescription {
   jsonReplace 'package.json' "${path}" "${markdown}"
 }
 
+updateMarkdownDescription "features"
+updateMarkdownDescription "glue"
 updateMarkdownDescription "parameterTypes"
