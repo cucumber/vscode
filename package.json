@@ -83,7 +83,7 @@
     "esbuild-extension": "esbuild ./src/extension.ts --external:vscode --bundle --outfile=out/extension.js --format=cjs --platform=node --minify --sourcemap",
     "esbuild-server": "npm run compile && esbuild dist/src/cucumber-language-server.js --bundle --outfile=out/cucumber-language-server.js --format=cjs --platform=node --sourcemap",
     "copy-wasm": "mkdir -p out && cp node_modules/@cucumber/language-service/dist/*.wasm out",
-    "build": "npm run esbuild-extension && npm run esbuild-server",
+    "build": "npm run esbuild-extension && npm run esbuild-server && copy-wasm",
     "compile": "tsc --build",
     "pretest": "npm run compile",
     "eslint": "eslint src --ext ts",
