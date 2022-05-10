@@ -2,10 +2,10 @@
   "name": "cucumber-official",
   "displayName": "Cucumber",
   "description": "Cucumber for Visual Studio Code",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "publisher": "CucumberOpen",
   "engines": {
-    "vscode": "^1.63.2"
+    "vscode": "^1.67.0"
   },
   "categories": [
     "Programming Languages",
