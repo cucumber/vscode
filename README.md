@@ -48,7 +48,7 @@ and other cells are right-aligned.
 ## Extension Settings
 
 ### `cucumber.features`
-[//]: # (<features>)
+[//]: # (<cucumber.features>)
 The `cucumber.features` setting can be used to speciy where the extension
 should look for `.feature` files.
 
@@ -62,10 +62,10 @@ Default value:
   ]
 }
 ```
-[//]: # (</features>)
+[//]: # (</cucumber.features>)
 
 ### `cucumber.glue`
-[//]: # (<glue>)
+[//]: # (<cucumber.glue>)
 The `cucumber.glue` setting can be used to speciy where the extension
 should look for source code where step definitions are defined.
 
@@ -82,10 +82,10 @@ Default value:
   ]
 }
 ```
-[//]: # (</glue>)
+[//]: # (</cucumber.glue>)
 
 ### `cucumber.parameterTypes`
-[//]: # (<parameterTypes>)
+[//]: # (<cucumber.parameterTypes>)
 The `cucumber.parameterTypes` setting can be used to define [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are not directly visible in the source code.
 
 Default value:
@@ -105,7 +105,7 @@ For example, if you're using the `actor` parameter type from [@cucumber/screenpl
   ]
 }
 ````
-[//]: # (</parameterTypes>)
+[//]: # (</cucumber.parameterTypes>)
 
 ## Feedback
 

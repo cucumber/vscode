@@ -1,25 +1,18 @@
-# CHANGE LOG
+# Changelog
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-----
 ## [Unreleased]
 
-### Added
-
-### Changed
-
-### Deprecated
-
-### Removed
-
 ### Fixed
+- Fix default settings
 
-<!-- Releases -->
-[Unreleased]: https://github.com/cucumber/vscode/compare/v0.0.1...HEAD
-[0.0.1]:      https://github.com/cucumber/common/tree/v0.0.1
+## [1.0.0] - 2021-05-1o
+### Added
+- First release
 
-<!-- Contributors in alphabetical order -->
-[aslakhellesoy]:    https://github.com/aslakhellesoy
+[Unreleased]: https://github.com/cucumber/vscode/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/cucumber/vscode/tree/v1.0.0

@@ -5,8 +5,8 @@
 
 function section {
   file=$1
-  marker=$2
-  sed -n "/\[\/\/\]: # (<${marker}>)/,/\[\/\/\]: # (<\/${marker}>)/p" "${file}" | tail -n +2 | sed -e '$ d'
+  setting=$2
+  sed -n "/\[\/\/\]: # (<${setting}>)/,/\[\/\/\]: # (<\/${setting}>)/p" "${file}" | tail -n +2 | sed -e '$ d'
 }
 
 function jsonReplace {
@@ -24,22 +24,22 @@ function jsonReplace {
 }
 
 function updateMarkdownDescription {
-  marker=$1
-  markdown=$(section 'README.md' "${marker}")
+  setting=$1
+  markdown=$(section 'README.md' "${setting}")
   jsonReplace \
     'package.json' \
-    ".contributes.configuration.properties.\"cucumber.${marker}\".markdownDescription" \
+    ".contributes.configuration.properties.\"${setting}\".markdownDescription" \
     "${markdown}" \
     0
 
-  default=$(echo "${markdown}" | sed -n "/^\`\`\`json$/,/^\`\`\`$/p" | tail -n +2 | sed -e '$ d')
+  default=$(echo "${markdown}" | sed -n "/^\`\`\`json$/,/^\`\`\`$/p" | tail -n +2 | sed -e '$ d' | jq ".\"${setting}\"")
   jsonReplace \
     'package.json' \
-    ".contributes.configuration.properties.\"cucumber.${marker}\".default" \
+    ".contributes.configuration.properties.\"${setting}\".default" \
     "${default}" \
     1
 }
 
-updateMarkdownDescription "features"
-updateMarkdownDescription "glue"
-updateMarkdownDescription "parameterTypes"
+updateMarkdownDescription "cucumber.features"
+updateMarkdownDescription "cucumber.glue"
+updateMarkdownDescription "cucumber.parameterTypes"
