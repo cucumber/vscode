@@ -41,7 +41,7 @@ Update the changelog...
 
 ## Publish it
 
-See [this issue](https://github.com/microsoft/vsmarketplace/issues/291)
+See [this issue](https://github.com/microsoft/vsmarketplace/issues/394)
 
     npm run publish
 
