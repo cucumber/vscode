@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - Fix default settings
 
-## [1.0.0] - 2021-05-1o
+## [1.0.0] - 2021-05-10
 ### Added
 - First release
 
