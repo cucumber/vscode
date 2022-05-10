@@ -14,7 +14,7 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-        node-version: ['12.x', '14.x', '16.x']
+        node-version: ['14.x', '16.x']
         include:
           - os: windows-latest
             node-version: '16.x'
@@ -35,7 +35,7 @@ jobs:
     - run: npm run build
     - run: npm run package
     - run: npm run eslint
-    - run: echo "github.ref_name = {{ github.ref_name }}"
-    - run: echo "github.ref = {{ github.ref }}"
-    - run: echo "{{ github.ref }}" | sed "s;refs/tags/;;"
-    - run: echo "{{ github.ref }}" | sed "s;refs/heads/;;"
+    - run: echo "github.ref_name = ${{ github.ref_name }}"
+    - run: echo "github.ref = ${{ github.ref }}"
+    - run: echo "${{ github.ref }}" | sed "s;refs/tags/;;"
+    - run: echo "${{ github.ref }}" | sed "s;refs/heads/;;"
