@@ -17,3 +17,6 @@ Run the extension (opens a new window) and check all the functionality such as:
 ## GitHub Actions release
 
 See [.github/RELEASING](https://github.com/cucumber/.github/blob/main/RELEASING.md).
+
+*IMPORTANT:* After updating dependencies, revert to `"@types/vscode": "1.67.0"` so the
+extension doesn't require the latest version of VS Code.
