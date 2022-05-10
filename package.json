@@ -2,10 +2,10 @@
   "name": "cucumber-official",
   "displayName": "Cucumber",
   "description": "Cucumber for Visual Studio Code",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "CucumberOpen",
   "engines": {
-    "vscode": "^1.67.0"
+    "vscode": "^1.63.2"
   },
   "categories": [
     "Programming Languages",
@@ -97,7 +97,7 @@
   "devDependencies": {
     "@types/glob": "7.2.0",
     "@types/mocha": "9.1.1",
-    "@types/vscode": "1.67.0",
+    "@types/vscode": "1.63.2",
     "@typescript-eslint/eslint-plugin": "5.23.0",
     "@typescript-eslint/parser": "5.23.0",
     "esbuild": "0.14.38",
