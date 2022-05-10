@@ -44,25 +44,26 @@
       "title": "Cucumber",
       "properties": {
         "cucumber.features": {
-          "markdownDescription": "The `cucumber.features` setting can be used to speciy where the extension\nshould look for `.feature` files.\n\nDefault value:\n\n```json\n{\n  \"cucumber.features\": [\n    \"src/test/**/*.feature\", \n    \"features/**/*.feature\"\n  ]\n}\n```",
+          "markdownDescription": "The `cucumber.features` setting can be used to speciy where the extension\nshould look for `.feature` files.\n\nDefault value:\n\n```json\n{\n  \"cucumber.features\": [\n    \"features/**/*.feature\",\n    \"src/test/**/*.feature\" \n  ]\n}\n```",
           "type": "array",
           "required": false,
           "default": {
             "cucumber.features": [
-              "src/test/**/*.feature",
-              "features/**/*.feature"
+              "features/**/*.feature",
+              "src/test/**/*.feature"
             ]
           }
         },
         "cucumber.glue": {
-          "markdownDescription": "The `cucumber.glue` setting can be used to speciy where the extension\nshould look for source code where step definitions are defined.\n\nDefault value:\n\n```json\n{\n  \"cucumber.glue\": [\n    \"src/test/**/*.java\", \n    \"features/**/*.ts\", \n    \"features/**/*.php\", \n    \"*specs*/**/.cs\"\n  ]\n}\n```",
+          "markdownDescription": "The `cucumber.glue` setting can be used to speciy where the extension\nshould look for source code where step definitions are defined.\n\nDefault value:\n\n```json\n{\n  \"cucumber.glue\": [\n    \"features/**/*.php\",\n    \"features/**/*.rb\",\n    \"features/**/*.ts\",\n    \"src/test/**/*.java\",\n    \"*specs*/**/.cs\"\n  ]\n}\n```",
           "type": "array",
           "required": false,
           "default": {
             "cucumber.glue": [
-              "src/test/**/*.java",
-              "features/**/*.ts",
               "features/**/*.php",
+              "features/**/*.rb",
+              "features/**/*.ts",
+              "src/test/**/*.java",
               "*specs*/**/.cs"
             ]
           }
@@ -82,8 +83,8 @@
     "vscode:prepublish": "npm run esbuild-extension && npm run esbuild-server",
     "esbuild-extension": "esbuild ./src/extension.ts --external:vscode --bundle --outfile=out/extension.js --format=cjs --platform=node --minify --sourcemap",
     "esbuild-server": "npm run compile && esbuild dist/src/cucumber-language-server.js --bundle --outfile=out/cucumber-language-server.js --format=cjs --platform=node --sourcemap",
-    "copy-wasm": "mkdir -p out && cp node_modules/@cucumber/language-service/dist/*.wasm out",
-    "build": "npm run esbuild-extension && npm run esbuild-server && copy-wasm",
+    "prepare": "mkdir -p out && cp node_modules/@cucumber/language-service/dist/*.wasm out",
+    "build": "npm run esbuild-extension && npm run esbuild-server",
     "compile": "tsc --build",
     "pretest": "npm run compile",
     "eslint": "eslint src --ext ts",
@@ -92,18 +93,19 @@
     "prepublishOnly": "npm run update-settings-docs",
     "update-settings-docs": "./scripts/update-settings-docs.sh",
     "package": "vsce package",
-    "publish": "vsce publish"
+    "publish": "vsce publish",
+    "upgrade": "npm-check-updates --upgrade"
   },
   "dependencies": {
-    "@cucumber/language-server": "0.7.1",
+    "@cucumber/language-server": "0.8.2",
     "vscode-languageclient": "7.0.0"
   },
   "devDependencies": {
     "@types/glob": "7.2.0",
     "@types/mocha": "9.1.1",
     "@types/vscode": "1.67.0",
-    "@typescript-eslint/eslint-plugin": "5.22.0",
-    "@typescript-eslint/parser": "5.22.0",
+    "@typescript-eslint/eslint-plugin": "5.23.0",
+    "@typescript-eslint/parser": "5.23.0",
     "esbuild": "0.14.38",
     "eslint": "8.15.0",
     "eslint-config-prettier": "8.5.0",

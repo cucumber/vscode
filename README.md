@@ -16,7 +16,7 @@ This extension is maintained by the [Cucumber team](https://github.com/cucumber/
   - [x] Java
   - [ ] [JavaScript - help needed](https://github.com/cucumber/language-service/issues/42)
   - [x] PHP
-  - [ ] [Ruby - help needed](https://github.com/cucumber/language-service/issues/41)
+  - [x] Ruby
   - [x] TypeScript
 
 ### Auto completion
@@ -57,8 +57,8 @@ Default value:
 ```json
 {
   "cucumber.features": [
-    "src/test/**/*.feature", 
-    "features/**/*.feature"
+    "features/**/*.feature",
+    "src/test/**/*.feature" 
   ]
 }
 ```
@@ -74,9 +74,10 @@ Default value:
 ```json
 {
   "cucumber.glue": [
-    "src/test/**/*.java", 
-    "features/**/*.ts", 
-    "features/**/*.php", 
+    "features/**/*.php",
+    "features/**/*.rb",
+    "features/**/*.ts",
+    "src/test/**/*.java",
     "*specs*/**/.cs"
   ]
 }
