@@ -19,9 +19,8 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: GitHub Release
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
         with:
-          tag_name: v${{ github.workspace }}
+          tag_name: v${{ github.ref_name }}
           files: |
-            Release.txt
+            *.vsix
             LICENSE

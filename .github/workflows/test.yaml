@@ -35,7 +35,3 @@ jobs:
     - run: npm run build
     - run: npm run package
     - run: npm run eslint
-    - run: echo "github.ref_name = ${{ github.ref_name }}"
-    - run: echo "github.ref = ${{ github.ref }}"
-    - run: echo "${{ github.ref }}" | sed "s;refs/tags/;;"
-    - run: echo "${{ github.ref }}" | sed "s;refs/heads/;;"
