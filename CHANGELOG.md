@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Fixed
+- Configure automated release to VS Code Marketplace and https://open-vsx.org/
+- Allow installation on any VS Code version `>= 1.63.2`
 
 ## [1.0.2] - 2022-05-11
 ### Fixed

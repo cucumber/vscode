@@ -1,4 +1,4 @@
-[![test-javascript](https://github.com/cucumber/vscode/actions/workflows/test.yml/badge.svg)](https://github.com/cucumber/vscode/actions/workflows/test.yml)
+[![test-javascript](https://github.com/cucumber/vscode/actions/workflows/test.yaml/badge.svg)](https://github.com/cucumber/vscode/actions/workflows/test.yaml)
 
 # Cucumber for Visual Studio Code
 

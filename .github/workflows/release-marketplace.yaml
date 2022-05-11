@@ -1,0 +1,30 @@
+name: Release to marketplace
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  publish-marketplace:
+    name: Release to marketplace
+    runs-on: ubuntu-latest
+    environment: Release
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+      - run: npm install-test
+      # Re-enable when https://github.com/EclipseFdn/open-vsx.org/issues/1008 is fixed
+      # - name: Publish to Open VSX Registry
+      #   uses: HaaLeo/publish-vscode-extension@v1
+      #   with:
+      #     pat: ${{ secrets.OPEN_VSX_TOKEN }}
+      - name: Publish to Visual Studio Marketplace
+        uses: HaaLeo/publish-vscode-extension@v1
+        with:
+          pat: ${{ secrets.MICROSOFT_MARKETPLACE_TOKEN }}
+          registryUrl: https://marketplace.visualstudio.com
