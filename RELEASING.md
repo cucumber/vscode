@@ -25,4 +25,5 @@ extension doesn't require the latest version of VS Code.
 
     git commit -am "Release $next_release" && \
     git tag "v$next_release" && \
-    git push --tags origin main:release/v$next_release
+    git push --tags origin main:release/v$next_release && \
+    git push

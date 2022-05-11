@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.0.5] - 2022-05-11
+
 ## [1.0.4] - 2022-05-11
 ### Fixed
 - Upload `.visx` to GitHub releases
@@ -28,7 +30,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - First release
 
-[Unreleased]: https://github.com/cucumber/vscode/compare/v1.0.4...HEAD
+[Unreleased]: https://github.com/cucumber/vscode/compare/v1.0.5...HEAD
+[1.0.5]: https://github.com/cucumber/vscode/compare/v1.0.4...v1.0.5
 [1.0.4]: https://github.com/cucumber/vscode/compare/v1.0.3...v1.0.4
 [1.0.3]: https://github.com/cucumber/vscode/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/cucumber/vscode/compare/v1.0.1...v1.0.2

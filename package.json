@@ -2,7 +2,7 @@
   "name": "cucumber-official",
   "displayName": "Cucumber",
   "description": "Cucumber for Visual Studio Code",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "publisher": "CucumberOpen",
   "engines": {
     "vscode": "^1.63.2"
@@ -91,7 +91,7 @@
     "upgrade": "npm-check-updates --upgrade"
   },
   "dependencies": {
-    "@cucumber/language-server": "0.8.2",
+    "@cucumber/language-server": "0.9.0",
     "vscode-languageclient": "7.0.0"
   },
   "devDependencies": {
