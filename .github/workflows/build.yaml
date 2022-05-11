@@ -1,4 +1,4 @@
-name: test-javascript
+name: build
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  test:
+  build:
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -16,8 +16,6 @@ jobs:
           - ubuntu-latest
         node-version: ['16.x']
         include:
-          - os: windows-latest
-            node-version: '16.x'
           - os: macos-latest
             node-version: '16.x'
 
