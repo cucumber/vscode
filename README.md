@@ -1,4 +1,9 @@
-[![test-javascript](https://github.com/cucumber/vscode/actions/workflows/test.yaml/badge.svg)](https://github.com/cucumber/vscode/actions/workflows/test.yaml)
+[![build](https://github.com/cucumber/vscode/actions/workflows/test.yaml/badge.svg)](https://github.com/cucumber/vscode/actions/workflows/test.yaml)
+
+![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/CucumberOpen.cucumber-official)
+![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/CucumberOpen.cucumber-official)
+![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/CucumberOpen.cucumber-official)
+![Visual Studio Marketplace Rating (Stars)](https://img.shields.io/visual-studio-marketplace/stars/CucumberOpen.cucumber-official)
 
 # Cucumber for Visual Studio Code
 
