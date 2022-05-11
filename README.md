@@ -1,4 +1,4 @@
-[![build](https://github.com/cucumber/vscode/actions/workflows/test.yaml/badge.svg)](https://github.com/cucumber/vscode/actions/workflows/build.yaml)
+[![build](https://github.com/cucumber/vscode/actions/workflows/build.yaml/badge.svg)](https://github.com/cucumber/vscode/actions/workflows/build.yaml)
 
 ![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/CucumberOpen.cucumber-official)
 ![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/CucumberOpen.cucumber-official)
