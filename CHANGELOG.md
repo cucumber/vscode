@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.0.9] - 2022-05-12
 ### Fixed
 - Trigger reindexing when glue code is modified
 
@@ -47,7 +48,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - First release
 
-[Unreleased]: https://github.com/cucumber/vscode/compare/v1.0.8...HEAD
+[Unreleased]: https://github.com/cucumber/vscode/compare/v1.0.9...HEAD
+[1.0.9]: https://github.com/cucumber/vscode/compare/v1.0.8...v1.0.9
 [1.0.8]: https://github.com/cucumber/vscode/compare/v1.0.7...v1.0.8
 [1.0.7]: https://github.com/cucumber/vscode/compare/v1.0.6...v1.0.7
 [1.0.6]: https://github.com/cucumber/vscode/compare/v1.0.5...v1.0.6
