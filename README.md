@@ -52,10 +52,14 @@ and other cells are right-aligned.
 
 ## Extension Settings
 
+If your `.feature` files and step definition files are
+in an unconventional file structure, you need to change the
+settings to make autocomplete work properly.
+
 ### `cucumber.features`
 [//]: # (<cucumber.features>)
 The `cucumber.features` setting can be used to speciy where the extension
-should look for `.feature` files.
+should look for `.feature` files. Changing this will only affect autocompletion.
 
 Default value:
 
@@ -73,6 +77,7 @@ Default value:
 [//]: # (<cucumber.glue>)
 The `cucumber.glue` setting can be used to speciy where the extension
 should look for source code where step definitions are defined.
+Changing this will only affect autocompletion.
 
 Default value:
 
@@ -91,7 +96,8 @@ Default value:
 
 ### `cucumber.parameterTypes`
 [//]: # (<cucumber.parameterTypes>)
-The `cucumber.parameterTypes` setting can be used to define [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are not directly visible in the source code.
+Override the `cucumber.parameterTypes` setting if your Cucumber Expressions
+are using [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are defined outside your `cucumber.glue` setting.
 
 Default value:
 

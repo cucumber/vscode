@@ -91,7 +91,7 @@
     "upgrade": "npm-check-updates --upgrade"
   },
   "dependencies": {
-    "@cucumber/language-server": "0.9.0",
+    "@cucumber/language-server": "0.10.0",
     "vscode-languageclient": "7.0.0"
   },
   "devDependencies": {
@@ -100,7 +100,7 @@
     "@types/vscode": "1.63.2",
     "@typescript-eslint/eslint-plugin": "5.23.0",
     "@typescript-eslint/parser": "5.23.0",
-    "esbuild": "0.14.38",
+    "esbuild": "0.14.39",
     "eslint": "8.15.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.26.0",
