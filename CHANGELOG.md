@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+- Trigger reindexing when glue code is modified
+
 ## [1.0.8] - 2022-05-12
 ### Fixed
 - Upgraded to [@cucumber/language-server 0.10.4](https://github.com/cucumber/language-server/blob/main/CHANGELOG.md#0104---2022-05-12)
