@@ -7,12 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.0.6] - 2022-05-12
 ### Fixed
-
 - Upgraded to [@cucumber/language-server 0.10.0](https://github.com/cucumber/language-server/blob/main/CHANGELOG.md#0100---2022-05-12)
 
 ## [1.0.5] - 2022-05-11
-
 ### Fixed
 - Upgraded to [@cucumber/language-server 0.9.0](https://github.com/cucumber/language-server/blob/main/CHANGELOG.md#090---2022-05-11)
 
@@ -37,7 +36,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - First release
 
-[Unreleased]: https://github.com/cucumber/vscode/compare/v1.0.5...HEAD
+[Unreleased]: https://github.com/cucumber/vscode/compare/v1.0.6...HEAD
+[1.0.6]: https://github.com/cucumber/vscode/compare/v1.0.5...v1.0.6
 [1.0.5]: https://github.com/cucumber/vscode/compare/v1.0.4...v1.0.5
 [1.0.4]: https://github.com/cucumber/vscode/compare/v1.0.3...v1.0.4
 [1.0.3]: https://github.com/cucumber/vscode/compare/v1.0.2...v1.0.3

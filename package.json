@@ -44,7 +44,7 @@
       "title": "Cucumber",
       "properties": {
         "cucumber.features": {
-          "markdownDescription": "The `cucumber.features` setting can be used to speciy where the extension\nshould look for `.feature` files.\n\nDefault value:\n\n```json\n{\n  \"cucumber.features\": [\n    \"features/**/*.feature\",\n    \"src/test/**/*.feature\" \n  ]\n}\n```",
+          "markdownDescription": "The `cucumber.features` setting can be used to speciy where the extension\nshould look for `.feature` files. Changing this will only affect autocompletion.\n\nDefault value:\n\n```json\n{\n  \"cucumber.features\": [\n    \"features/**/*.feature\",\n    \"src/test/**/*.feature\" \n  ]\n}\n```",
           "type": "array",
           "required": false,
           "default": [
@@ -53,7 +53,7 @@
           ]
         },
         "cucumber.glue": {
-          "markdownDescription": "The `cucumber.glue` setting can be used to speciy where the extension\nshould look for source code where step definitions are defined.\n\nDefault value:\n\n```json\n{\n  \"cucumber.glue\": [\n    \"features/**/*.php\",\n    \"features/**/*.rb\",\n    \"features/**/*.ts\",\n    \"src/test/**/*.java\",\n    \"*specs*/**/.cs\"\n  ]\n}\n```",
+          "markdownDescription": "The `cucumber.glue` setting can be used to speciy where the extension\nshould look for source code where step definitions are defined.\nChanging this will only affect autocompletion.\n\nDefault value:\n\n```json\n{\n  \"cucumber.glue\": [\n    \"features/**/*.php\",\n    \"features/**/*.rb\",\n    \"features/**/*.ts\",\n    \"src/test/**/*.java\",\n    \"*specs*/**/.cs\"\n  ]\n}\n```",
           "type": "array",
           "required": false,
           "default": [
@@ -65,7 +65,7 @@
           ]
         },
         "cucumber.parameterTypes": {
-          "markdownDescription": "The `cucumber.parameterTypes` setting can be used to define [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are not directly visible in the source code.\n\nDefault value:\n\n```json\n{\n  \"cucumber.parameterTypes\": []\n}\n```\n\nFor example, if you're using the `actor` parameter type from [@cucumber/screenplay](https://github.com/cucumber/screenplay.js#actors) you'll have to declare this in the `parameterTypes` setting:\n\n````json\n{\n  \"cucumber.parameterTypes\": [\n    { \"name\": \"actor\", \"regexp\": \"[A-Z][a-z]+\" }\n  ]\n}\n````",
+          "markdownDescription": "Override the `cucumber.parameterTypes` setting if your Cucumber Expressions\nare using [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are defined outside your `cucumber.glue` setting.\n\nDefault value:\n\n```json\n{\n  \"cucumber.parameterTypes\": []\n}\n```\n\nFor example, if you're using the `actor` parameter type from [@cucumber/screenplay](https://github.com/cucumber/screenplay.js#actors) you'll have to declare this in the `parameterTypes` setting:\n\n````json\n{\n  \"cucumber.parameterTypes\": [\n    { \"name\": \"actor\", \"regexp\": \"[A-Z][a-z]+\" }\n  ]\n}\n````",
           "type": "array",
           "required": false,
           "default": []
