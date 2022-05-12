@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 
 ### Fixed
-- Upgraded to [@cucumber/language-server 0.10.3](https://github.com/cucumber/language-server/blob/main/CHANGELOG.md#0103---2022-05-12)
+- Upgraded to [@cucumber/language-server 0.10.4](https://github.com/cucumber/language-server/blob/main/CHANGELOG.md#0104---2022-05-12)
 
 ## [1.0.7] - 2022-05-12
 ### Added
