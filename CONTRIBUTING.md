@@ -31,3 +31,13 @@ code .
 # Make sure you've disabled the Cucumber extension if you installed it from the marketplace
 # Chose `Run -> Run without debugging` to open a 2nd editor where you can manually test
 ```
+
+If you need to make more changes to `language-service` or `language-server`, you have to rebuild them (but you don't need to relink). E.g:
+
+```
+pushd language-service
+npm run build
+popd
+```
+
+Then exit your 2nd editor and start it again via `Run`
