@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for contributing! Please follow these steps to test your changes locally.
+Thank you for contributing! Please follow these steps to manually test your changes locally.
 
 Most of the logic in this extension is implemented in two other libraries:
 
