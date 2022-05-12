@@ -11,7 +11,7 @@ let client: LanguageClient
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
-export function activate(context: vscode.ExtensionContext) {
+export async function activate(context: vscode.ExtensionContext) {
   const serverModule = context.asAbsolutePath(path.join('out', 'cucumber-language-server.js'))
   const debugOptions = { execArgv: ['--nolazy', '--inspect=6009'] }
 
@@ -25,16 +25,18 @@ export function activate(context: vscode.ExtensionContext) {
   }
 
   const clientOptions: LanguageClientOptions = {
-    documentSelector: [{ scheme: 'file', language: 'cucumber' }],
+    documentSelector: [
+      { scheme: 'file', language: 'cucumber' },
+      { scheme: 'file', language: 'ruby' },
+    ],
   }
 
   client = new LanguageClient('Cucumber', 'Cucumber Language Server', serverOptions, clientOptions)
 
-  const disposeClient = client.start()
-  context.subscriptions.push(disposeClient)
+  await client.start()
 }
 
 // this method is called when your extension is deactivated
-export function deactivate() {
-  // no-op
+export async function deactivate() {
+  await client.stop()
 }
