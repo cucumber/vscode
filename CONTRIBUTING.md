@@ -32,6 +32,10 @@ code .
 # Chose `Run -> Run without debugging` to open a 2nd editor where you can manually test
 ```
 
+The `connection.console.info` messages printed by the language server are visible under `Output -> Cucumber Language Server`
+
+![VS Code Output](doc/contributing/vscode-output.png)
+
 If you need to make more changes to `language-service` or `language-server`, you have to rebuild them (but you don't need to relink). E.g:
 
 ```
