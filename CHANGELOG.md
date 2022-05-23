@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Added
+- Implemented go to step definition shortcut
+
 ## [1.0.9] - 2022-05-12
 ### Fixed
 - Trigger reindexing when glue code is modified

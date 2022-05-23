@@ -13,7 +13,8 @@ This extension is maintained by the [Cucumber team](https://github.com/cucumber/
 
 ## Features
 
-- [x] [Auto completion](#auto-completion) of Gherkin steps
+- [x] [Autocomplete](#autocomplete) of Gherkin steps
+- [x] [Go to step definition](#go-to-step-definition)
 - [x] [Syntax highlighting](#syntax-highlighting)
 - [x] [Formatting](#formatting) (pretty printing)
 - [x] Language support
@@ -24,7 +25,7 @@ This extension is maintained by the [Cucumber team](https://github.com/cucumber/
   - [x] Ruby
   - [x] TypeScript
 
-### Auto completion
+### Autocomplete
 
 ![Autocomplete](images/autocomplete.gif)
 
@@ -34,6 +35,12 @@ based on existing step definitions and Gherkin steps.
 The suggestions are more helpful if your step definitions use
 [Cucumber Expressions](https://github.com/cucumber/cucumber-expressions#readme)
 but you'll also get suggestions if they use Regular Expressions.
+
+### Go to step definition
+
+![Go to step definition](images/goto-step-definition.gif)
+
+You can quickly navigate from a Gherkin step to a step definition.
 
 ### Syntax highlighting
 
