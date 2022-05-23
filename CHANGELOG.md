@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.0] - 2022-05-23
 ### Added
 - Implemented go to step definition shortcut
 
@@ -51,7 +52,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - First release
 
-[Unreleased]: https://github.com/cucumber/vscode/compare/v1.0.9...HEAD
+[Unreleased]: https://github.com/cucumber/vscode/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/cucumber/vscode/compare/v1.0.9...v1.1.0
 [1.0.9]: https://github.com/cucumber/vscode/compare/v1.0.8...v1.0.9
 [1.0.8]: https://github.com/cucumber/vscode/compare/v1.0.7...v1.0.8
 [1.0.7]: https://github.com/cucumber/vscode/compare/v1.0.6...v1.0.7
