@@ -13,17 +13,19 @@ This extension is maintained by the [Cucumber team](https://github.com/cucumber/
 
 ## Features
 
-- [x] [Autocomplete](#autocomplete) of Gherkin steps
-- [x] [Go to step definition](#go-to-step-definition)
-- [x] [Syntax highlighting](#syntax-highlighting)
-- [x] [Formatting](#formatting) (pretty printing)
-- [x] Language support
-  - [x] C#
-  - [x] Java
-  - [ ] [JavaScript - help needed](https://github.com/cucumber/language-service/issues/42)
-  - [x] PHP
-  - [x] Ruby
-  - [x] TypeScript
+- [Autocomplete](#autocomplete) of Gherkin steps
+- [Go to step definition](#go-to-step-definition)
+- [Go to step definition](#go-to-step-definition)
+- [Syntax highlighting](#syntax-highlighting)
+- [Formatting](#formatting) (pretty printing)
+- Language support
+  - C#
+  - Java
+  - [JavaScript - help needed](https://github.com/cucumber/language-service/issues/42)
+  - PHP
+  - [Python/Behave - help needed](https://github.com/cucumber/language-service/issues/49)
+  - Ruby
+  - TypeScript
 
 ### Autocomplete
 
@@ -41,6 +43,12 @@ but you'll also get suggestions if they use Regular Expressions.
 ![Go to step definition](images/goto-step-definition.gif)
 
 You can quickly navigate from a Gherkin step to a step definition.
+
+### Generate step definition
+
+![Generate step definition](images/generate-step-definition.gif)
+
+Generate step definition snippets with a quick fix.
 
 ### Syntax highlighting
 

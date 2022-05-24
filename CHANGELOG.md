@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Added
+- Implemented generate step definition quick-fix
+
 ## [1.1.0] - 2022-05-23
 ### Added
 - Implemented go to step definition shortcut

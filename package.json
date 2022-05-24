@@ -91,15 +91,15 @@
     "upgrade": "npm-check-updates --upgrade"
   },
   "dependencies": {
-    "@cucumber/language-server": "0.11.0",
+    "@cucumber/language-server": "0.12.1",
     "vscode-languageclient": "8.0.1"
   },
   "devDependencies": {
     "@types/glob": "7.2.0",
     "@types/mocha": "9.1.1",
     "@types/vscode": "1.63.2",
-    "@typescript-eslint/eslint-plugin": "5.25.0",
-    "@typescript-eslint/parser": "5.25.0",
+    "@typescript-eslint/eslint-plugin": "5.26.0",
+    "@typescript-eslint/parser": "5.26.0",
     "esbuild": "0.14.39",
     "eslint": "8.16.0",
     "eslint-config-prettier": "8.5.0",
