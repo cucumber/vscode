@@ -15,7 +15,7 @@ This extension is maintained by the [Cucumber team](https://github.com/cucumber/
 
 - [Autocomplete](#autocomplete) of Gherkin steps
 - [Go to step definition](#go-to-step-definition)
-- [Go to step definition](#go-to-step-definition)
+- [Generate step definition](#generate-step-definition)
 - [Syntax highlighting](#syntax-highlighting)
 - [Formatting](#formatting) (pretty printing)
 - Language support
