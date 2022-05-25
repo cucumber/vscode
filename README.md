@@ -50,22 +50,31 @@ You can quickly navigate from a Gherkin step to a step definition.
 
 Generate step definition snippets with a quick fix.
 
+*IMPORTANT*: Generate step definition will only be enabled
+if there is at least one existing step definition. This is
+so that the extension can determine the programming language
+for the step definition, and provide choices for what file(s)
+to add it to.
+
 ### Syntax highlighting
 
 ![Syntax highlighting](images/syntax-highlighting.gif)
 
-The syntax highlights highlights Gherkin keywords and step parameters.
+Gherkin keywords and step parameters are highlighted.
 Undefined steps and syntax errors are underlined.
 
 ### Formatting
 
 ![Formatting](images/formatting.gif)
 
-When choosing to format a Gherkin document, it will be formatted
-using two space indentation. Numeric cells are right-aligned (as in Excel),
-and other cells are right-aligned.
+Gherkin documents are formatted using two space indentation. 
+
+Numeric cells are right-aligned (as in Excel). Non-numeric cells are right-aligned.
 
 ## Extension Settings
+
+In most cases you shouldn't need to specify any settings
+as the extension comes with reasonable defaults. 
 
 If your `.feature` files and step definition files are
 in an unconventional file structure, you need to change the
@@ -73,8 +82,11 @@ settings to make autocomplete work properly.
 
 ### `cucumber.features`
 [//]: # (<cucumber.features>)
-The `cucumber.features` setting can be used to speciy where the extension
-should look for `.feature` files. Changing this will only affect autocompletion.
+The `cucumber.features` setting overrides where the extension 
+should look for `.feature` files. 
+
+If no feature files are found, [autocomplete](#autocomplete) 
+will not work.
 
 Default value:
 
@@ -90,9 +102,14 @@ Default value:
 
 ### `cucumber.glue`
 [//]: # (<cucumber.glue>)
-The `cucumber.glue` setting can be used to speciy where the extension
-should look for source code where step definitions are defined.
-Changing this will only affect autocompletion.
+The `cucumber.glue` setting overrides where the extension
+should look for source code where step definitions and
+parameter types are defined.
+
+If no glue files are found, [autocomplete](#autocomplete) 
+will not work, and all Gherkin steps will be underlined as 
+undefined. [Generate step definition](#generate-step-definition)
+will not work either.
 
 Default value:
 

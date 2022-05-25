@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+- Generate step definition now correctly uses `Given`, `When` or `Then` for undefined steps that use `And` or `But`
+- Generated C# step definitions now follow SpecFlow conventions.
+
 ## [1.2.1] - 2022-05-25
 ### Fixed
 - Errors during reindexing are hopefully fixed
