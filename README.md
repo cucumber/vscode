@@ -7,7 +7,7 @@
 
 # Cucumber for Visual Studio Code
 
-This extension adds support for using Cucumber with Visual Studio Code, powered by the [Cucumber language server](https://github.com/cucumber/language-server#readme).
+This extension adds support for using Cucumber with Visual Studio Code, powered by the [Cucumber Language Server](https://github.com/cucumber/language-server#readme).
 
 This extension is maintained by the [Cucumber team](https://github.com/cucumber/).
 
