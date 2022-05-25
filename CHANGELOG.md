@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+- Errors during reindexing are hopefully fixed
+
 ## [1.2.0] - 2022-05-24
 ### Added
 - Implemented generate step definition quick-fix
