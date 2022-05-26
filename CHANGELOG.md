@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+- Don't crash on Cucumber Expression optionals following non-text or whitespace
+
 ## [1.2.2] - 2022-05-25
 ### Fixed
 - Generate step definition now correctly uses `Given`, `When` or `Then` for undefined steps that use `And` or `But`
