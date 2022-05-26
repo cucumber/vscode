@@ -48,7 +48,8 @@ You can quickly navigate from a Gherkin step to a step definition.
 
 ![Generate step definition](images/generate-step-definition.gif)
 
-Generate step definition snippets with a quick fix.
+Generate step definition snippets with a quick fix - `⌘` + `.` (MacOS) or
+`Ctrl` + `.` (Windows).
 
 *IMPORTANT*: Generate step definition will only be enabled
 if there is at least one existing step definition. This is

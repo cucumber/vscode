@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+- Don't throw an error when generating suggestions for RegExp.
+
 ## [1.2.4] - 2022-05-26
 ### Fixed
 - Log the root path
