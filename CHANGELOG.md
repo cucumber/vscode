@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.2.6] - 2022-05-26
 ### Fixed
 - Log working directory in addition to root path
 
@@ -80,7 +81,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - First release
 
-[Unreleased]: https://github.com/cucumber/vscode/compare/v1.2.5...HEAD
+[Unreleased]: https://github.com/cucumber/vscode/compare/v1.2.6...HEAD
+[1.2.6]: https://github.com/cucumber/vscode/compare/v1.2.5...v1.2.6
 [1.2.5]: https://github.com/cucumber/vscode/compare/v1.2.4...v1.2.5
 [1.2.4]: https://github.com/cucumber/vscode/compare/v1.2.3...v1.2.4
 [1.2.3]: https://github.com/cucumber/vscode/compare/v1.2.2...v1.2.3
