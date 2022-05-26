@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+- Log the root path
+
 ## [1.2.3] - 2022-05-26
 ### Fixed
 - Don't crash on Cucumber Expression optionals following non-text or whitespace
