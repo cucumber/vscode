@@ -54,7 +54,7 @@ Generate step definition snippets with a quick fix - `⌘` + `.` (MacOS) or
 *IMPORTANT*: Generate step definition will only be enabled
 if there is at least one existing step definition. This is
 so that the extension can determine the programming language
-for the step definition, and provide choices for what file(s)
+for the step definition, and provide choices for existing files
 to add it to.
 
 ### Syntax highlighting
