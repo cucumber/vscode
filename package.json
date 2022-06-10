@@ -40,6 +40,18 @@
         "configuration": "./language-configuration.json"
       }
     ],
+    "customEditors": [
+      {
+        "viewType": "Cucumber.Blockly",
+        "displayName": "Cucumber Blockly",
+        "selector": [
+          {
+            "filenamePattern": "*.feature"
+          }
+        ],
+        "priority": "option"
+      }
+    ],
     "configuration": {
       "title": "Cucumber",
       "properties": {
@@ -76,6 +88,7 @@
   "scripts": {
     "vscode:prepublish": "npm run esbuild-extension && npm run esbuild-server",
     "esbuild-extension": "esbuild ./src/extension.ts --external:vscode --bundle --outfile=out/extension.js --format=cjs --platform=node --minify --sourcemap",
+    "esbuild-cucumber-blockly": "esbuild src/media/cucumberBlockly.ts --bundle --outfile=out/media/cucumberBlockly.js --format=cjs --platform=browser --sourcemap",
     "esbuild-server": "npm run compile && esbuild dist/src/cucumber-language-server.js --bundle --outfile=out/cucumber-language-server.js --format=cjs --platform=node --sourcemap",
     "prepare": "mkdir -p out && cp node_modules/@cucumber/language-service/dist/*.wasm out",
     "build": "npm run esbuild-extension && npm run esbuild-server",
@@ -88,7 +101,8 @@
     "update-settings-docs": "./scripts/update-settings-docs.sh",
     "package": "vsce package",
     "publish": "vsce publish",
-    "upgrade": "npm-check-updates --upgrade"
+    "upgrade": "npm-check-updates --upgrade",
+    "cucumber-blockly:debug": "npm run esbuild-cucumber-blockly && http-server -c-1 src/media"
   },
   "dependencies": {
     "@cucumber/language-server": "0.12.9",
@@ -108,6 +122,7 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-simple-import-sort": "7.0.0",
     "glob": "8.0.3",
+    "http-server": "14.1.1",
     "mocha": "10.0.0",
     "npm-check-updates": "13.0.3",
     "prettier": "2.6.2",
