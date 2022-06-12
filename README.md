@@ -132,6 +132,8 @@ Default value:
 Override the `cucumber.parameterTypes` setting if your Cucumber Expressions
 are using [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are defined outside your `cucumber.glue` setting.
 
+Parameter Types in the `cucumber.glue` globs will be picked up automatically.
+
 Default value:
 
 ```json
