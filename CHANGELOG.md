@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+- Better SpecFlow/C# support. See [@cucumber/language-service 0.30.0](https://github.com/cucumber/language-service/releases/tag/v0.30.0) for details.
+
 ## [1.2.6] - 2022-05-26
 ### Fixed
 - Log working directory in addition to root path
