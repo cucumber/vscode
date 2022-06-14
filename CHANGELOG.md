@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.2.7] - 2022-06-14
 ### Fixed
 - Better SpecFlow/C# support. See [@cucumber/language-service 0.30.0](https://github.com/cucumber/language-service/releases/tag/v0.30.0) for details.
 
@@ -84,7 +85,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - First release
 
-[Unreleased]: https://github.com/cucumber/vscode/compare/v1.2.6...HEAD
+[Unreleased]: https://github.com/cucumber/vscode/compare/v1.2.7...HEAD
+[1.2.7]: https://github.com/cucumber/vscode/compare/v1.2.6...v1.2.7
 [1.2.6]: https://github.com/cucumber/vscode/compare/v1.2.5...v1.2.6
 [1.2.5]: https://github.com/cucumber/vscode/compare/v1.2.4...v1.2.5
 [1.2.4]: https://github.com/cucumber/vscode/compare/v1.2.3...v1.2.4
