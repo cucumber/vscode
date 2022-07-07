@@ -20,6 +20,7 @@ This extension is maintained by the [Cucumber team](https://github.com/cucumber/
 - [Formatting](#formatting) (pretty printing)
 - Language support
   - C#
+  - [Go/Godog - help needed](https://github.com/cucumber/language-service/issues/72)
   - Java
   - [JavaScript - help needed](https://github.com/cucumber/language-service/issues/42)
   - PHP
