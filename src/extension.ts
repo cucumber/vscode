@@ -7,11 +7,15 @@ import {
   TransportKind,
 } from 'vscode-languageclient/node'
 
+import { CucumberBlocklyEditorProvider } from './CucumberBlocklyEditorProvider.js'
+
 let client: LanguageClient
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export async function activate(context: vscode.ExtensionContext) {
+  context.subscriptions.push(CucumberBlocklyEditorProvider.register(context))
+
   const serverModule = context.asAbsolutePath(path.join('out', 'cucumber-language-server.js'))
   const debugOptions = { execArgv: ['--nolazy', '--inspect=6009'] }
 
