@@ -65,7 +65,7 @@
           ]
         },
         "cucumber.parameterTypes": {
-          "markdownDescription": "Override the `cucumber.parameterTypes` setting if your Cucumber Expressions\nare using [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are defined outside your `cucumber.glue` setting.\n\nDefault value:\n\n```json\n{\n  \"cucumber.parameterTypes\": []\n}\n```\n\nFor example, if you're using the `actor` parameter type from [@cucumber/screenplay](https://github.com/cucumber/screenplay.js#actors) you'll have to declare this in the `parameterTypes` setting:\n\n````json\n{\n  \"cucumber.parameterTypes\": [\n    { \"name\": \"actor\", \"regexp\": \"[A-Z][a-z]+\" }\n  ]\n}\n````",
+          "markdownDescription": "Override the `cucumber.parameterTypes` setting if your Cucumber Expressions\nare using [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are defined outside your `cucumber.glue` setting.\n\nParameter Types in the `cucumber.glue` globs will be picked up automatically.\n\nDefault value:\n\n```json\n{\n  \"cucumber.parameterTypes\": []\n}\n```\n\nFor example, if you're using the `actor` parameter type from [@cucumber/screenplay](https://github.com/cucumber/screenplay.js#actors) you'll have to declare this in the `parameterTypes` setting:\n\n````json\n{\n  \"cucumber.parameterTypes\": [\n    { \"name\": \"actor\", \"regexp\": \"[A-Z][a-z]+\" }\n  ]\n}\n````",
           "type": "array",
           "required": false,
           "default": []
@@ -91,29 +91,29 @@
     "upgrade": "npm-check-updates --upgrade"
   },
   "dependencies": {
-    "@cucumber/language-server": "0.12.10",
-    "vscode-languageclient": "8.0.1"
+    "@cucumber/language-server": "0.12.11",
+    "vscode-languageclient": "8.0.2"
   },
   "devDependencies": {
     "@types/glob": "7.2.0",
     "@types/mocha": "9.1.1",
     "@types/vscode": "1.63.2",
-    "@typescript-eslint/eslint-plugin": "5.28.0",
-    "@typescript-eslint/parser": "5.28.0",
-    "esbuild": "0.14.43",
-    "eslint": "8.17.0",
+    "@typescript-eslint/eslint-plugin": "5.30.6",
+    "@typescript-eslint/parser": "5.30.6",
+    "esbuild": "0.14.49",
+    "eslint": "8.19.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-simple-import-sort": "7.0.0",
     "glob": "8.0.3",
     "mocha": "10.0.0",
-    "npm-check-updates": "15.0.0",
-    "prettier": "2.7.0",
+    "npm-check-updates": "15.3.3",
+    "prettier": "2.7.1",
     "pretty-quick": "3.1.3",
-    "typescript": "4.7.3",
-    "vsce": "2.9.1",
+    "typescript": "4.7.4",
+    "vsce": "2.9.2",
     "vscode-test": "1.6.1"
   }
 }

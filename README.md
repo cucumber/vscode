@@ -24,7 +24,7 @@ This extension is maintained by the [Cucumber team](https://github.com/cucumber/
   - Java
   - [JavaScript - help needed](https://github.com/cucumber/language-service/issues/42)
   - PHP
-  - [Python/Behave - help needed](https://github.com/cucumber/language-service/issues/49)
+  - Python/Behave
   - Ruby
   - TypeScript
 
