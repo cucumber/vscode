@@ -121,6 +121,7 @@ Default value:
     "features/**/*.php",
     "features/**/*.rb",
     "features/**/*.ts",
+    "features/**/*.py",
     "src/test/**/*.java",
     "*specs*/**/.cs"
   ]
