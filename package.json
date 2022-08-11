@@ -53,7 +53,7 @@
           ]
         },
         "cucumber.glue": {
-          "markdownDescription": "The `cucumber.glue` setting overrides where the extension\nshould look for source code where step definitions and\nparameter types are defined.\n\nIf no glue files are found, [autocomplete](#autocomplete) \nwill not work, and all Gherkin steps will be underlined as \nundefined. [Generate step definition](#generate-step-definition)\nwill not work either.\n\nDefault value:\n\n```json\n{\n  \"cucumber.glue\": [\n    \"features/**/*.php\",\n    \"features/**/*.rb\",\n    \"features/**/*.ts\",\n    \"features/**/*.py\",\n    \"src/test/**/*.java\",\n    \"*specs*/**/.cs\"\n  ]\n}\n```",
+          "markdownDescription": "The `cucumber.glue` setting overrides where the extension\nshould look for source code where step definitions and\nparameter types are defined.\n\nIf no glue files are found, [autocomplete](#autocomplete) \nwill not work, and all Gherkin steps will be underlined as \nundefined. [Generate step definition](#generate-step-definition)\nwill not work either.\n\nDefault value:\n\n```json\n{\n  \"cucumber.glue\": [\n    \"features/**/*.php\",\n    \"features/**/*.rb\",\n    \"features/**/*.ts\",\n    \"features/**/*.py\",\n    \"src/test/**/*.java\",\n    \"*specs*/**/*.cs\"\n  ]\n}\n```",
           "type": "array",
           "required": false,
           "default": [
@@ -62,7 +62,7 @@
             "features/**/*.ts",
             "features/**/*.py",
             "src/test/**/*.java",
-            "*specs*/**/.cs"
+            "*specs*/**/*.cs"
           ]
         },
         "cucumber.parameterTypes": {
