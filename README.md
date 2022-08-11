@@ -123,7 +123,7 @@ Default value:
     "features/**/*.ts",
     "features/**/*.py",
     "src/test/**/*.java",
-    "*specs*/**/.cs"
+    "*specs*/**/*.cs"
   ]
 }
 ```
