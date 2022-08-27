@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+- Fix `@types/vscode` - require minimum version `1.69.0`.
+
 ## [1.2.9] - 2022-08-27
 ### Fixed
 - Fixed defaults for C# ([#93](https://github.com/cucumber/vscode/pull/93))
