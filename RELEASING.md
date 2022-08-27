@@ -20,10 +20,3 @@ See [.github/RELEASING](https://github.com/cucumber/.github/blob/main/RELEASING.
 
 *IMPORTANT:* After updating dependencies, revert to `"@types/vscode": "1.67.0"` so the
 extension doesn't require the latest version of VS Code.
-
-*IMPORTANT*: To trigger the release you have to create a tag:
-
-    git commit -am "Release $next_release" && \
-    git tag "v$next_release" && \
-    git push --tags origin main:release/v$next_release && \
-    git push
