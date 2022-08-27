@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [1.2.9] - 2022-08-27
 ### Fixed
 - Fixed defaults for C# ([#93](https://github.com/cucumber/vscode/pull/93))
 - Fix syntax highlighting of `Background` keyword ([#91](https://github.com/cucumber/vscode/issues/91))
@@ -95,7 +97,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - First release
 
-[Unreleased]: https://github.com/cucumber/vscode/compare/v1.2.8...HEAD
+[Unreleased]: https://github.com/cucumber/vscode/compare/v1.2.9...HEAD
+[1.2.9]: https://github.com/cucumber/vscode/compare/v1.2.8...v1.2.9
 [1.2.8]: https://github.com/cucumber/vscode/compare/v1.2.7...v1.2.8
 [1.2.7]: https://github.com/cucumber/vscode/compare/v1.2.6...v1.2.7
 [1.2.6]: https://github.com/cucumber/vscode/compare/v1.2.5...v1.2.6
