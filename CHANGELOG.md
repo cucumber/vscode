@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.2.10] - 2022-08-27
 ### Fixed
 - Fix `@types/vscode` - require minimum version `1.69.0`.
 
@@ -100,7 +101,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - First release
 
-[Unreleased]: https://github.com/cucumber/vscode/compare/v1.2.9...HEAD
+[Unreleased]: https://github.com/cucumber/vscode/compare/v1.2.10...HEAD
+[1.2.10]: https://github.com/cucumber/vscode/compare/v1.2.9...v1.2.10
 [1.2.9]: https://github.com/cucumber/vscode/compare/v1.2.8...v1.2.9
 [1.2.8]: https://github.com/cucumber/vscode/compare/v1.2.7...v1.2.8
 [1.2.7]: https://github.com/cucumber/vscode/compare/v1.2.6...v1.2.7
