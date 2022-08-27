@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Fixed
+- Fixed defaults for C# ([#93](https://github.com/cucumber/vscode/pull/93))
 - Bugfixes in [@cucumber/language-server 0.12.12](https://github.com/cucumber/language-service/releases/tag/v0.12.12)
 - Bugfixes in [@cucumber/language-service 0.32.0](https://github.com/cucumber/language-service/releases/tag/v0.33.0)
 
