@@ -6,8 +6,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Fixed
+- Bugfixes in [@cucumber/language-server 0.12.12](https://github.com/cucumber/language-service/releases/tag/v0.12.12)
+- Bugfixes in [@cucumber/language-service 0.32.0](https://github.com/cucumber/language-service/releases/tag/v0.33.0)
 
 ## [1.2.8] - 2022-07-14
+### Fixed
+- Bugfixes in [@cucumber/language-server 0.12.11](https://github.com/cucumber/language-service/releases/tag/v0.12.11)
+- Bugfixes in [@cucumber/language-service 0.31.0](https://github.com/cucumber/language-service/releases/tag/v0.31.0)
 
 ## [1.2.7] - 2022-06-14
 ### Fixed
