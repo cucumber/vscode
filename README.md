@@ -11,6 +11,11 @@ This extension adds support for using Cucumber with Visual Studio Code, powered 
 
 This extension is maintained by the [Cucumber team](https://github.com/cucumber/).
 
+# Installation
+
+Get it from the [Open VSX Registry](https://open-vsx.org/extension/CucumberOpen/cucumber-official) or
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official).
+
 ## Features
 
 - [Autocomplete](#autocomplete) of Gherkin steps
