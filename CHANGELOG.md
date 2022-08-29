@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+- Trigger reindexing when Python files change
+
 ## [1.2.10] - 2022-08-27
 ### Fixed
 - Fix `@types/vscode` - require minimum version `1.69.0`.
