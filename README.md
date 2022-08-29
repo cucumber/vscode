@@ -101,8 +101,10 @@ Default value:
 ```json
 {
   "cucumber.features": [
+    "src/test/**/*.feature",
     "features/**/*.feature",
-    "src/test/**/*.feature" 
+    "tests/**/*.feature",
+    "*specs*/**/.feature"
   ]
 }
 ```
@@ -124,12 +126,13 @@ Default value:
 ```json
 {
   "cucumber.glue": [
-    "features/**/*.php",
-    "features/**/*.rb",
-    "features/**/*.ts",
-    "features/**/*.py",
     "src/test/**/*.java",
-    "*specs*/**/*.cs"
+    "features/**/*.ts",
+    "features/**/*.php",
+    "features/**/*.py",
+    "tests/**/*.py",
+    "features/**/*.rb",
+    "*specs*/**/.cs"
   ]
 }
 ```
