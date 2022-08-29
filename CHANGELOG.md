@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 
 ### Fixed
+- Change defaults so that [pytest-bdd](https://pypi.org/project/pytest-bdd/) works out of the box ([#102](https://github.com/cucumber/vscode/pull/102))
 - Trigger reindexing when Python files change ([#101](https://github.com/cucumber/vscode/pull/101))
 
 ## [1.2.10] - 2022-08-27

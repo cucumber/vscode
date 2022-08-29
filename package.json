@@ -44,25 +44,28 @@
       "title": "Cucumber",
       "properties": {
         "cucumber.features": {
-          "markdownDescription": "The `cucumber.features` setting overrides where the extension \nshould look for `.feature` files. \n\nIf no feature files are found, [autocomplete](#autocomplete) \nwill not work.\n\nDefault value:\n\n```json\n{\n  \"cucumber.features\": [\n    \"features/**/*.feature\",\n    \"src/test/**/*.feature\" \n  ]\n}\n```",
+          "markdownDescription": "The `cucumber.features` setting overrides where the extension \nshould look for `.feature` files. \n\nIf no feature files are found, [autocomplete](#autocomplete) \nwill not work.\n\nDefault value:\n\n```json\n{\n  \"cucumber.features\": [\n    \"src/test/**/*.feature\",\n    \"features/**/*.feature\",\n    \"tests/**/*.feature\",\n    \"*specs*/**/.feature\"\n  ]\n}\n```",
           "type": "array",
           "required": false,
           "default": [
+            "src/test/**/*.feature",
             "features/**/*.feature",
-            "src/test/**/*.feature"
+            "tests/**/*.feature",
+            "*specs*/**/.feature"
           ]
         },
         "cucumber.glue": {
-          "markdownDescription": "The `cucumber.glue` setting overrides where the extension\nshould look for source code where step definitions and\nparameter types are defined.\n\nIf no glue files are found, [autocomplete](#autocomplete) \nwill not work, and all Gherkin steps will be underlined as \nundefined. [Generate step definition](#generate-step-definition)\nwill not work either.\n\nDefault value:\n\n```json\n{\n  \"cucumber.glue\": [\n    \"features/**/*.php\",\n    \"features/**/*.rb\",\n    \"features/**/*.ts\",\n    \"features/**/*.py\",\n    \"src/test/**/*.java\",\n    \"*specs*/**/*.cs\"\n  ]\n}\n```",
+          "markdownDescription": "The `cucumber.glue` setting overrides where the extension\nshould look for source code where step definitions and\nparameter types are defined.\n\nIf no glue files are found, [autocomplete](#autocomplete) \nwill not work, and all Gherkin steps will be underlined as \nundefined. [Generate step definition](#generate-step-definition)\nwill not work either.\n\nDefault value:\n\n```json\n{\n  \"cucumber.glue\": [\n    \"src/test/**/*.java\",\n    \"features/**/*.ts\",\n    \"features/**/*.php\",\n    \"features/**/*.py\",\n    \"tests/**/*.py\",\n    \"features/**/*.rb\",\n    \"*specs*/**/.cs\"\n  ]\n}\n```",
           "type": "array",
           "required": false,
           "default": [
-            "features/**/*.php",
-            "features/**/*.rb",
-            "features/**/*.ts",
-            "features/**/*.py",
             "src/test/**/*.java",
-            "*specs*/**/*.cs"
+            "features/**/*.ts",
+            "features/**/*.php",
+            "features/**/*.py",
+            "tests/**/*.py",
+            "features/**/*.rb",
+            "*specs*/**/.cs"
           ]
         },
         "cucumber.parameterTypes": {
@@ -92,7 +95,7 @@
     "upgrade": "npm-check-updates --upgrade"
   },
   "dependencies": {
-    "@cucumber/language-server": "0.12.12",
+    "@cucumber/language-server": "0.12.13",
     "vscode-languageclient": "8.0.2"
   },
   "devDependencies": {
@@ -114,7 +117,7 @@
     "prettier": "2.7.1",
     "pretty-quick": "3.1.3",
     "typescript": "4.8.2",
-    "vsce": "2.10.2",
+    "vsce": "2.11.0",
     "vscode-test": "1.6.1"
   }
 }
