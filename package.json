@@ -104,7 +104,7 @@
     "@types/vscode": "1.69.0",
     "@typescript-eslint/eslint-plugin": "5.35.1",
     "@typescript-eslint/parser": "5.35.1",
-    "esbuild": "0.15.5",
+    "esbuild": "0.15.6",
     "eslint": "8.23.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.26.0",
