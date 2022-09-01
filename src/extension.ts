@@ -1,28 +1,15 @@
-import path from 'path'
+import { newWasmServer } from '@cucumber/language-server'
 import vscode from 'vscode'
-import {
-  LanguageClient,
-  LanguageClientOptions,
-  ServerOptions,
-  TransportKind,
-} from 'vscode-languageclient/node'
+import { LanguageClient, LanguageClientOptions, ServerOptions } from 'vscode-languageclient/node'
 
 let client: LanguageClient
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export async function activate(context: vscode.ExtensionContext) {
-  const serverModule = context.asAbsolutePath(path.join('out', 'cucumber-language-server.js'))
-  const debugOptions = { execArgv: ['--nolazy', '--inspect=6009'] }
-
-  const serverOptions: ServerOptions = {
-    run: { module: serverModule, transport: TransportKind.ipc },
-    debug: {
-      module: serverModule,
-      transport: TransportKind.ipc,
-      options: debugOptions,
-    },
-  }
+  // const serverModule = context.asAbsolutePath(path.join('out', 'cucumber-language-server.js'))
+  // const serverOptions: ServerOptions = { module: serverModule, transport: TransportKind.ipc }
+  const serverOptions: ServerOptions = async () => newWasmServer(__dirname)
 
   const clientOptions: LanguageClientOptions = {
     // We need to list all supported languages here so that
