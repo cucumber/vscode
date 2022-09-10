@@ -77,7 +77,7 @@ Undefined steps and syntax errors are underlined.
 
 Gherkin documents are formatted using two space indentation. 
 
-Numeric cells are right-aligned (as in Excel). Non-numeric cells are right-aligned.
+Numeric cells are right-aligned (as in Excel). Non-numeric cells are left-aligned.
 
 ## Extension Settings
 
@@ -128,6 +128,7 @@ Default value:
   "cucumber.glue": [
     "src/test/**/*.java",
     "features/**/*.ts",
+    "features/**/*.tsx",
     "features/**/*.php",
     "features/**/*.py",
     "tests/**/*.py",
