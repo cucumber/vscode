@@ -96,7 +96,7 @@
     "upgrade": "npm-check-updates --upgrade"
   },
   "dependencies": {
-    "@cucumber/language-server": "0.12.13",
+    "@cucumber/language-server": "0.12.14",
     "vscode-languageclient": "8.0.2"
   },
   "devDependencies": {
