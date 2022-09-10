@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.3.0] - 2022-09-10
 ### Added
 - Add support for `.tsx` ([#87](https://github.com/cucumber/language-service/issues/87) [#90](https://github.com/cucumber/language-service/pull/90))
 
@@ -112,7 +113,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - First release
 
-[Unreleased]: https://github.com/cucumber/vscode/compare/v1.2.11...HEAD
+[Unreleased]: https://github.com/cucumber/vscode/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/cucumber/vscode/compare/v1.2.11...v1.3.0
 [1.2.11]: https://github.com/cucumber/vscode/compare/v1.2.10...v1.2.11
 [1.2.10]: https://github.com/cucumber/vscode/compare/v1.2.9...v1.2.10
 [1.2.9]: https://github.com/cucumber/vscode/compare/v1.2.8...v1.2.9
