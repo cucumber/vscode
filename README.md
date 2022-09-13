@@ -11,6 +11,11 @@ This extension adds support for using Cucumber with Visual Studio Code, powered 
 
 This extension is maintained by the [Cucumber team](https://github.com/cucumber/).
 
+# Installation
+
+Get it from the [Open VSX Registry](https://open-vsx.org/extension/CucumberOpen/cucumber-official) or
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official).
+
 ## Features
 
 - [Autocomplete](#autocomplete) of Gherkin steps
@@ -20,11 +25,13 @@ This extension is maintained by the [Cucumber team](https://github.com/cucumber/
 - [Formatting](#formatting) (pretty printing)
 - Language support
   - C#
+  - [Go/Godog - help needed](https://github.com/cucumber/language-service/issues/72)
   - Java
   - [JavaScript - help needed](https://github.com/cucumber/language-service/issues/42)
   - PHP
-  - [Python/Behave - help needed](https://github.com/cucumber/language-service/issues/49)
+  - Python/Behave
   - Ruby
+  - [Rust - help needed](https://github.com/cucumber/language-service/issues/82)
   - TypeScript
 
 ### Autocomplete
@@ -54,7 +61,7 @@ Generate step definition snippets with a quick fix - `⌘` + `.` (MacOS) or
 *IMPORTANT*: Generate step definition will only be enabled
 if there is at least one existing step definition. This is
 so that the extension can determine the programming language
-for the step definition, and provide choices for what file(s)
+for the step definition, and provide choices for existing files
 to add it to.
 
 ### Syntax highlighting
@@ -70,7 +77,7 @@ Undefined steps and syntax errors are underlined.
 
 Gherkin documents are formatted using two space indentation. 
 
-Numeric cells are right-aligned (as in Excel). Non-numeric cells are right-aligned.
+Numeric cells are right-aligned (as in Excel). Non-numeric cells are left-aligned.
 
 ## Extension Settings
 
@@ -94,8 +101,10 @@ Default value:
 ```json
 {
   "cucumber.features": [
+    "src/test/**/*.feature",
     "features/**/*.feature",
-    "src/test/**/*.feature" 
+    "tests/**/*.feature",
+    "*specs*/**/.feature"
   ]
 }
 ```
@@ -117,10 +126,13 @@ Default value:
 ```json
 {
   "cucumber.glue": [
-    "features/**/*.php",
-    "features/**/*.rb",
-    "features/**/*.ts",
     "src/test/**/*.java",
+    "features/**/*.ts",
+    "features/**/*.tsx",
+    "features/**/*.php",
+    "features/**/*.py",
+    "tests/**/*.py",
+    "features/**/*.rb",
     "*specs*/**/.cs"
   ]
 }
@@ -131,6 +143,8 @@ Default value:
 [//]: # (<cucumber.parameterTypes>)
 Override the `cucumber.parameterTypes` setting if your Cucumber Expressions
 are using [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are defined outside your `cucumber.glue` setting.
+
+Parameter Types in the `cucumber.glue` globs will be picked up automatically.
 
 Default value:
 

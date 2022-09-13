@@ -2,10 +2,10 @@
   "name": "cucumber-official",
   "displayName": "Cucumber",
   "description": "Cucumber for Visual Studio Code",
-  "version": "1.2.6",
+  "version": "1.3.0",
   "publisher": "CucumberOpen",
   "engines": {
-    "vscode": "^1.63.2"
+    "vscode": "^1.69.0"
   },
   "categories": [
     "Programming Languages",
@@ -56,28 +56,33 @@
       "title": "Cucumber",
       "properties": {
         "cucumber.features": {
-          "markdownDescription": "The `cucumber.features` setting overrides where the extension \nshould look for `.feature` files. \n\nIf no feature files are found, [autocomplete](#autocomplete) \nwill not work.\n\nDefault value:\n\n```json\n{\n  \"cucumber.features\": [\n    \"features/**/*.feature\",\n    \"src/test/**/*.feature\" \n  ]\n}\n```",
+          "markdownDescription": "The `cucumber.features` setting overrides where the extension \nshould look for `.feature` files. \n\nIf no feature files are found, [autocomplete](#autocomplete) \nwill not work.\n\nDefault value:\n\n```json\n{\n  \"cucumber.features\": [\n    \"src/test/**/*.feature\",\n    \"features/**/*.feature\",\n    \"tests/**/*.feature\",\n    \"*specs*/**/.feature\"\n  ]\n}\n```",
           "type": "array",
           "required": false,
           "default": [
+            "src/test/**/*.feature",
             "features/**/*.feature",
-            "src/test/**/*.feature"
+            "tests/**/*.feature",
+            "*specs*/**/.feature"
           ]
         },
         "cucumber.glue": {
-          "markdownDescription": "The `cucumber.glue` setting overrides where the extension\nshould look for source code where step definitions and\nparameter types are defined.\n\nIf no glue files are found, [autocomplete](#autocomplete) \nwill not work, and all Gherkin steps will be underlined as \nundefined. [Generate step definition](#generate-step-definition)\nwill not work either.\n\nDefault value:\n\n```json\n{\n  \"cucumber.glue\": [\n    \"features/**/*.php\",\n    \"features/**/*.rb\",\n    \"features/**/*.ts\",\n    \"src/test/**/*.java\",\n    \"*specs*/**/.cs\"\n  ]\n}\n```",
+          "markdownDescription": "The `cucumber.glue` setting overrides where the extension\nshould look for source code where step definitions and\nparameter types are defined.\n\nIf no glue files are found, [autocomplete](#autocomplete) \nwill not work, and all Gherkin steps will be underlined as \nundefined. [Generate step definition](#generate-step-definition)\nwill not work either.\n\nDefault value:\n\n```json\n{\n  \"cucumber.glue\": [\n    \"src/test/**/*.java\",\n    \"features/**/*.ts\",\n    \"features/**/*.tsx\",\n    \"features/**/*.php\",\n    \"features/**/*.py\",\n    \"tests/**/*.py\",\n    \"features/**/*.rb\",\n    \"*specs*/**/.cs\"\n  ]\n}\n```",
           "type": "array",
           "required": false,
           "default": [
-            "features/**/*.php",
-            "features/**/*.rb",
-            "features/**/*.ts",
             "src/test/**/*.java",
+            "features/**/*.ts",
+            "features/**/*.tsx",
+            "features/**/*.php",
+            "features/**/*.py",
+            "tests/**/*.py",
+            "features/**/*.rb",
             "*specs*/**/.cs"
           ]
         },
         "cucumber.parameterTypes": {
-          "markdownDescription": "Override the `cucumber.parameterTypes` setting if your Cucumber Expressions\nare using [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are defined outside your `cucumber.glue` setting.\n\nDefault value:\n\n```json\n{\n  \"cucumber.parameterTypes\": []\n}\n```\n\nFor example, if you're using the `actor` parameter type from [@cucumber/screenplay](https://github.com/cucumber/screenplay.js#actors) you'll have to declare this in the `parameterTypes` setting:\n\n````json\n{\n  \"cucumber.parameterTypes\": [\n    { \"name\": \"actor\", \"regexp\": \"[A-Z][a-z]+\" }\n  ]\n}\n````",
+          "markdownDescription": "Override the `cucumber.parameterTypes` setting if your Cucumber Expressions\nare using [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are defined outside your `cucumber.glue` setting.\n\nParameter Types in the `cucumber.glue` globs will be picked up automatically.\n\nDefault value:\n\n```json\n{\n  \"cucumber.parameterTypes\": []\n}\n```\n\nFor example, if you're using the `actor` parameter type from [@cucumber/screenplay](https://github.com/cucumber/screenplay.js#actors) you'll have to declare this in the `parameterTypes` setting:\n\n````json\n{\n  \"cucumber.parameterTypes\": [\n    { \"name\": \"actor\", \"regexp\": \"[A-Z][a-z]+\" }\n  ]\n}\n````",
           "type": "array",
           "required": false,
           "default": []
@@ -105,30 +110,30 @@
     "cucumber-blockly:debug": "npm run esbuild-cucumber-blockly && http-server -c-1 src/media"
   },
   "dependencies": {
-    "@cucumber/language-server": "0.12.9",
-    "vscode-languageclient": "8.0.1"
+    "@cucumber/language-server": "0.13.1",
+    "vscode-languageclient": "8.0.2"
   },
   "devDependencies": {
-    "@types/glob": "7.2.0",
+    "@types/glob": "8.0.0",
     "@types/mocha": "9.1.1",
-    "@types/vscode": "1.63.2",
-    "@typescript-eslint/eslint-plugin": "5.26.0",
-    "@typescript-eslint/parser": "5.26.0",
-    "esbuild": "0.14.39",
-    "eslint": "8.16.0",
+    "@types/vscode": "1.69.0",
+    "@typescript-eslint/eslint-plugin": "5.37.0",
+    "@typescript-eslint/parser": "5.37.0",
+    "esbuild": "0.15.7",
+    "eslint": "8.23.1",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-prettier": "4.0.0",
-    "eslint-plugin-simple-import-sort": "7.0.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-simple-import-sort": "8.0.0",
     "glob": "8.0.3",
     "http-server": "14.1.1",
     "mocha": "10.0.0",
-    "npm-check-updates": "13.0.3",
-    "prettier": "2.6.2",
+    "npm-check-updates": "16.1.2",
+    "prettier": "2.7.1",
     "pretty-quick": "3.1.3",
-    "typescript": "4.7.2",
-    "vsce": "2.8.0",
+    "typescript": "4.8.3",
+    "vsce": "2.11.0",
     "vscode-test": "1.6.1"
   }
 }

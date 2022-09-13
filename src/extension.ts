@@ -1,36 +1,22 @@
-import path from 'path'
+import { newWasmServer } from '@cucumber/language-server'
 import vscode from 'vscode'
-import {
-  LanguageClient,
-  LanguageClientOptions,
-  ServerOptions,
-  TransportKind,
-} from 'vscode-languageclient/node'
+import { LanguageClient, LanguageClientOptions, ServerOptions } from 'vscode-languageclient/node'
 
 import { CucumberBlocklyEditorProvider } from './CucumberBlocklyEditorProvider.js'
+import { VscodeFiles } from './VscodeFiles'
 
 let client: LanguageClient
 
-// this method is called when your extension is activated
-// your extension is activated the very first time the command is executed
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(CucumberBlocklyEditorProvider.register(context))
-
-  const serverModule = context.asAbsolutePath(path.join('out', 'cucumber-language-server.js'))
-  const debugOptions = { execArgv: ['--nolazy', '--inspect=6009'] }
-
-  const serverOptions: ServerOptions = {
-    run: { module: serverModule, transport: TransportKind.ipc },
-    debug: {
-      module: serverModule,
-      transport: TransportKind.ipc,
-      options: debugOptions,
-    },
-  }
+  const makeFiles = (rootUri: string) => new VscodeFiles(rootUri, vscode.workspace.fs)
+  const serverOptions: ServerOptions = async () => newWasmServer(__dirname, makeFiles)
 
   const clientOptions: LanguageClientOptions = {
     // We need to list all supported languages here so that
     // the language server is notified to reindex when a file changes
+    // https://code.visualstudio.com/docs/languages/identifiers#_known-language-identifiers
     documentSelector: [
       { scheme: 'file', language: 'csharp' },
       { scheme: 'file', language: 'cucumber' },
@@ -38,6 +24,8 @@ export async function activate(context: vscode.ExtensionContext) {
       { scheme: 'file', language: 'php' },
       { scheme: 'file', language: 'ruby' },
       { scheme: 'file', language: 'typescript' },
+      { scheme: 'file', language: 'typescriptreact' },
+      { scheme: 'file', language: 'python' },
     ],
   }
 

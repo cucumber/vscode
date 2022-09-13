@@ -7,6 +7,41 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+- The Cucumber Language Server is now started in-process ([#105](https://github.com/cucumber/vscode/pull/105)) 
+
+## [1.3.0] - 2022-09-10
+### Added
+- Add support for `.tsx` ([#87](https://github.com/cucumber/language-service/issues/87) [#90](https://github.com/cucumber/language-service/pull/90))
+
+### Fixed
+- RegExp flags in Step Definitions are preserved ([#91](https://github.com/cucumber/language-service/issues/91#issuecomment-1242243037) [#92](https://github.com/cucumber/language-service/pull/92))
+
+## [1.2.11] - 2022-08-29
+### Fixed
+- Change defaults so that [pytest-bdd](https://pypi.org/project/pytest-bdd/) works out of the box ([#102](https://github.com/cucumber/vscode/pull/102))
+- Trigger reindexing when Python files change ([#101](https://github.com/cucumber/vscode/pull/101))
+
+## [1.2.10] - 2022-08-27
+### Fixed
+- Fix `@types/vscode` - require minimum version `1.69.0`.
+
+## [1.2.9] - 2022-08-27
+### Fixed
+- Fixed defaults for C# ([#93](https://github.com/cucumber/vscode/pull/93))
+- Fix syntax highlighting of `Background` keyword ([#91](https://github.com/cucumber/vscode/issues/91))
+- Bugfixes in [@cucumber/language-server 0.12.12](https://github.com/cucumber/language-service/releases/tag/v0.12.12)
+- Bugfixes in [@cucumber/language-service 0.32.0](https://github.com/cucumber/language-service/releases/tag/v0.33.0)
+
+## [1.2.8] - 2022-07-14
+### Fixed
+- Bugfixes in [@cucumber/language-server 0.12.11](https://github.com/cucumber/language-service/releases/tag/v0.12.11)
+- Bugfixes in [@cucumber/language-service 0.31.0](https://github.com/cucumber/language-service/releases/tag/v0.31.0)
+
+## [1.2.7] - 2022-06-14
+### Fixed
+- Better SpecFlow/C# support. See [@cucumber/language-service 0.30.0](https://github.com/cucumber/language-service/releases/tag/v0.30.0) for details.
+
 ## [1.2.6] - 2022-05-26
 ### Fixed
 - Log working directory in addition to root path
@@ -81,7 +116,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - First release
 
-[Unreleased]: https://github.com/cucumber/vscode/compare/v1.2.6...HEAD
+[Unreleased]: https://github.com/cucumber/vscode/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/cucumber/vscode/compare/v1.2.11...v1.3.0
+[1.2.11]: https://github.com/cucumber/vscode/compare/v1.2.10...v1.2.11
+[1.2.10]: https://github.com/cucumber/vscode/compare/v1.2.9...v1.2.10
+[1.2.9]: https://github.com/cucumber/vscode/compare/v1.2.8...v1.2.9
+[1.2.8]: https://github.com/cucumber/vscode/compare/v1.2.7...v1.2.8
+[1.2.7]: https://github.com/cucumber/vscode/compare/v1.2.6...v1.2.7
 [1.2.6]: https://github.com/cucumber/vscode/compare/v1.2.5...v1.2.6
 [1.2.5]: https://github.com/cucumber/vscode/compare/v1.2.4...v1.2.5
 [1.2.4]: https://github.com/cucumber/vscode/compare/v1.2.3...v1.2.4
