@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+- The Cucumber Language Server is now started in-process ([#105](https://github.com/cucumber/vscode/pull/105)) 
+
 ## [1.3.0] - 2022-09-10
 ### Added
 - Add support for `.tsx` ([#87](https://github.com/cucumber/language-service/issues/87) [#90](https://github.com/cucumber/language-service/pull/90))
