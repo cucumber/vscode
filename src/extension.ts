@@ -4,6 +4,8 @@ import { LanguageClient, LanguageClientOptions, ServerOptions } from 'vscode-lan
 
 import { VscodeFiles } from './VscodeFiles'
 
+import { cucumber } from './treeView';
+
 let client: LanguageClient
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -30,6 +32,10 @@ export async function activate(context: vscode.ExtensionContext) {
   client = new LanguageClient('Cucumber', 'Cucumber Language Server', serverOptions, clientOptions)
 
   await client.start()
+
+  let tree = new cucumber.tree_view();
+	vscode.window.registerTreeDataProvider('cucumber', tree);
+	tree.refresh();
 }
 
 // this method is called when your extension is deactivated

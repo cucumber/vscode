@@ -24,10 +24,78 @@
   },
   "icon": "images/icon-128x128.png",
   "activationEvents": [
-    "onLanguage:cucumber"
+    "onLanguage:cucumber",
+    "onCommand:cucumber.on_item_clicked",
+    "onCommand:cucumber.context_menu_run",
+    "onCommand:cucumber.refresh",
+    "onCommand:cucumber.run"
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "cucumber-view-container",
+          "title": "Cucumber",
+          "icon": "images/treeview/navigation_bar_logo.png"
+        }
+      ]
+    },
+    "views": {
+			"cucumber-view-container": [
+				{
+					"id": "cucumber",
+					"name": "Cucumber"
+				}
+			]
+		},
+    "commands": [
+			{
+				"command": "cucumber.on_item_clicked",
+				"title": "tree view item"
+			},
+			{
+				"command": "cucumber.context_menu_run",
+				"title": "Run"
+			},	
+			{
+				"command": "cucumber.refresh",
+				"title": "refresh",
+				"icon": {
+					"light": "images/treeview/light/refresh.svg",
+					"dark": "images/treeview/dark/refresh.svg"
+				}
+			},
+			{
+				"command": "cucumber.run",
+				"title": "run",
+				"icon": {
+					"light": "images/treeview/run.png",
+					"dark": "images/treeview/run.png"
+				}
+			}
+		],
+		"menus": {
+			"view/title": [
+				{
+					"command": "cucumber.refresh",
+					"when": "view == cucumber",
+					"group": "navigation@1"
+				},
+				{
+					"command": "cucumber.run",
+					"when": "view == cucumber",
+					"group": "navigation@0"
+				}
+			],
+			"view/item/context": [
+				{
+					"command": "cucumber.context_menu_run",
+					"when": "view == cucumber",
+					"group": "cucumber@0"
+				}
+			]
+		},
     "languages": [
       {
         "id": "cucumber",
@@ -40,6 +108,32 @@
         "configuration": "./language-configuration.json"
       }
     ],
+    "debuggers": [
+			{
+				"type": "cucumber",
+				"label": "Cucumber",
+				"configurationAttributes": {
+					"launch": {
+						"properties": {
+              "command":{
+                "type": "string",
+                "description": "Executing command to run cucumber tests",
+                "default": "cucumber"
+              },
+							"cwd": {
+								"type": "string",
+                "description": "Current working directory of from where the cucumber command is executed",
+                "default": "${workspaceFolder}"
+							},
+							"program": {
+								"type": "string",
+                "description": "If there is a test executable (like in C++) set the path to the program to be launched"
+							}
+						}	
+					}
+				}
+			}
+		],
     "configuration": {
       "title": "Cucumber",
       "properties": {
