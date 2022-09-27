@@ -4,7 +4,7 @@ import { LanguageClient, LanguageClientOptions, ServerOptions } from 'vscode-lan
 
 import { VscodeFiles } from './VscodeFiles'
 
-import { cucumber } from './treeView';
+import { cucumber } from './tree_view';
 
 let client: LanguageClient
 

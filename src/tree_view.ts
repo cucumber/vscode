@@ -79,9 +79,11 @@ export namespace cucumber {
         }
 
         private internal_run(feature: string|undefined) {
-            var cucumber_runner = new cucumber(feature);
-            cucumber_runner.run_tests().then(() => {
-                cucumber_runner.set_test_results(this.data);
+            const configs = vscode.workspace.getConfiguration("launch").get("configurations") as Array<debug_config>;       
+            // TODO select config
+            const test_runner = create_test_runner(configs[0], feature);
+            test_runner.run_tests().then(() => {
+                test_runner.parse_json_report(this.data);
                 this.reload_tree_data();
             });
         }
@@ -145,28 +147,17 @@ export namespace cucumber {
             return this.data;
         }
 
-        // TODO refactor
         public update_feature_icons() {
             this.data.forEach((feature) => {
-                feature.set_test_result(test_result.none);
-                feature.children.forEach((scenario) => {
-                    if (feature.get_last_result() !== test_result.failed) {   
-                        switch (scenario.get_last_result()) {
-                            case test_result.passed:
-                                feature.set_test_result(test_result.passed);
-                                break;
-                            case test_result.failed:
-                                feature.set_test_result(test_result.failed);
-                                break;     
-                            case test_result.undefined:
-                                feature.set_test_result(test_result.undefined);
-                                break;          
-                            default:
-                                feature.set_test_result(test_result.none);
-                                break;
-                        }
-                    }
-                });
+                if (feature.children.every((element) => element.get_last_result() === test_result.passed)) {
+                    feature.set_test_result(test_result.passed);
+                } else if (feature.children.some((element) => element.get_last_result() === test_result.failed)) {
+                    feature.set_test_result(test_result.failed);
+                } else if (feature.children.some((element) => element.get_last_result() === test_result.undefined)) {
+                    feature.set_test_result(test_result.undefined);
+                }  else {
+                    feature.set_test_result(test_result.none);
+                }            
             });
         }
 
@@ -276,6 +267,47 @@ export namespace cucumber {
         // step
     }
 
+    
+    function create_test_runner(config: debug_config, feature: string|undefined) {
+        
+        return new cucumber(config, feature);
+
+        // TODO impl. other runners. 
+        // switch (config.command) {
+        //     case 'behave':
+        //         break;
+        
+        //     default:
+        //       return new cucumber(config, feature);  
+        // }
+    }
+
+    abstract class test_runner {
+
+        readonly config : debug_config;
+        private args: string[] = [];
+
+        constructor(cfg: debug_config) {
+            this.config = cfg; 
+            
+            if (vscode.workspace.workspaceFolders) {
+                const wspace_folder = vscode.workspace.workspaceFolders[0].uri.fsPath;
+                this.config.cwd = this.config.cwd === undefined ?  wspace_folder : this.config.cwd.replace("${workspaceFolder}", wspace_folder);
+                this.config.program = this.config.program === undefined ? undefined : this.config.program.replace("${workspaceFolder}", wspace_folder);   
+            }
+  
+        }
+        protected add_argument(arg : string ){
+            this.args.push(JSON.stringify(arg));
+        }
+        protected get_args() {
+            return this.args;
+        }
+        public abstract run_tests() : Promise<unknown>;
+        // TODO rename parse_json_report
+        public abstract parse_json_report(tree_data: tree_view_data): void;
+    }    
+
 
     interface cucumber_results {
         id: string;
@@ -287,38 +319,27 @@ export namespace cucumber {
             steps: [{
                 result: {
                     status: string;
+                    error_message?: string;
                 }
             }]
         }]
     }
-    
-    class cucumber {
-        private cwd: string;
-        private args: string[] = [];
-        private program: string|undefined;
-        private command: string;
+    class cucumber extends test_runner {
+
         private test_result : string = '';
 
-        constructor(features: string|undefined){
+        constructor(cfg: debug_config, features: string|undefined){
+            super(cfg);
             if (vscode.workspace.workspaceFolders) {
-                const configs = vscode.workspace.getConfiguration("launch").get("configurations") as Array<debug_config>;
-                // TODO refactor, only one launch config considered ... 
-                const cfg = configs[0];     
-                const wspace_folder = vscode.workspace.workspaceFolders[0].uri.fsPath;
-                this.cwd = cfg.cwd === undefined ?  wspace_folder : cfg.cwd.replace("${workspaceFolder}", wspace_folder);
-                this.program = cfg.program === undefined ? undefined : cfg.program.replace("${workspaceFolder}", wspace_folder);
-                this.command = cfg.command;
-                
-                // TODO Refactor, behave has other arguments....
+                // TODO refactor pushing default arguments
                 if (features === undefined) {
-                    this.args.push(JSON.stringify(this.cwd + "/features"));
+                    super.add_argument("./features");
                 } else {
-                    this.args.push(JSON.stringify(features));
+                    super.add_argument(features);
                 }
-                this.args.push(JSON.stringify('--publish-quiet'));
-                this.args.push(JSON.stringify('--format'));
-                this.args.push(JSON.stringify('json'));
-
+                super.add_argument('--publish-quiet');
+                super.add_argument('--format');
+                super.add_argument('json');
             } else {
                 throw new Error("can't execute cucumber, no workspace folder is opened!");
             }
@@ -326,41 +347,39 @@ export namespace cucumber {
 
         public async run_tests() {
             vscode.window.showInformationMessage('Starting tests, please wait.');
-            if (this.program !== undefined) {
+            if (this.config.program !== undefined) {
                 await this.launch_program();
             } 
             return this.execute_cucumber();
         }
 
-        // TODO Refactor ugly nested loops
-        public set_test_results(tree_data: tree_view_data) {
+        // TODO rename parse_json_report
+        public parse_json_report(tree_data: tree_view_data) {
             var json_report = JSON.parse(this.test_result) as cucumber_results[];
             json_report.forEach((feature) => {
                 feature.elements.forEach((scenario) => {
-                    var result = test_result.passed;
-                    scenario.steps.forEach((step) => {
-                        switch (step.result.status) {
-                            case 'failed':
-                                result = test_result.failed;
-                                break;
-                            case 'undefined':
-                                result = test_result.undefined
-                                break;
-                        }
-                    });
-                    tree_data.get_scenario_by_uri_and_row(feature.uri, scenario.line)?.set_test_result(result);
+
+                    var current_item = tree_data.get_scenario_by_uri_and_row(feature.uri, scenario.line);
+                
+                    if (scenario.steps.some((element) => element.result.status === 'failed')) {
+                        current_item?.set_test_result(test_result.failed);
+                    } 
+                    else if (scenario.steps.some((element) => element.result.status === 'undefined')) {
+                        current_item?.set_test_result(test_result.undefined);
+                    } else {
+                        current_item?.set_test_result(test_result.passed);
+                    }
                 });
             });
         }
 
-
         private launch_program() {
-            var self = this;
+            var config = this.config;
             return new Promise(function (resolve, reject) {
-
-                var runner = spawn(self.program!, {detached: false});
+                console.log("launching: " + config.program!);
+                var runner = spawn(config.program!, {detached: false});
                 runner.on('spawn', () => {
-                    console.log(self.program + ' started!');
+                    console.log(config.program + ' started!');
                     resolve(true);
                 });
                 runner.on('error', (code) =>{
@@ -371,11 +390,12 @@ export namespace cucumber {
         }
 
         private execute_cucumber() {
+            var config = this.config;
+            var args = this.get_args();
             var self = this;
             return new Promise(function (resolve, reject) {
-                var runner = spawn(self.command , self.args , {detached: false, shell: true, cwd: self.cwd});
-                console.log(self.command);
-                console.log(self.args);
+                console.log("executing: " + config.command + ' ' + args);
+                var runner = spawn(config.command , args , {detached: false, shell: true, cwd: config.cwd});
                 runner.stdout.on('data', data => {
                     self.test_result = self.test_result.concat(data.toString());
                 });
@@ -390,4 +410,5 @@ export namespace cucumber {
             });
         }
     }
+
 }
