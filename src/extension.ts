@@ -1,9 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-inferrable-types */
+/* eslint-disable prettier/prettier */
 import { newWasmServer } from '@cucumber/language-server'
 import vscode from 'vscode'
 import { LanguageClient, LanguageClientOptions, ServerOptions } from 'vscode-languageclient/node'
 
+import {CucumberDocumentSymbolProvider} from './CucumberDocumentSymbolProvider'
 import { VscodeFiles } from './VscodeFiles'
-
 let client: LanguageClient
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -26,6 +29,12 @@ export async function activate(context: vscode.ExtensionContext) {
       { scheme: 'file', language: 'python' },
     ],
   }
+
+  context.subscriptions.push(
+    vscode.languages.registerDocumentSymbolProvider(
+        {scheme: "file", language: "cucumber"}, 
+        new CucumberDocumentSymbolProvider())
+);
 
   client = new LanguageClient('Cucumber', 'Cucumber Language Server', serverOptions, clientOptions)
 
