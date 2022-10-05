@@ -110,6 +110,7 @@
     "cucumber-blockly:debug": "npm run esbuild-cucumber-blockly && http-server -c-1 src/media"
   },
   "dependencies": {
+    "@cucumber/blockly": "0.0.3",
     "@cucumber/language-server": "0.13.1",
     "vscode-languageclient": "8.0.2"
   },

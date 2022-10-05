@@ -11,6 +11,6 @@ const gherkinSource = `
         And some other gibberish
   `
 mount($cucumberBlockly, gherkinSource, [], [], (err, gherkinSource, workspaceXml) => {
-  if(err) console.error(err)
-  if(gherkinSource) console.log(gherkinSource)
+  if (err) console.error(err)
+  if (gherkinSource) console.log(gherkinSource)
 })

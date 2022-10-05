@@ -48,21 +48,21 @@ export class CucumberBlocklyEditorProvider implements vscode.CustomTextEditorPro
     })
   }
 
-  private getTheme(): string {
-    const c = vscode.workspace.getConfiguration()
-    const theme = c.get<string>(themeKey, 'automatic')
-
-    if (theme !== 'automatic') {
-      return theme
-    }
-
-    const ctk = vscode.ColorThemeKind
-    return {
-      [ctk.Light]: 'Kennedy',
-      [ctk.Dark]: 'dark',
-      [ctk.HighContrast]: 'Kennedy',
-    }[vscode.window.activeColorTheme.kind]
-  }
+  // private getTheme(): string {
+  //   const c = vscode.workspace.getConfiguration()
+  //   const theme = c.get<string>(themeKey, 'automatic')
+  //
+  //   if (theme !== 'automatic') {
+  //     return theme
+  //   }
+  //
+  //   const ctk = vscode.ColorThemeKind
+  //   return {
+  //     [ctk.Light]: 'Kennedy',
+  //     [ctk.Dark]: 'dark',
+  //     [ctk.HighContrast]: 'Kennedy',
+  //   }[vscode.window.activeColorTheme.kind]
+  // }
 
   /**
    * Get the static html used for the editor webviews.
