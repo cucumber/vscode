@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Added
+- Support for [Cucumber Rust](https://github.com/cucumber-rs/cucumber) ([#82](https://github.com/cucumber/language-service/issues/82), [#99](https://github.com/cucumber/language-service/pull/99))
+
+### Fixed
+- Don't throw an error when Regular Expressions have optional capture groups ([#96](https://github.com/cucumber/language-service/issues/96), [#97](https://github.com/cucumber/language-service/pull/97)).
+
 ### Changed
 - The Cucumber Language Server is now started in-process ([#105](https://github.com/cucumber/vscode/pull/105)) 
 

@@ -31,7 +31,7 @@ Get it from the [Open VSX Registry](https://open-vsx.org/extension/CucumberOpen/
   - PHP
   - Python/Behave
   - Ruby
-  - [Rust - help needed](https://github.com/cucumber/language-service/issues/82)
+  - Rust
   - TypeScript
 
 ### Autocomplete
@@ -132,6 +132,8 @@ Default value:
     "features/**/*.php",
     "features/**/*.py",
     "tests/**/*.py",
+    "tests/**/*.rs",
+    "features/**/*.rs",
     "features/**/*.rb",
     "*specs*/**/.cs"
   ]
