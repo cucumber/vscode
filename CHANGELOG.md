@@ -7,14 +7,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.4.0] - 2022-10-06
 ### Added
 - Support for [Cucumber Rust](https://github.com/cucumber-rs/cucumber) ([#82](https://github.com/cucumber/language-service/issues/82), [#99](https://github.com/cucumber/language-service/pull/99))
 
+### Changed
+- The Cucumber Language Server is now started in-process ([#105](https://github.com/cucumber/vscode/pull/105))
+
 ### Fixed
 - Don't throw an error when Regular Expressions have optional capture groups ([#96](https://github.com/cucumber/language-service/issues/96), [#97](https://github.com/cucumber/language-service/pull/97)).
-
-### Changed
-- The Cucumber Language Server is now started in-process ([#105](https://github.com/cucumber/vscode/pull/105)) 
 
 ## [1.3.0] - 2022-09-10
 ### Added
@@ -122,7 +123,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - First release
 
-[Unreleased]: https://github.com/cucumber/vscode/compare/v1.3.0...HEAD
+[Unreleased]: https://github.com/cucumber/vscode/compare/v1.4.0...HEAD
+[1.4.0]: https://github.com/cucumber/vscode/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/cucumber/vscode/compare/v1.2.11...v1.3.0
 [1.2.11]: https://github.com/cucumber/vscode/compare/v1.2.10...v1.2.11
 [1.2.10]: https://github.com/cucumber/vscode/compare/v1.2.9...v1.2.10
