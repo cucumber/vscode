@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.4.1] - 2022-10-10
 ### Fixed
 - Add Rust document selector ([#131](https://github.com/cucumber/vscode/pull/113))
 - Fix rust snippet fn name to lowercase ([#103](https://github.com/cucumber/language-service/issues/103), [#104](https://github.com/cucumber/language-service/pull/104))
@@ -127,7 +128,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - First release
 
-[Unreleased]: https://github.com/cucumber/vscode/compare/v1.4.0...HEAD
+[Unreleased]: https://github.com/cucumber/vscode/compare/v1.4.1...HEAD
+[1.4.1]: https://github.com/cucumber/vscode/compare/v1.4.0...v1.4.1
 [1.4.0]: https://github.com/cucumber/vscode/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/cucumber/vscode/compare/v1.2.11...v1.3.0
 [1.2.11]: https://github.com/cucumber/vscode/compare/v1.2.10...v1.2.11
