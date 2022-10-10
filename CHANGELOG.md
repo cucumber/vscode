@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+- (TypeScript) Fix bug in template literal recognition
+
 ## [1.5.0] - 2022-10-10
 ### Added
 - New Document Outline panel, making it easier to navigate between scenarios.
