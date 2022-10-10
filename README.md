@@ -79,6 +79,13 @@ Gherkin documents are formatted using two space indentation.
 
 Numeric cells are right-aligned (as in Excel). Non-numeric cells are left-aligned.
 
+### Document Outline
+
+![Document Outline](images/document-outline.gif)
+
+The Outline panel displays an outline of the Gherkin document,
+making it easy to navigate between scenarios.
+
 ## Extension Settings
 
 In most cases you shouldn't need to specify any settings

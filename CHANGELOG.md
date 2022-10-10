@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Added
+- New Document Outline panel, making it easier to navigate between scenarios.
+- (Java) Recognise regexps with `(?i)`, with the caveat that the resulting JavaScript `RegExp` is _not_ case insensitive ([#100](https://github.com/cucumber/language-service/issues/100), [#108](https://github.com/cucumber/language-service/pull/108))
+- (TypeScript) Add support for template literals without subsitutions. ([#101](https://github.com/cucumber/language-service/issues/101), [#107](https://github.com/cucumber/language-service/pull/107))
+
 ## [1.4.1] - 2022-10-10
 ### Fixed
 - Add Rust document selector ([#131](https://github.com/cucumber/vscode/pull/113))
