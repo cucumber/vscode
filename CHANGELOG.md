@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.5.0] - 2022-10-10
 ### Added
 - New Document Outline panel, making it easier to navigate between scenarios.
 - (Java) Recognise regexps with `(?i)`, with the caveat that the resulting JavaScript `RegExp` is _not_ case insensitive ([#100](https://github.com/cucumber/language-service/issues/100), [#108](https://github.com/cucumber/language-service/pull/108))
@@ -133,7 +134,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - First release
 
-[Unreleased]: https://github.com/cucumber/vscode/compare/v1.4.1...HEAD
+[Unreleased]: https://github.com/cucumber/vscode/compare/v1.5.0...HEAD
+[1.5.0]: https://github.com/cucumber/vscode/compare/v1.4.1...v1.5.0
 [1.4.1]: https://github.com/cucumber/vscode/compare/v1.4.0...v1.4.1
 [1.4.0]: https://github.com/cucumber/vscode/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/cucumber/vscode/compare/v1.2.11...v1.3.0
