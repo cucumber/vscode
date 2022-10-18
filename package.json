@@ -40,6 +40,18 @@
         "configuration": "./language-configuration.json"
       }
     ],
+    "customEditors": [
+      {
+        "viewType": "Cucumber.Blockly",
+        "displayName": "Cucumber Blockly",
+        "selector": [
+          {
+            "filenamePattern": "*.gherkin"
+          }
+        ],
+        "priority": "default"
+      }
+    ],
     "configuration": {
       "title": "Cucumber",
       "properties": {
@@ -81,12 +93,14 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "npm run esbuild-extension && npm run esbuild-server",
+    "vscode:prepublish": "npm run build",
+    "build": "npm run esbuild-extension && npm run esbuild-cucumber-blockly",
     "esbuild-extension": "esbuild ./src/extension.ts --external:vscode --bundle --outfile=out/extension.js --format=cjs --platform=node --minify --sourcemap",
-    "esbuild-server": "npm run compile && esbuild dist/src/cucumber-language-server.js --bundle --outfile=out/cucumber-language-server.js --format=cjs --platform=node --sourcemap",
-    "prepare": "mkdir -p out && cp node_modules/@cucumber/language-service/dist/*.wasm out",
-    "build": "npm run esbuild-extension && npm run esbuild-server",
+    "esbuild-cucumber-blockly": "esbuild ./src/cucumber-blockly.ts --external:vscode --bundle --outfile=media/cucumber-blockly.js --format=cjs --platform=browser --minify --sourcemap",
     "compile": "tsc --build",
+    "prebuild": "echo 'FIXME'",
+    "copy-wasms": "mkdir -p out && cp node_modules/@cucumber/language-service/dist/*.wasm out",
+    "copy-blockly-media": "cp -r node_modules/blockly/media/ media",
     "pretest": "npm run compile",
     "eslint": "eslint src --ext ts",
     "eslint-fix": "eslint src --ext ts --max-warnings 0 --fix",
@@ -98,6 +112,7 @@
     "upgrade": "npm-check-updates --upgrade"
   },
   "dependencies": {
+    "@cucumber/blockly": "^0.0.4",
     "@cucumber/language-server": "1.1.1",
     "vscode-languageclient": "8.0.2"
   },
@@ -105,6 +120,7 @@
     "@types/glob": "8.0.0",
     "@types/mocha": "10.0.0",
     "@types/vscode": "1.69.0",
+    "@types/vscode-webview": "1.57.0",
     "@typescript-eslint/eslint-plugin": "5.40.1",
     "@typescript-eslint/parser": "5.40.1",
     "esbuild": "0.15.11",

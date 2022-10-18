@@ -49,3 +49,7 @@ popd
 ```
 
 Then exit your 2nd editor and start it again via `Run`
+
+## Cucumber Blockly
+
+See [Inspecting and debugging webviews](https://code.visualstudio.com/api/extension-guides/webview#inspecting-and-debugging-webviews)
