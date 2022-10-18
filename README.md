@@ -24,14 +24,14 @@ Get it from the [Open VSX Registry](https://open-vsx.org/extension/CucumberOpen/
 - [Syntax highlighting](#syntax-highlighting)
 - [Formatting](#formatting) (pretty printing)
 - Language support
-  - C#
+  - C#/SpecFlow
   - [Go/Godog - help needed](https://github.com/cucumber/language-service/issues/72)
   - Java
   - [JavaScript - help needed](https://github.com/cucumber/language-service/issues/42)
   - PHP
   - Python/Behave
   - Ruby
-  - [Rust - help needed](https://github.com/cucumber/language-service/issues/82)
+  - Rust
   - TypeScript
 
 ### Autocomplete
@@ -78,6 +78,13 @@ Undefined steps and syntax errors are underlined.
 Gherkin documents are formatted using two space indentation. 
 
 Numeric cells are right-aligned (as in Excel). Non-numeric cells are left-aligned.
+
+### Document Outline
+
+![Document Outline](images/document-outline.gif)
+
+The Outline panel displays an outline of the Gherkin document,
+making it easy to navigate between scenarios.
 
 ## Extension Settings
 
@@ -132,6 +139,8 @@ Default value:
     "features/**/*.php",
     "features/**/*.py",
     "tests/**/*.py",
+    "tests/**/*.rs",
+    "features/**/*.rs",
     "features/**/*.rb",
     "*specs*/**/.cs"
   ]

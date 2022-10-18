@@ -7,8 +7,30 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.5.1] - 2022-10-11
+### Fixed
+- (TypeScript) Fix bug in template literal recognition
+
+## [1.5.0] - 2022-10-10
+### Added
+- New Document Outline panel, making it easier to navigate between scenarios.
+- (Java) Recognise regexps with `(?i)`, with the caveat that the resulting JavaScript `RegExp` is _not_ case insensitive ([#100](https://github.com/cucumber/language-service/issues/100), [#108](https://github.com/cucumber/language-service/pull/108))
+- (TypeScript) Add support for template literals without subsitutions. ([#101](https://github.com/cucumber/language-service/issues/101), [#107](https://github.com/cucumber/language-service/pull/107))
+
+## [1.4.1] - 2022-10-10
+### Fixed
+- Add Rust document selector ([#131](https://github.com/cucumber/vscode/pull/113))
+- Fix rust snippet fn name to lowercase ([#103](https://github.com/cucumber/language-service/issues/103), [#104](https://github.com/cucumber/language-service/pull/104))
+
+## [1.4.0] - 2022-10-06
+### Added
+- Support for [Cucumber Rust](https://github.com/cucumber-rs/cucumber) ([#82](https://github.com/cucumber/language-service/issues/82), [#99](https://github.com/cucumber/language-service/pull/99))
+
 ### Changed
-- The Cucumber Language Server is now started in-process ([#105](https://github.com/cucumber/vscode/pull/105)) 
+- The Cucumber Language Server is now started in-process ([#105](https://github.com/cucumber/vscode/pull/105))
+
+### Fixed
+- Don't throw an error when Regular Expressions have optional capture groups ([#96](https://github.com/cucumber/language-service/issues/96), [#97](https://github.com/cucumber/language-service/pull/97)).
 
 ## [1.3.0] - 2022-09-10
 ### Added
@@ -116,7 +138,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - First release
 
-[Unreleased]: https://github.com/cucumber/vscode/compare/v1.3.0...HEAD
+[Unreleased]: https://github.com/cucumber/vscode/compare/v1.5.1...HEAD
+[1.5.1]: https://github.com/cucumber/vscode/compare/v1.5.0...v1.5.1
+[1.5.0]: https://github.com/cucumber/vscode/compare/v1.4.1...v1.5.0
+[1.4.1]: https://github.com/cucumber/vscode/compare/v1.4.0...v1.4.1
+[1.4.0]: https://github.com/cucumber/vscode/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/cucumber/vscode/compare/v1.2.11...v1.3.0
 [1.2.11]: https://github.com/cucumber/vscode/compare/v1.2.10...v1.2.11
 [1.2.10]: https://github.com/cucumber/vscode/compare/v1.2.9...v1.2.10
