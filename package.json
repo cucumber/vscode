@@ -112,7 +112,7 @@
     "upgrade": "npm-check-updates --upgrade"
   },
   "dependencies": {
-    "@cucumber/blockly": "^0.0.4",
+    "@cucumber/blockly": "0.0.5",
     "@cucumber/language-server": "1.2.0",
     "vscode-languageclient": "8.0.2"
   },
