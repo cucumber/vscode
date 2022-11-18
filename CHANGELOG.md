@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Added
+- Added context to python snippet to properly support `behave`
+- Added `ParameterType` support to the python language implementation. This is currently supported via [cuke4behave](http://gitlab.com/cuke4behave/cuke4behave)
+
 ## [1.5.1] - 2022-10-11
 ### Fixed
 - (TypeScript) Fix bug in template literal recognition
