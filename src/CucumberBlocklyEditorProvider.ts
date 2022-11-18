@@ -1,6 +1,8 @@
 import { CucumberExpressions, Suggestion } from '@cucumber/language-server'
 import * as vscode from 'vscode'
 
+import { expressionToJson, registryToJson } from './CucumberExpressionsSerde'
+
 export class CucumberBlocklyEditorProvider implements vscode.CustomTextEditorProvider {
   private updateWebviewHtml: () => void
 
@@ -21,6 +23,7 @@ export class CucumberBlocklyEditorProvider implements vscode.CustomTextEditorPro
       webviewPanel.webview.html = this.getHtmlForWebview(
         webviewPanel.webview,
         document.getText(),
+        this.registry,
         this.expressions,
         this.suggestions
       )
@@ -47,6 +50,7 @@ export class CucumberBlocklyEditorProvider implements vscode.CustomTextEditorPro
   private getHtmlForWebview(
     webview: vscode.Webview,
     gherkinSource: string,
+    registry: CucumberExpressions.ParameterTypeRegistry,
     expressions: readonly CucumberExpressions.Expression[],
     suggestions: readonly Suggestion[]
   ): string {
@@ -108,8 +112,8 @@ export class CucumberBlocklyEditorProvider implements vscode.CustomTextEditorPro
       <script nonce="${nonce}">
         window.blocklyMedia = ${JSON.stringify(mediaUri.toString())}
         window.gherkinSource = ${JSON.stringify(gherkinSource)}
-        window.registryJson = ${JSON.stringify(expressions)}
-        window.expressionsJson = ${JSON.stringify(expressions)}
+        window.registryJson = ${JSON.stringify(registryToJson(registry))}
+        window.expressionsJson = ${JSON.stringify(expressions.map(expressionToJson))}
         window.suggestionsJson = ${JSON.stringify(suggestions)}
       </script>
       <script nonce="${nonce}" src="${scriptUri}"></script>

@@ -96,7 +96,7 @@
     "vscode:prepublish": "npm run build",
     "build": "npm run esbuild-extension && npm run esbuild-cucumber-blockly",
     "esbuild-extension": "esbuild ./src/extension.ts --external:vscode --bundle --outfile=out/extension.js --format=cjs --platform=node --minify --sourcemap",
-    "esbuild-cucumber-blockly": "esbuild ./src/cucumber-blockly.ts --external:vscode --bundle --outfile=media/cucumber-blockly.js --format=cjs --platform=browser --minify --sourcemap",
+    "esbuild-cucumber-blockly": "esbuild ./src/cucumber-blockly.ts --external:vscode --bundle --outfile=media/cucumber-blockly.js --format=esm --platform=browser --sourcemap=inline",
     "compile": "tsc --build",
     "prebuild": "echo 'FIXME'",
     "copy-wasms": "mkdir -p out && cp node_modules/@cucumber/language-service/dist/*.wasm out",

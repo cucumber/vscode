@@ -1,17 +1,24 @@
 // const vscode = acquireVsCodeApi()
 import { mount } from '@cucumber/blockly'
 
-import { expressionFromJson } from './CucumberExpressionsSerde'
+import { expressionFromJson, registryFromJson } from './CucumberExpressionsSerde'
 
 const $app = document.querySelector('#app')
 
+// @ts-ignore
+console.log('registryJson', registryJson)
+// @ts-ignore
+console.log('expressionsJson', expressionsJson)
+
 if ($app) {
   // @ts-ignore
-  const expressions = JSON.parse(expressionsJson).map((expressionJson) =>
-    expressionFromJson(expressionJson)
+  const registry = registryFromJson(registryJson)
+  // @ts-ignore
+  const expressions = expressionsJson.map((expressionJson) =>
+    expressionFromJson(registry, expressionJson)
   )
   // @ts-ignore
-  const suggestions = JSON.parse(suggestionsJson)
+  const suggestions = suggestionsJson
 
   console.log('TWO')
 
