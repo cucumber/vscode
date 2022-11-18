@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.6.0] - 2022-11-18
+### Added
+- Added context to python snippet to properly support `behave`
+- Added `ParameterType` support to the python language implementation. This is currently supported via [cuke4behave](http://gitlab.com/cuke4behave/cuke4behave)
+
 ## [1.5.1] - 2022-10-11
 ### Fixed
 - (TypeScript) Fix bug in template literal recognition
@@ -138,7 +143,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - First release
 
-[Unreleased]: https://github.com/cucumber/vscode/compare/v1.5.1...HEAD
+[Unreleased]: https://github.com/cucumber/vscode/compare/v1.6.0...HEAD
+[1.6.0]: https://github.com/cucumber/vscode/compare/v1.5.1...v1.6.0
 [1.5.1]: https://github.com/cucumber/vscode/compare/v1.5.0...v1.5.1
 [1.5.0]: https://github.com/cucumber/vscode/compare/v1.4.1...v1.5.0
 [1.4.1]: https://github.com/cucumber/vscode/compare/v1.4.0...v1.4.1
