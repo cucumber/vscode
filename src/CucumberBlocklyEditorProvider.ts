@@ -1,26 +1,55 @@
-import { Suggestion } from '@cucumber/language-server'
+import { CucumberExpressions, Suggestion } from '@cucumber/language-server'
 import * as vscode from 'vscode'
 
 export class CucumberBlocklyEditorProvider implements vscode.CustomTextEditorProvider {
-  constructor(private readonly context: vscode.ExtensionContext) {}
+  private updateWebviewHtml: () => void
+
+  constructor(
+    private readonly context: vscode.ExtensionContext,
+    private registry: CucumberExpressions.ParameterTypeRegistry,
+    private expressions: readonly CucumberExpressions.Expression[],
+    private suggestions: readonly Suggestion[]
+  ) {}
 
   async resolveCustomTextEditor(
     document: vscode.TextDocument,
     webviewPanel: vscode.WebviewPanel,
     token: vscode.CancellationToken
   ) {
-    webviewPanel.webview.options = { enableScripts: true }
-    webviewPanel.webview.html = this.getHtmlForWebview(webviewPanel.webview)
+    this.updateWebviewHtml = () => {
+      webviewPanel.webview.options = { enableScripts: true }
+      webviewPanel.webview.html = this.getHtmlForWebview(
+        webviewPanel.webview,
+        document.getText(),
+        this.expressions,
+        this.suggestions
+      )
+    }
+    this.updateWebviewHtml()
   }
 
-  onSuggestions(suggestions: readonly Suggestion[]) {
-    console.log('SUGGG', suggestions)
+  onReindexed(
+    registry: CucumberExpressions.ParameterTypeRegistry,
+    expressions: readonly CucumberExpressions.Expression[],
+    suggestions: readonly Suggestion[]
+  ) {
+    this.registry = registry
+    this.expressions = expressions
+    this.suggestions = suggestions
+    if (this.updateWebviewHtml) {
+      this.updateWebviewHtml()
+    }
   }
 
   /**
    * Get the static html used for the editor webviews.
    */
-  private getHtmlForWebview(webview: vscode.Webview): string {
+  private getHtmlForWebview(
+    webview: vscode.Webview,
+    gherkinSource: string,
+    expressions: readonly CucumberExpressions.Expression[],
+    suggestions: readonly Suggestion[]
+  ): string {
     // Local path to script and css for the webview
     const mediaUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, 'media'))
 
@@ -78,6 +107,10 @@ export class CucumberBlocklyEditorProvider implements vscode.CustomTextEditorPro
       </div>
       <script nonce="${nonce}">
         window.blocklyMedia = ${JSON.stringify(mediaUri.toString())}
+        window.gherkinSource = ${JSON.stringify(gherkinSource)}
+        window.registryJson = ${JSON.stringify(expressions)}
+        window.expressionsJson = ${JSON.stringify(expressions)}
+        window.suggestionsJson = ${JSON.stringify(suggestions)}
       </script>
       <script nonce="${nonce}" src="${scriptUri}"></script>
     </body>

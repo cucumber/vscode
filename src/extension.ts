@@ -9,16 +9,29 @@ let client: LanguageClient
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function activate(context: vscode.ExtensionContext) {
-  const blocklyProvider = new CucumberBlocklyEditorProvider(context)
-
   const serverOptions: ServerOptions = async () => {
+    // eslint-disable-next-line prefer-const
+    let blocklyProvider: CucumberBlocklyEditorProvider
     const serverInfo = startEmbeddedServer(
       __dirname,
       (rootUri: string) => new VscodeFiles(rootUri, vscode.workspace.fs),
-      (suggestions) => {
-        serverInfo.connection.console.log(`******** Suggestions: ${suggestions.length}`)
-        blocklyProvider.onSuggestions(suggestions)
+      (registry, expressions, suggestions) => {
+        serverInfo.connection.console.log(
+          `******** onReindexed: ${expressions.length}, ${suggestions.length}`
+        )
+        blocklyProvider.onReindexed(registry, expressions, suggestions)
       }
+    )
+    blocklyProvider = new CucumberBlocklyEditorProvider(
+      context,
+      serverInfo.server.registry,
+      serverInfo.server.expressions,
+      serverInfo.server.suggestions
+    )
+
+    // blocklyProvider.onReindexed(serverInfo.server.expressions, serverInfo.server.suggestions)
+    context.subscriptions.push(
+      vscode.window.registerCustomEditorProvider('Cucumber.Blockly', blocklyProvider)
     )
     return serverInfo
   }
@@ -43,10 +56,6 @@ export async function activate(context: vscode.ExtensionContext) {
   client = new LanguageClient('Cucumber', 'Cucumber Language Server', serverOptions, clientOptions)
 
   await client.start()
-
-  context.subscriptions.push(
-    vscode.window.registerCustomEditorProvider('Cucumber.Blockly', blocklyProvider)
-  )
 }
 
 // this method is called when your extension is deactivated
