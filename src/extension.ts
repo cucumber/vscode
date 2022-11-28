@@ -7,14 +7,14 @@ import { VscodeFiles } from './VscodeFiles'
 
 let client: LanguageClient
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function activate(context: vscode.ExtensionContext) {
+  console.log('ACTIVATED******')
   const serverOptions: ServerOptions = async () => {
     // eslint-disable-next-line prefer-const
     let blocklyProvider: CucumberBlocklyEditorProvider
     const serverInfo = startEmbeddedServer(
       __dirname,
-      (rootUri: string) => new VscodeFiles(rootUri, vscode.workspace.fs),
+      () => new VscodeFiles(vscode.workspace.fs),
       (registry, expressions, suggestions) => {
         serverInfo.connection.console.log(
           `******** onReindexed: ${expressions.length}, ${suggestions.length}`
