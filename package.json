@@ -81,12 +81,12 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "npm run esbuild-extension && npm run esbuild-server",
+    "vscode:prepublish": "npm run build",
     "esbuild-extension": "esbuild ./src/extension.ts --external:vscode --bundle --outfile=out/extension.js --format=cjs --platform=node --minify --sourcemap",
-    "esbuild-server": "npm run compile && esbuild dist/src/cucumber-language-server.js --bundle --outfile=out/cucumber-language-server.js --format=cjs --platform=node --sourcemap",
-    "prepare": "mkdir -p out && cp node_modules/@cucumber/language-service/dist/*.wasm out",
-    "build": "npm run esbuild-extension && npm run esbuild-server",
+    "build": "npm run esbuild-extension",
     "compile": "tsc --build",
+    "prepare": "npm run copy-wasms",
+    "copy-wasms": "mkdir -p out && cp node_modules/@cucumber/language-service/dist/*.wasm out",
     "pretest": "npm run compile",
     "eslint": "eslint src --ext ts",
     "eslint-fix": "eslint src --ext ts --max-warnings 0 --fix",
@@ -98,7 +98,7 @@
     "upgrade": "npm-check-updates --upgrade"
   },
   "dependencies": {
-    "@cucumber/language-server": "1.2.0",
+    "@cucumber/language-server": "1.3.0",
     "vscode-languageclient": "8.0.2"
   },
   "devDependencies": {

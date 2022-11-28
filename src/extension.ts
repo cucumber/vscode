@@ -1,4 +1,4 @@
-import { newWasmServer } from '@cucumber/language-server'
+import { startEmbeddedServer } from '@cucumber/language-server/wasm'
 import vscode from 'vscode'
 import { LanguageClient, LanguageClientOptions, ServerOptions } from 'vscode-languageclient/node'
 
@@ -8,8 +8,7 @@ let client: LanguageClient
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function activate(context: vscode.ExtensionContext) {
-  const makeFiles = (rootUri: string) => new VscodeFiles(rootUri, vscode.workspace.fs)
-  const serverOptions: ServerOptions = async () => newWasmServer(__dirname, makeFiles)
+  const serverOptions: ServerOptions = async () => startEmbeddedServer(__dirname, () => new VscodeFiles(vscode.workspace.fs), () => undefined)
 
   const clientOptions: LanguageClientOptions = {
     // We need to list all supported languages here so that

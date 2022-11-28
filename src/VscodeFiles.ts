@@ -2,7 +2,7 @@ import { Files } from '@cucumber/language-server'
 import { FileSystem, Uri, workspace } from 'vscode'
 
 export class VscodeFiles implements Files {
-  constructor(private readonly rootUri: string, private readonly fs: FileSystem) {}
+  constructor(private readonly fs: FileSystem) {}
 
   async exists(uri: string): Promise<boolean> {
     try {
