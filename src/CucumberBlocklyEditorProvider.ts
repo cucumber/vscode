@@ -85,7 +85,7 @@ export class CucumberBlocklyEditorProvider implements vscode.CustomTextEditorPro
     }; script-src 'nonce-${nonce}';">
       <title>Cucumber Blocks</title>
       <link href="${styleResetUri}" rel="stylesheet">
-			<link href="${styleVSCodeUri}" rel="stylesheet">
+      <link href="${styleVSCodeUri}" rel="stylesheet">
       <style>
         .flex-container {
           display: flex;
