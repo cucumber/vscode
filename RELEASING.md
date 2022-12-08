@@ -20,4 +20,4 @@ See [.github/RELEASING](https://github.com/cucumber/.github/blob/main/RELEASING.
 
 *IMPORTANT:* After updating dependencies, revert both `engines.vscode` and `"@types/vscode"` to the *same* version.
 
-Use a version that is 2 versions behind the latest version so that the extension doesn't require the latest version of VS Code.
+Use a version that is 2 *minor* versions behind the latest version so that the extension doesn't require the latest version of VS Code.

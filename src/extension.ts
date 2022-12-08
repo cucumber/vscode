@@ -8,7 +8,12 @@ let client: LanguageClient
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function activate(context: vscode.ExtensionContext) {
-  const serverOptions: ServerOptions = async () => startEmbeddedServer(__dirname, () => new VscodeFiles(vscode.workspace.fs), () => undefined)
+  const serverOptions: ServerOptions = async () =>
+    startEmbeddedServer(
+      __dirname,
+      () => new VscodeFiles(vscode.workspace.fs),
+      () => undefined
+    )
 
   const clientOptions: LanguageClientOptions = {
     // We need to list all supported languages here so that
@@ -18,6 +23,7 @@ export async function activate(context: vscode.ExtensionContext) {
       { scheme: 'file', language: 'csharp' },
       { scheme: 'file', language: 'cucumber' },
       { scheme: 'file', language: 'java' },
+      { scheme: 'file', language: 'javascript' },
       { scheme: 'file', language: 'php' },
       { scheme: 'file', language: 'ruby' },
       { scheme: 'file', language: 'typescript' },

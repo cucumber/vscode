@@ -134,6 +134,8 @@ Default value:
 {
   "cucumber.glue": [
     "src/test/**/*.java",
+    "features/**/*.js",
+    "features/**/*.jsx",
     "features/**/*.ts",
     "features/**/*.tsx",
     "features/**/*.php",

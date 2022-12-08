@@ -5,7 +5,7 @@
   "version": "1.6.0",
   "publisher": "CucumberOpen",
   "engines": {
-    "vscode": "^1.69.0"
+    "vscode": "^1.72.0"
   },
   "categories": [
     "Programming Languages",
@@ -60,6 +60,8 @@
           "required": false,
           "default": [
             "src/test/**/*.java",
+            "features/**/*.js",
+            "features/**/*.jsx",
             "features/**/*.ts",
             "features/**/*.tsx",
             "features/**/*.php",
@@ -98,17 +100,17 @@
     "upgrade": "npm-check-updates --upgrade"
   },
   "dependencies": {
-    "@cucumber/language-server": "1.3.0",
+    "@cucumber/language-server": "1.4.0",
     "vscode-languageclient": "8.0.2"
   },
   "devDependencies": {
     "@types/glob": "8.0.0",
-    "@types/mocha": "10.0.0",
-    "@types/vscode": "1.69.0",
-    "@typescript-eslint/eslint-plugin": "5.44.0",
-    "@typescript-eslint/parser": "5.44.0",
-    "esbuild": "0.15.16",
-    "eslint": "8.28.0",
+    "@types/mocha": "10.0.1",
+    "@types/vscode": "1.72.0",
+    "@typescript-eslint/eslint-plugin": "5.46.0",
+    "@typescript-eslint/parser": "5.46.0",
+    "esbuild": "0.16.2",
+    "eslint": "8.29.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-node": "11.1.0",
@@ -116,10 +118,10 @@
     "eslint-plugin-simple-import-sort": "8.0.0",
     "glob": "8.0.3",
     "mocha": "10.1.0",
-    "npm-check-updates": "16.4.3",
-    "prettier": "2.8.0",
+    "npm-check-updates": "16.5.1",
+    "prettier": "2.8.1",
     "pretty-quick": "3.1.3",
-    "typescript": "4.9.3",
+    "typescript": "4.9.4",
     "vsce": "2.14.0",
     "vscode-test": "1.6.1"
   }
