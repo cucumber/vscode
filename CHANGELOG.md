@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.7.0] - 2022-12-08
+### Added
+- Added support for JavaScript - [#42](https://github.com/cucumber/language-service/issues/42), [#115](https://github.com/cucumber/language-service/pull/115), [#120](https://github.com/cucumber/language-service/pull/120)
+
+### Fixed
+- Fixed a regression in the python language implementation for regexes [#119](https://github.com/cucumber/language-service/pull/119)
+
 ## [1.6.0] - 2022-11-18
 ### Added
 - Added context to python snippet to properly support `behave`
@@ -143,7 +150,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - First release
 
-[Unreleased]: https://github.com/cucumber/vscode/compare/v1.6.0...HEAD
+[Unreleased]: https://github.com/cucumber/vscode/compare/v1.7.0...HEAD
+[1.7.0]: https://github.com/cucumber/vscode/compare/v1.6.0...v1.7.0
 [1.6.0]: https://github.com/cucumber/vscode/compare/v1.5.1...v1.6.0
 [1.5.1]: https://github.com/cucumber/vscode/compare/v1.5.0...v1.5.1
 [1.5.0]: https://github.com/cucumber/vscode/compare/v1.4.1...v1.5.0

@@ -27,7 +27,7 @@ Get it from the [Open VSX Registry](https://open-vsx.org/extension/CucumberOpen/
   - C#/SpecFlow
   - [Go/Godog - help needed](https://github.com/cucumber/language-service/issues/72)
   - Java
-  - [JavaScript - help needed](https://github.com/cucumber/language-service/issues/42)
+  - JavaScript
   - PHP
   - Python/Behave
   - Ruby
@@ -134,6 +134,8 @@ Default value:
 {
   "cucumber.glue": [
     "src/test/**/*.java",
+    "features/**/*.js",
+    "features/**/*.jsx",
     "features/**/*.ts",
     "features/**/*.tsx",
     "features/**/*.php",
