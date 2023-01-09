@@ -2,18 +2,39 @@ import { startEmbeddedServer } from '@cucumber/language-server/wasm'
 import vscode from 'vscode'
 import { LanguageClient, LanguageClientOptions, ServerOptions } from 'vscode-languageclient/node'
 
+import { CucumberBlocklyEditorProvider } from './CucumberBlocklyEditorProvider'
 import { VscodeFiles } from './VscodeFiles'
 
 let client: LanguageClient
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function activate(context: vscode.ExtensionContext) {
-  const serverOptions: ServerOptions = async () =>
-    startEmbeddedServer(
+  console.log('ACTIVATED******')
+  const serverOptions: ServerOptions = async () => {
+    // eslint-disable-next-line prefer-const
+    let blocklyProvider: CucumberBlocklyEditorProvider
+    const serverInfo = startEmbeddedServer(
       __dirname,
       () => new VscodeFiles(vscode.workspace.fs),
-      () => undefined
+      (registry, expressions, suggestions) => {
+        serverInfo.connection.console.log(
+          `******** onReindexed: ${expressions.length}, ${suggestions.length}`
+        )
+        blocklyProvider.onReindexed(registry, expressions, suggestions)
+      }
     )
+    blocklyProvider = new CucumberBlocklyEditorProvider(
+      context,
+      serverInfo.server.registry,
+      serverInfo.server.expressions,
+      serverInfo.server.suggestions
+    )
+
+    // blocklyProvider.onReindexed(serverInfo.server.expressions, serverInfo.server.suggestions)
+    context.subscriptions.push(
+      vscode.window.registerCustomEditorProvider('Cucumber.Blockly', blocklyProvider)
+    )
+    return serverInfo
+  }
 
   const clientOptions: LanguageClientOptions = {
     // We need to list all supported languages here so that
