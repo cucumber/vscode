@@ -146,7 +146,8 @@ Default value:
     "tests/**/*.rs",
     "features/**/*.rs",
     "features/**/*.rb",
-    "*specs*/**/.cs"
+    "*step*/**/*.cs",
+    "*specs*/**/*.cs"
   ]
 }
 ```
