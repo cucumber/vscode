@@ -2,8 +2,7 @@ name: Release to marketplace
 
 on:
   push:
-    tags:
-      - "v*.*.*"
+    branches: [release/*]
 
 jobs:
   publish-marketplace:
