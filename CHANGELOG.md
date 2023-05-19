@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+- Comments are no longer stripped when formatting Gherkin documents
+
 ## [1.7.0] - 2022-12-08
 ### Added
 - Added support for JavaScript - [#42](https://github.com/cucumber/language-service/issues/42), [#115](https://github.com/cucumber/language-service/pull/115), [#120](https://github.com/cucumber/language-service/pull/120)
