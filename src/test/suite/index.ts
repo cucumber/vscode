@@ -1,4 +1,4 @@
-import glob from 'glob'
+import { glob } from 'glob'
 import Mocha from 'mocha'
 import path from 'path'
 
