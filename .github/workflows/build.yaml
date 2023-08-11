@@ -2,9 +2,13 @@ name: build
 
 on:
   push:
+    branches:
+      - main
+      - renovate/**
   pull_request:
     branches:
       - main
+  workflow_call:
 
 jobs:
   build:
