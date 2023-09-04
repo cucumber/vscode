@@ -2,10 +2,10 @@
   "name": "cucumber-official",
   "displayName": "Cucumber",
   "description": "Cucumber for Visual Studio Code",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "publisher": "CucumberOpen",
   "engines": {
-    "vscode": "^1.72.0"
+    "vscode": "^1.78.0"
   },
   "categories": [
     "Programming Languages",
@@ -85,9 +85,10 @@
   "scripts": {
     "vscode:prepublish": "npm run build",
     "esbuild-extension": "esbuild ./src/extension.ts --external:vscode --bundle --outfile=out/extension.js --format=cjs --platform=node --minify --sourcemap",
-    "build": "npm run esbuild-extension",
+    "build": "npm run copy-hack && npm run esbuild-extension",
     "compile": "tsc --build",
     "prepare": "npm run copy-wasms",
+    "copy-hack": "cp HACK-tree-sitter.js node_modules/web-tree-sitter/tree-sitter.js",
     "copy-wasms": "mkdir -p out && cp node_modules/@cucumber/language-service/dist/*.wasm out",
     "pretest": "npm run compile",
     "eslint": "eslint src --ext ts",
@@ -106,9 +107,9 @@
   "devDependencies": {
     "@types/glob": "8.1.0",
     "@types/mocha": "10.0.1",
-    "@types/vscode": "1.72.0",
-    "@typescript-eslint/eslint-plugin": "6.5.0",
-    "@typescript-eslint/parser": "6.5.0",
+    "@types/vscode": "1.78.0",
+    "@typescript-eslint/eslint-plugin": "6.6.0",
+    "@typescript-eslint/parser": "6.6.0",
     "esbuild": "0.19.2",
     "eslint": "8.48.0",
     "eslint-config-prettier": "9.0.0",
