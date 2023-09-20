@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [1.8.0] - 2023-09-20
 ### Fixed
 - Comments are no longer stripped when formatting Gherkin documents
 - Bumped the minimum Code version requirement to 1.82.0 to prevent people from using the extension with incompatible, older versions
@@ -153,7 +155,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - First release
 
-[Unreleased]: https://github.com/cucumber/vscode/compare/v1.7.0...HEAD
+[Unreleased]: https://github.com/cucumber/vscode/compare/v1.8.0...HEAD
+[1.8.0]: https://github.com/cucumber/vscode/compare/v1.7.0...v1.8.0
 [1.7.0]: https://github.com/cucumber/vscode/compare/v1.6.0...v1.7.0
 [1.6.0]: https://github.com/cucumber/vscode/compare/v1.5.1...v1.6.0
 [1.5.1]: https://github.com/cucumber/vscode/compare/v1.5.0...v1.5.1
