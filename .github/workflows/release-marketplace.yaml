@@ -17,6 +17,8 @@ jobs:
           cache: 'npm'
           cache-dependency-path: package-lock.json
       - run: npm install-test
+      - name: Show Dependency Manifest
+        run: npm ls -a
       - name: Publish to Visual Studio Marketplace
         uses: HaaLeo/publish-vscode-extension@v1
         with:

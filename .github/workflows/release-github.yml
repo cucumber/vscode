@@ -14,6 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: npm install-ci-test
+      - name: Show Dependency Manifest
+        run: npm ls -a
       - run: npm run build
       - run: npm run package
       - name: GitHub Release
