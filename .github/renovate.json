@@ -3,5 +3,11 @@
   "extends": [
     "github>cucumber/renovate-config",
     ":automergeMajor"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["vscode"],
+      "automerge": false
+    }
   ]
 }
