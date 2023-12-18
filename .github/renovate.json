@@ -1,7 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>cucumber/renovate-config",
-    ":automergeMajor"
+    "github>cucumber/renovate-config"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["vscode"],
+      "automerge": false
+    }
   ]
 }
