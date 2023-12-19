@@ -1,6 +1,6 @@
 # Releasing
 
-## Do a manual test:
+## Perform Manual Testing
 
 Before a release it is important to do a manual test.
 We haven't invested in automated tests to catch regressions.
@@ -11,7 +11,7 @@ We haven't invested in automated tests to catch regressions.
 Run the extension (opens a new window) and check all the functionality such as:
 
 * Syntax highlighting
-* Auto-complete
+* Autocomplete
 * Formatting
 
 ## GitHub Actions release
@@ -20,4 +20,4 @@ See [.github/RELEASING](https://github.com/cucumber/.github/blob/main/RELEASING.
 
 *IMPORTANT:* After updating dependencies, revert both `engines.vscode` and `"@types/vscode"` to the *same* version.
 
-Use a version that is 2 *minor* versions behind the latest version so that the extension doesn't require the latest version of VS Code.
+Use a version that is 2 *minor* versions behind the latest version so that the extension doesn't require the latest version of Visual Studio Code.
