@@ -1,17 +1,16 @@
-[![build](https://github.com/cucumber/vscode/actions/workflows/build.yaml/badge.svg)](https://github.com/cucumber/vscode/actions/workflows/build.yaml)
+# Cucumber for Visual Studio Code
 
 ![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/CucumberOpen.cucumber-official)
+[![build](https://github.com/cucumber/vscode/actions/workflows/build.yaml/badge.svg)](https://github.com/cucumber/vscode/actions/workflows/build.yaml)
 ![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/CucumberOpen.cucumber-official)
 ![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/CucumberOpen.cucumber-official)
 ![Visual Studio Marketplace Rating (Stars)](https://img.shields.io/visual-studio-marketplace/stars/CucumberOpen.cucumber-official)
-
-# Cucumber for Visual Studio Code
 
 This extension adds support for using Cucumber with Visual Studio Code, powered by the [Cucumber Language Server](https://github.com/cucumber/language-server#readme).
 
 This extension is maintained by the [Cucumber team](https://github.com/cucumber/).
 
-# Installation
+## Installation
 
 Get it from the [Open VSX Registry](https://open-vsx.org/extension/CucumberOpen/cucumber-official) or
 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official).
@@ -75,7 +74,7 @@ Undefined steps and syntax errors are underlined.
 
 ![Formatting](images/formatting.gif)
 
-Gherkin documents are formatted using two space indentation. 
+Gherkin documents are formatted using two space indentation.
 
 Numeric cells are right-aligned (as in Excel). Non-numeric cells are left-aligned.
 
@@ -89,18 +88,19 @@ making it easy to navigate between scenarios.
 ## Extension Settings
 
 In most cases you shouldn't need to specify any settings
-as the extension comes with reasonable defaults. 
+as the extension comes with reasonable defaults.
 
 If your `.feature` files and step definition files are
 in an unconventional file structure, you need to change the
 settings to make autocomplete work properly.
 
 ### `cucumber.features`
-[//]: # (<cucumber.features>)
-The `cucumber.features` setting overrides where the extension 
-should look for `.feature` files. 
 
-If no feature files are found, [autocomplete](#autocomplete) 
+[//]: # (<cucumber.features>)
+The `cucumber.features` setting overrides where the extension
+should look for `.feature` files.
+
+If no feature files are found, [autocomplete](#autocomplete)
 will not work.
 
 Default value:
@@ -115,16 +115,18 @@ Default value:
   ]
 }
 ```
+
 [//]: # (</cucumber.features>)
 
 ### `cucumber.glue`
+
 [//]: # (<cucumber.glue>)
 The `cucumber.glue` setting overrides where the extension
 should look for source code where step definitions and
 parameter types are defined.
 
-If no glue files are found, [autocomplete](#autocomplete) 
-will not work, and all Gherkin steps will be underlined as 
+If no glue files are found, [autocomplete](#autocomplete)
+will not work, and all Gherkin steps will be underlined as
 undefined. [Generate step definition](#generate-step-definition)
 will not work either.
 
@@ -148,9 +150,11 @@ Default value:
   ]
 }
 ```
+
 [//]: # (</cucumber.glue>)
 
 ### `cucumber.parameterTypes`
+
 [//]: # (<cucumber.parameterTypes>)
 Override the `cucumber.parameterTypes` setting if your Cucumber Expressions
 are using [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are defined outside your `cucumber.glue` setting.
@@ -174,6 +178,7 @@ For example, if you're using the `actor` parameter type from [@cucumber/screenpl
   ]
 }
 ````
+
 [//]: # (</cucumber.parameterTypes>)
 
 ## Feedback
