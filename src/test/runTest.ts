@@ -1,5 +1,5 @@
+import { runTests } from '@vscode/test-electron'
 import path from 'path'
-import { runTests } from 'vscode-test'
 
 async function main() {
   if (process.env['CI']) {
