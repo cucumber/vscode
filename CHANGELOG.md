@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - Bumped the minimum Code version requirement to 1.82.0 to prevent people from using the extension with incompatible, older versions
 
+### Fixed
+- Fix the glue for CSharp step definitions - [#144](https://github.com/cucumber/vscode/pull/144)
+
 ## [1.7.0] - 2022-12-08
 ### Added
 - Added support for JavaScript - [#42](https://github.com/cucumber/language-service/issues/42), [#115](https://github.com/cucumber/language-service/pull/115), [#120](https://github.com/cucumber/language-service/pull/120)

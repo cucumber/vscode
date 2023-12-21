@@ -111,7 +111,7 @@ Default value:
     "src/test/**/*.feature",
     "features/**/*.feature",
     "tests/**/*.feature",
-    "*specs*/**/.feature"
+    "*specs*/**/*.feature"
   ]
 }
 ```
@@ -146,7 +146,7 @@ Default value:
     "tests/**/*.rs",
     "features/**/*.rs",
     "features/**/*.rb",
-    "*specs*/**/.cs"
+    "*specs*/**/*.cs"
   ]
 }
 ```
