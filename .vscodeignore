@@ -1,11 +1,12 @@
-.vscode/**
-.vscode-test/**
-src/**
-dist/**
-node_modules/**
-.gitignore
-.yarnrc
-**/tsconfig.json
-**/.eslintrc.json
-**/*.map
-**/*.ts
+*
+*/**
+# Whitelist the following files
+!package.json
+!language-configuration.json
+!LICENSE
+!README.md
+!CHANGELOG.md
+!images/icon.png
+!out/*.js
+!out/*.wasm
+!syntaxes/*.tmLanguage

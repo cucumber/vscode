@@ -8,13 +8,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Fixed
 - Comments are no longer stripped when formatting Gherkin documents
+- Fix the glue for CSharp step definitions - [#144](https://github.com/cucumber/vscode/pull/144)
+
+### Changed
+ - Optimised extension bundling using GitHub CDN for documentation images and by excluding redundant files ([#194](https://github.com/cucumber/vscode/issues/194))
 
 ## [1.8.0] - 2023-09-20
 ### Fixed
 - Bumped the minimum Code version requirement to 1.82.0 to prevent people from using the extension with incompatible, older versions
-
-### Fixed
-- Fix the glue for CSharp step definitions - [#144](https://github.com/cucumber/vscode/pull/144)
 
 ## [1.7.0] - 2022-12-08
 ### Added
