@@ -28,7 +28,7 @@ The following information will help you run the extension locally.
 6. Find output from the extension in the debug console under `Output -> Cucumber Language Server`.
 7. Set breakpoints within code in the `src` directory to debug the extension.
 
-    ![Visual Studio Code Output](https://raw.githubusercontent.com/cucumber/vscode/main/doc/contributing/vscode-output.png)
+    ![Visual Studio Code Output](https://raw.githubusercontent.com/cucumber/vscode/main/images/vscode-output.png)
 
 ## Modifying the LSP
 
