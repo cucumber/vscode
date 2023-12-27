@@ -1,28 +1,26 @@
 # Cucumber for Visual Studio Code
 
 ![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/CucumberOpen.cucumber-official)
-[![build](https://github.com/cucumber/vscode/actions/workflows/build.yaml/badge.svg)](https://github.com/cucumber/vscode/actions/workflows/build.yaml)
 ![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/CucumberOpen.cucumber-official)
 ![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/CucumberOpen.cucumber-official)
 ![Visual Studio Marketplace Rating (Stars)](https://img.shields.io/visual-studio-marketplace/stars/CucumberOpen.cucumber-official)
+[![build](https://github.com/cucumber/vscode/actions/workflows/build.yaml/badge.svg)](https://github.com/cucumber/vscode/actions/workflows/build.yaml)
 
 This extension adds support for using Cucumber with Visual Studio Code, powered by the [Cucumber Language Server](https://github.com/cucumber/language-server#readme).
 
-This extension is maintained by the [Cucumber team](https://github.com/cucumber/).
-
-## Installation
-
-Get it from the [Open VSX Registry](https://open-vsx.org/extension/CucumberOpen/cucumber-official) or
+Available from the [Open VSX Registry](https://open-vsx.org/extension/CucumberOpen/cucumber-official) and
 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official).
+
+This extension is maintained by the [Cucumber team](https://github.com/cucumber/).
 
 ## Features
 
-- [Autocomplete](#autocomplete) of Gherkin steps
-- [Go to step definition](#go-to-step-definition)
-- [Generate step definition](#generate-step-definition)
-- [Syntax highlighting](#syntax-highlighting)
-- [Formatting](#formatting) (pretty printing)
-- Language support
+- ⌨️ [Autocomplete](#autocomplete) of gherkin steps
+- 📍 [Go to step definition](#go-to-step-definition)
+- 🪄 [Generate step definition](#generate-step-definition)
+- 💄 [Syntax highlighting](#syntax-highlighting)
+- ✨ [Formatting](#formatting)
+- 🌎 [Language support](#language-support)
   - C#/SpecFlow
   - [Go/Godog - help needed](https://github.com/cucumber/language-service/issues/72)
   - Java
@@ -85,6 +83,14 @@ Numeric cells are right-aligned (as in Excel). Non-numeric cells are left-aligne
 The Outline panel displays an outline of the Gherkin document,
 making it easy to navigate between scenarios.
 
+## Language Support
+
+The Cucumber extension provides step definition support with a [large number of languages and frameworks](#features).
+
+If your language or framework is unsupported, please [open an issue](https://github.com/cucumber/language-service/issues) or [raise a pull request](https://github.com/cucumber/language-service/pulls) in the [Cucumber Language Service](https://github.com/cucumber/language-service) - where language support is implemented.
+
+If you experience any issues using the extension with a supported language, please [raise a bug report](https://github.com/cucumber/vscode/issues) with as much detail as possible or reach out for help through [our Slack community](https://cucumber.io/community#slack).
+
 ## Extension Settings
 
 In most cases you shouldn't need to specify any settings
@@ -93,6 +99,8 @@ as the extension comes with reasonable defaults.
 If your `.feature` files and step definition files are
 in an unconventional file structure, you need to change the
 settings to make autocomplete work properly.
+
+With multi-root workspaces, you will need to either specify glob paths for each workspace individually (e.g. `workspace-a/features/*.feature` and `workspace-b/features/*.feature`) or specify a glob path that matches all of them (e.g. `**/features/*.feature`). See [VSCode documentation for configuring a multi-root workspace](https://code.visualstudio.com/docs/editor/multi-root-workspaces#_workspace-file-schema).
 
 ### `cucumber.features`
 
