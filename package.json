@@ -22,7 +22,7 @@
     "type": "git",
     "url": "git://github.com/cucumber/vscode.git"
   },
-  "icon": "images/icon-128x128.png",
+  "icon": "images/icon.png",
   "main": "./out/extension.js",
   "contributes": {
     "languages": [

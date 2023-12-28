@@ -28,7 +28,7 @@ The following information will help you run the extension locally.
 6. Find output from the extension in the debug console under `Output -> Cucumber Language Server`.
 7. Set breakpoints within code in the `src` directory to debug the extension.
 
-    ![VS Code Output](doc/contributing/vscode-output.png)
+    ![Visual Studio Code Output](https://raw.githubusercontent.com/cucumber/vscode/main/images/vscode-output.png)
 
 ## Modifying the LSP
 
@@ -88,7 +88,7 @@ Run the update command for any modifications to [extension settings](README.md#e
 npm run update-settings-docs
 ```
 
-Update `.vscodeignore` with the paths of any new or modified files or directories that should not be included in the packaged version of the extension.
+Update `.vscodeignore` with the paths of any new or modified files or directories that should be included in the packaged version of the extension.
 
 Package the extension locally and ensure the command runs without error - see [Packaging Extensions](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#packaging-extensions) for more detail.
 

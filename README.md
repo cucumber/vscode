@@ -35,7 +35,7 @@ Get it from the [Open VSX Registry](https://open-vsx.org/extension/CucumberOpen/
 
 ### Autocomplete
 
-![Autocomplete](images/autocomplete.gif)
+![Autocomplete](https://raw.githubusercontent.com/cucumber/vscode/main/images/autocomplete.gif)
 
 When you start typing a step, you will see auto-complete suggestions
 based on existing step definitions and Gherkin steps.
@@ -46,13 +46,13 @@ but you'll also get suggestions if they use Regular Expressions.
 
 ### Go to step definition
 
-![Go to step definition](images/goto-step-definition.gif)
+![Go to step definition](https://raw.githubusercontent.com/cucumber/vscode/main/images/goto-step-definition.gif)
 
 You can quickly navigate from a Gherkin step to a step definition.
 
 ### Generate step definition
 
-![Generate step definition](images/generate-step-definition.gif)
+![Generate step definition](https://raw.githubusercontent.com/cucumber/vscode/main/images/generate-step-definition.gif)
 
 Generate step definition snippets with a quick fix - `⌘` + `.` (MacOS) or
 `Ctrl` + `.` (Windows).
@@ -65,14 +65,14 @@ to add it to.
 
 ### Syntax highlighting
 
-![Syntax highlighting](images/syntax-highlighting.gif)
+![Syntax highlighting](https://raw.githubusercontent.com/cucumber/vscode/main/images/syntax-highlighting.gif)
 
 Gherkin keywords and step parameters are highlighted.
 Undefined steps and syntax errors are underlined.
 
 ### Formatting
 
-![Formatting](images/formatting.gif)
+![Formatting](https://raw.githubusercontent.com/cucumber/vscode/main/images/formatting.gif)
 
 Gherkin documents are formatted using two space indentation.
 
@@ -80,7 +80,7 @@ Numeric cells are right-aligned (as in Excel). Non-numeric cells are left-aligne
 
 ### Document Outline
 
-![Document Outline](images/document-outline.gif)
+![Document outline](https://raw.githubusercontent.com/cucumber/vscode/main/images/document-outline.gif)
 
 The Outline panel displays an outline of the Gherkin document,
 making it easy to navigate between scenarios.
