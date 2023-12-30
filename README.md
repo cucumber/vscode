@@ -20,7 +20,8 @@ This extension is maintained by the [Cucumber team](https://github.com/cucumber/
 - 🪄 [Generate step definition](#generate-step-definition)
 - 💄 [Syntax highlighting](#syntax-highlighting)
 - ✨ [Formatting](#formatting)
-- 🌎 [Language support](#language-support)
+- 🌎 [Gherkin localisation](#gherkin-localisation)
+- 📖 [Language support](#language-support)
   - C#/SpecFlow
   - [Go/Godog - help needed](https://github.com/cucumber/language-service/issues/72)
   - Java
@@ -82,6 +83,14 @@ Numeric cells are right-aligned (as in Excel). Non-numeric cells are left-aligne
 
 The Outline panel displays an outline of the Gherkin document,
 making it easy to navigate between scenarios.
+
+## Gherkin Localisation
+
+Gherkin supports a multitude of languages. To specify a language, include a `# language: <key>` header in your feature file, replacing `<key>` with the appropriate language key. You can find a list of supported language keys in the [localisation documentation](https://cucumber.io/docs/gherkin/languages/).
+
+![Localisation](https://raw.githubusercontent.com/cucumber/vscode/main/images/localisation.png)
+
+New translations or updates are welcome and can be submitted through the [gherkin GitHub repository](https://github.com/cucumber/gherkin).
 
 ## Language Support
 
