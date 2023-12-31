@@ -84,15 +84,15 @@ Numeric cells are right-aligned (as in Excel). Non-numeric cells are left-aligne
 The Outline panel displays an outline of the Gherkin document,
 making it easy to navigate between scenarios.
 
-## Gherkin Localisation
+### Gherkin Localisation
 
 Gherkin supports a multitude of languages. To specify a language, include a `# language: <key>` header in your feature file, replacing `<key>` with the appropriate language key. You can find a list of supported language keys in the [localisation documentation](https://cucumber.io/docs/gherkin/languages/).
 
 ![Localisation](https://raw.githubusercontent.com/cucumber/vscode/main/images/localisation.png)
 
-New translations or updates are welcome and can be submitted through the [gherkin GitHub repository](https://github.com/cucumber/gherkin).
+New translations or updates are welcome and can be submitted through the [gherkin repository](https://github.com/cucumber/gherkin).
 
-## Language Support
+### Language Support
 
 The Cucumber extension provides step definition support with a [large number of languages and frameworks](#features).
 
