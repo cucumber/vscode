@@ -86,7 +86,7 @@ making it easy to navigate between scenarios.
 
 ### Gherkin Localisation
 
-Gherkin supports a multitude of languages. To specify a language, include a `# language: <key>` header in your feature file, replacing `<key>` with the appropriate language key. You can find a list of supported language keys in the [localisation documentation](https://cucumber.io/docs/gherkin/languages/).
+Gherkin supports many translations. To specify a translation, include a `# language: <key>` header in your feature file, replacing `<key>` with a supported language key from the [localisation documentation](https://cucumber.io/docs/gherkin/languages/).
 
 ![Localisation](https://raw.githubusercontent.com/cucumber/vscode/main/images/localisation.png)
 

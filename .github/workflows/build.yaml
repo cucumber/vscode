@@ -34,6 +34,7 @@ jobs:
         cache: 'npm'
         cache-dependency-path: package-lock.json
     - run: npm install-ci-test
+    - run: npm run vscode-types-compatible
     - run: npm run build
     - run: npm run package
     - run: npm run eslint

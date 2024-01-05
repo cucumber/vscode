@@ -92,6 +92,7 @@
     "test": "node ./dist/src/test/runTest.js",
     "prepublishOnly": "npm run update-settings-docs",
     "update-settings-docs": "./scripts/update-settings-docs.sh",
+    "vscode-types-compatible": "./scripts/vscode-types-compatible.sh",
     "package": "vsce package",
     "publish": "vsce publish",
     "upgrade": "npm-check-updates --upgrade"
