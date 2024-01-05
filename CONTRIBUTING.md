@@ -23,9 +23,9 @@ Achievement unlocked! You are now running the extension locally! 🏆
 
 ## Modifying the Language Server
 
-Once you have completed the [getting started steps](#getting-started), you may be wondering how you can begin modifying the implementation. 🤔
+Once you have completed [getting started](#getting-started), you may be wondering how you can begin modifying the implementation. 🤔
 
-This extension uses the _Language Server Protocol_ to communicate with Visual Studio Code, which is an open protocol that allows a common implementation - called a __language server__ - to communicate with different IDEs. This implementation is stored in the [Cucumber Language Server](https://github.com/cucumber/language-server), and the underlying [Cucumber Language Service](https://github.com/cucumber/language-service). Let's integrate local versions of each into our extension so we can modify them.
+This extension uses the _Language Server Protocol_ to communicate with Visual Studio Code, which is an open protocol that allows the development of a common implementation - called a __language server__ - that can communicate with different IDEs. This implementation is stored in the [Cucumber Language Server](https://github.com/cucumber/language-server) and the underlying [Cucumber Language Service](https://github.com/cucumber/language-service). Let's integrate local versions of each into our extension so we can modify them.
 
 1. First, clone the Language Server and the Language Service to the same directory in which you cloned the extension. Your directory structure should appear as follows:
 
