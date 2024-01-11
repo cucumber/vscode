@@ -9,7 +9,7 @@
       "automerge": false
     },
     {
-      "matchPackageNames": ["@vscode/types"],
+      "matchPackageNames": ["@types/vscode"],
       "enabled": false
     }
   ]
