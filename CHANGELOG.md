@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Cucumber icon for feature files ([#206](https://github.com/cucumber/vscode/pull/206))
 
 ## [1.8.1] - 2024-01-14
 ### Changed
