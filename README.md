@@ -86,7 +86,7 @@ making it easy to navigate between scenarios.
 
 ### Gherkin Localisation
 
-Gherkin supports many translations. To specify a translation, include a `# language: <key>` header in your feature file, replacing `<key>` with a supported language key from the [localisation documentation](https://cucumber.io/docs/gherkin/languages/).
+Gherkin supports many translations. To specify a translation, include a `# language: <key>` header in your feature file, with a supported language key from the [localisation documentation](https://cucumber.io/docs/gherkin/languages/).
 
 ![Localisation](https://raw.githubusercontent.com/cucumber/vscode/main/images/localisation.png)
 
@@ -94,7 +94,7 @@ New translations or updates are welcome and can be submitted through the [gherki
 
 ### Language Support
 
-The Cucumber extension provides step definition support with a [large number of languages and frameworks](#features).
+Support is provided for step definitions from [different languages and frameworks](#features).
 
 If your language or framework is unsupported, please [open an issue](https://github.com/cucumber/language-service/issues) or [raise a pull request](https://github.com/cucumber/language-service/pulls) in the [Cucumber Language Service](https://github.com/cucumber/language-service) - where language support is implemented.
 

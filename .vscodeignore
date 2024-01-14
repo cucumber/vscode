@@ -7,6 +7,6 @@
 !README.md
 !CHANGELOG.md
 !images/icon.png
+!images/icon.svg
 !out/*.js
 !out/*.wasm
-!syntaxes/*.tmLanguage
