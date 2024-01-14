@@ -6,12 +6,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [1.8.1] - 2024-01-14
+### Changed
+- Optimised extension bundling using GitHub CDN for documentation images and by excluding redundant files ([#194](https://github.com/cucumber/vscode/issues/194))
+
 ### Fixed
 - Comments are no longer stripped when formatting Gherkin documents
 - Fix the glue for CSharp step definitions - [#144](https://github.com/cucumber/vscode/pull/144)
-
-### Changed
- - Optimised extension bundling using GitHub CDN for documentation images and by excluding redundant files ([#194](https://github.com/cucumber/vscode/issues/194))
 
 ## [1.8.0] - 2023-09-20
 ### Fixed
@@ -160,7 +162,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - First release
 
-[Unreleased]: https://github.com/cucumber/vscode/compare/v1.8.0...HEAD
+[Unreleased]: https://github.com/cucumber/vscode/compare/v1.8.1...HEAD
+[1.8.1]: https://github.com/cucumber/vscode/compare/v1.8.0...v1.8.1
 [1.8.0]: https://github.com/cucumber/vscode/compare/v1.7.0...v1.8.0
 [1.7.0]: https://github.com/cucumber/vscode/compare/v1.6.0...v1.7.0
 [1.6.0]: https://github.com/cucumber/vscode/compare/v1.5.1...v1.6.0
