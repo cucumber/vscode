@@ -41,6 +41,11 @@
         }
       }
     ],
+    "configurationDefaults": {
+      "[cucumber]": {
+        "editor.semanticHighlighting.enabled": true
+      }
+    },
     "configuration": {
       "title": "Cucumber",
       "properties": {
