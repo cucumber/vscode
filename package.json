@@ -102,6 +102,7 @@
     "upgrade": "npm-check-updates --upgrade"
   },
   "lint-staged": {
+    "README.md": "npm run update-settings-docs",
     "src/**/*.ts": "npm run eslint-fix"
   },
   "dependencies": {
