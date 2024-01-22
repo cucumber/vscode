@@ -13,15 +13,6 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - run: npm install-ci-test
-      - name: Show Dependency Manifest
-        run: npm ls -a
-      - run: npm run build
-      - run: npm run package
-      - name: GitHub Release
-        uses: softprops/action-gh-release@v1
+      - uses: cucumber/action-create-github-release@v1.1.1
         with:
-          tag_name: ${{ github.ref_name }}
-          files: |
-            *.vsix
-            LICENSE
+          github-token: ${{ secrets.GITHUB_TOKEN }}
