@@ -1,7 +1,7 @@
 #!/bin/bash
-# This script updates the docs for the configuration properties.
-# It extracts sections from the README.md and writes them into the markdownDescription
-# fields in `package.json`.
+# This script validates whether the @types/vscode package version matches the VSCode
+# compatibility engine version. If the types exceeds the engine version, then the
+# extension will not run.
 
 # Parse package.json and get the versions of the two packages
 vscodeVersion=$(jq -r '.engines.vscode' package.json)

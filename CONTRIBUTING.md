@@ -88,13 +88,13 @@ If your changes are not reflected or something went wrong, we would love to know
 
 Before submitting a pull request, there are a few actions that we must ensure to carry out.
 
-- Format all code to align with project coding standards.
+- Format all code to align with project coding standards. This is executed by the pre-commit hook by default.
 
     ```console
     npm run eslint-fix
     ```
 
-- Run the update command for any modifications to [extension settings](README.md#extension-settings) in `README.md`, to ensure they are reflected in `package.json`.
+- Run the update command for any modifications to [extension settings](README.md#extension-settings) in `README.md`, to ensure they are reflected in `package.json`. This is executed by the pre-commit hook by default.
 
     ```console
     npm run update-settings-docs
