@@ -130,6 +130,6 @@
     "mocha": "10.3.0",
     "npm-check-updates": "16.14.15",
     "prettier": "3.2.5",
-    "typescript": "5.3.3"
+    "typescript": "5.4.2"
   }
 }
