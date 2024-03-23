@@ -88,7 +88,7 @@
     "esbuild-extension": "esbuild ./src/extension.ts --external:vscode --bundle --outfile=out/extension.js --format=cjs --platform=node --minify --sourcemap",
     "build": "npm run esbuild-extension",
     "compile": "tsc --build",
-    "prepare": "husky install && npm run copy-wasms",
+    "prepare": "husky && npm run copy-wasms",
     "copy-wasms": "mkdir -p out && cp node_modules/@cucumber/language-service/dist/*.wasm out",
     "pretest": "npm run compile",
     "eslint": "eslint src --ext ts",
