@@ -6,7 +6,7 @@
 ![Visual Studio Marketplace Rating (Stars)](https://img.shields.io/visual-studio-marketplace/stars/CucumberOpen.cucumber-official)
 [![build](https://github.com/cucumber/vscode/actions/workflows/build.yaml/badge.svg)](https://github.com/cucumber/vscode/actions/workflows/build.yaml)
 
-This extension adds support for using Cucumber with Visual Studio Code, powered by the [Cucumber Language Server](https://github.com/cucumber/language-server#readme).
+This extension provides support for using Cucumber and Gherkin with Visual Studio Code, powered by the [Cucumber Language Server](https://github.com/cucumber/language-server#readme).
 
 Available from the [Open VSX Registry](https://open-vsx.org/extension/CucumberOpen/cucumber-official) and
 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official).
@@ -15,7 +15,7 @@ This extension is maintained by the [Cucumber team](https://github.com/cucumber/
 
 ## Features
 
-- ⌨️ [Autocomplete](#autocomplete) of gherkin steps
+- ⌨️ [Autocomplete steps](#autocomplete)
 - 📍 [Go to step definition](#go-to-step-definition)
 - 🪄 [Generate step definition](#generate-step-definition)
 - 💄 [Syntax highlighting](#syntax-highlighting)
@@ -31,6 +31,7 @@ This extension is maintained by the [Cucumber team](https://github.com/cucumber/
   - Ruby
   - Rust
   - TypeScript
+- 🥒 [Feature file icons](#feature-file-icons)
 
 ### Autocomplete
 
@@ -56,7 +57,7 @@ You can quickly navigate from a Gherkin step to a step definition.
 Generate step definition snippets with a quick fix - `⌘` + `.` (MacOS) or
 `Ctrl` + `.` (Windows).
 
-*IMPORTANT*: Generate step definition will only be enabled
+_IMPORTANT_: Generate step definition will only be enabled
 if there is at least one existing step definition. This is
 so that the extension can determine the programming language
 for the step definition, and provide choices for existing files
@@ -90,15 +91,21 @@ Gherkin supports many translations. To specify a translation, include a `# langu
 
 ![Localisation](https://raw.githubusercontent.com/cucumber/vscode/main/images/localisation.png)
 
-New translations or updates are welcome and can be submitted through the [gherkin repository](https://github.com/cucumber/gherkin).
+New translations or updates are welcome and can be submitted through the [gherkin parser](https://github.com/cucumber/gherkin).
 
 ### Language Support
 
-Support is provided for step definitions from [different languages and frameworks](#features).
+Step definitions support is provided for [different languages and frameworks](#features).
 
 If you experience an issue with a supported language, please [raise a detailed bug report](https://github.com/cucumber/vscode/issues) or reach out for help through [our Slack community](https://cucumber.io/community#slack).
 
 If your language or framework is unsupported, please [open an issue](https://github.com/cucumber/language-service/issues) or [raise a pull request](https://github.com/cucumber/language-service/pulls) in the [Cucumber Language Service](https://github.com/cucumber/language-service) - where language support is implemented.
+
+### Feature File Icons
+
+The Cucumber icon is applied to all feature files in your workspace. This replaces the default document icon, making it easier to identify your feature files at a glance.
+
+![Feature file icon](https://raw.githubusercontent.com/cucumber/vscode/main/images/feature-file-icons.png)
 
 ## Extension Settings
 

@@ -65,10 +65,19 @@ This extension uses the _Language Server Protocol_ to communicate with Visual St
     npm link @cucumber/language-server
     ```
 
+    You can verify that links are correctly configured by executing the below command in each respective repository
+
+    ```console
+    la node_modules/@cucumber
+    lrwxr-xr-x    1 username  staff     24 Jan 22 09:32 language-server -> ../../../language-server
+    ```
+
 4. Now open the extension repository in Visual Studio Code.
 5. As before, press `F5` to build and run the extension in a new window.
 
 Phew! That was tough - but all going well, you did it! 🙌 You can now start modifying the implementation and observe those changes running in Visual Studio Code - awesome! 😎
+
+**Note:** If you require further guidance on these steps, watch a [walkthrough on linking with the GitLab VSCode extension](https://www.youtube.com/watch?app=desktop&v=Re1pwIEsSio) - which has a similar setup.
 
 ### Rebuilding
 
