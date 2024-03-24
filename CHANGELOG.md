@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [1.9.0] - 2024-03-24
 ### Added
 - Cucumber icon for feature files ([#206](https://github.com/cucumber/vscode/pull/206))
 - Semantic highlighting enabled by default for gherkin ([#207](https://github.com/cucumber/vscode/pull/207))
@@ -165,7 +167,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - First release
 
-[Unreleased]: https://github.com/cucumber/vscode/compare/v1.8.1...HEAD
+[Unreleased]: https://github.com/cucumber/vscode/compare/v1.9.0...HEAD
+[1.9.0]: https://github.com/cucumber/vscode/compare/v1.8.1...v1.9.0
 [1.8.1]: https://github.com/cucumber/vscode/compare/v1.8.0...v1.8.1
 [1.8.0]: https://github.com/cucumber/vscode/compare/v1.7.0...v1.8.0
 [1.7.0]: https://github.com/cucumber/vscode/compare/v1.6.0...v1.7.0
