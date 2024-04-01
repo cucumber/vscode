@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/cucumber/cucumber-js/7df2c9b4f04099b81dc5c00cd73b404401cd6e46/docs/images/logo.svg" alt="">
+  <img src="https://raw.githubusercontent.com/cucumber/vscode/main/images/icon.png" width="63.046" alt="">
   <br>
   Cucumber for VSCode
 </h1>
