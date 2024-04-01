@@ -1,17 +1,34 @@
-# Cucumber for Visual Studio Code
+<h1 align="center">
+  <img src="https://raw.githubusercontent.com/cucumber/cucumber-js/7df2c9b4f04099b81dc5c00cd73b404401cd6e46/docs/images/logo.svg" alt="">
+  <br>
+  Cucumber for VSCode
+</h1>
+<p align="center">
+  <b>Official Visual Studio Code extension for Cucumber and Gherkin</b>
+</p>
 
-![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/CucumberOpen.cucumber-official)
-![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/CucumberOpen.cucumber-official)
-![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/CucumberOpen.cucumber-official)
-![Visual Studio Marketplace Rating (Stars)](https://img.shields.io/visual-studio-marketplace/stars/CucumberOpen.cucumber-official)
-[![build](https://github.com/cucumber/vscode/actions/workflows/build.yaml/badge.svg)](https://github.com/cucumber/vscode/actions/workflows/build.yaml)
-
-This extension provides support for using Cucumber and Gherkin with Visual Studio Code, powered by the [Cucumber Language Server](https://github.com/cucumber/language-server#readme).
+<p align="center">
+  <a href="https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official">
+    <img src="https://img.shields.io/visual-studio-marketplace/v/CucumberOpen.cucumber-official" alt="Visual Studio Marketplace Version">
+  </a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official">
+    <img src="https://img.shields.io/visual-studio-marketplace/i/CucumberOpen.cucumber-official" alt="Visual Studio Marketplace Installs">
+  </a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official">
+    <img src="https://img.shields.io/visual-studio-marketplace/d/CucumberOpen.cucumber-official" alt="Visual Studio Marketplace Downloads">
+  </a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official">
+    <img src="https://img.shields.io/visual-studio-marketplace/stars/CucumberOpen.cucumber-official" alt="Visual Studio Marketplace Rating (Stars)">
+  </a>
+  <a href="https://github.com/cucumber/vscode/actions/workflows/build.yaml">
+    <img src="https://github.com/cucumber/vscode/actions/workflows/build.yaml/badge.svg" alt="build">
+  </a>
+</p>
 
 Available from the [Open VSX Registry](https://open-vsx.org/extension/CucumberOpen/cucumber-official) and
 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official).
 
-This extension is maintained by the [Cucumber team](https://github.com/cucumber/).
+Maintained by the [Cucumber team](https://github.com/cucumber/) and powered by the [Cucumber Language Server](https://github.com/cucumber/language-server#readme).
 
 ## Features
 
