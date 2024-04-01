@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/cucumber/vscode/main/images/icon.png" width="63.046" alt="">
+  <img src="https://raw.githubusercontent.com/cucumber/vscode/main/images/icon.png" height="71" alt="">
   <br>
   Cucumber for VSCode
 </h1>
@@ -9,7 +9,7 @@
 
 <p align="center">
   <a href="https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official">
-    <img src="https://img.shields.io/visual-studio-marketplace/v/CucumberOpen.cucumber-official" alt="Visual Studio Marketplace Version">
+    <img src="https://img.shields.io/visual-studio-marketplace/v/CucumberOpen.cucumber-official?style=flat&color=dark-green" alt="Visual Studio Marketplace Version">
   </a>
   <a href="https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official">
     <img src="https://img.shields.io/visual-studio-marketplace/i/CucumberOpen.cucumber-official" alt="Visual Studio Marketplace Installs">
