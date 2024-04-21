@@ -8,19 +8,19 @@
 </p>
 
 <p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official">
+  <a href="https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official" style="text-decoration: none">
     <img src="https://img.shields.io/visual-studio-marketplace/v/CucumberOpen.cucumber-official?style=flat&color=dark-green" alt="Visual Studio Marketplace Version">
   </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official">
+  <a href="https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official" style="text-decoration: none">
     <img src="https://img.shields.io/visual-studio-marketplace/i/CucumberOpen.cucumber-official" alt="Visual Studio Marketplace Installs">
   </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official">
+  <a href="https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official" style="text-decoration: none">
     <img src="https://img.shields.io/visual-studio-marketplace/d/CucumberOpen.cucumber-official" alt="Visual Studio Marketplace Downloads">
   </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official">
+  <a href="https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official" style="text-decoration: none">
     <img src="https://img.shields.io/visual-studio-marketplace/stars/CucumberOpen.cucumber-official" alt="Visual Studio Marketplace Rating (Stars)">
   </a>
-  <a href="https://github.com/cucumber/vscode/actions/workflows/build.yaml">
+  <a href="https://github.com/cucumber/vscode/actions/workflows/build.yaml" style="text-decoration: none">
     <img src="https://github.com/cucumber/vscode/actions/workflows/build.yaml/badge.svg" alt="build">
   </a>
 </p>
