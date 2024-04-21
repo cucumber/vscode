@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [1.10.0] - 2024-04-21
 ### Added
 - (Go) Godog step definitions support ([language-service#130](https://github.com/cucumber/language-service/pull/130))
 - (Java) Cucumber JVM `@And` and `@But` step definition annotations support ([language-service#202](https://github.com/cucumber/language-service/pull/202))
@@ -185,7 +187,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - First release
 
-[Unreleased]: https://github.com/cucumber/vscode/compare/v1.9.0...HEAD
+[Unreleased]: https://github.com/cucumber/vscode/compare/v1.10.0...HEAD
+[1.10.0]: https://github.com/cucumber/vscode/compare/v1.9.0...v1.10.0
 [1.9.0]: https://github.com/cucumber/vscode/compare/v1.8.1...v1.9.0
 [1.8.1]: https://github.com/cucumber/vscode/compare/v1.8.0...v1.8.1
 [1.8.0]: https://github.com/cucumber/vscode/compare/v1.7.0...v1.8.0
