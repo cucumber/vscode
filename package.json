@@ -111,7 +111,7 @@
     "src/**/*.ts": "npm run eslint-fix"
   },
   "dependencies": {
-    "@cucumber/language-server": "1.5.0",
+    "@cucumber/language-server": "1.6.0",
     "vscode-languageclient": "9.0.1"
   },
   "devDependencies": {
