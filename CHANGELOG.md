@@ -6,6 +6,24 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- (Go) Godog step definitions support ([language-service#130](https://github.com/cucumber/language-service/pull/130))
+- (Java) Cucumber JVM `@And` and `@But` step definition annotations support ([language-service#202](https://github.com/cucumber/language-service/pull/202))
+- (Python) Behave `@step` step definition decorator support ([language-service#200](https://github.com/cucumber/language-service/pull/200))
+- (i18n) Syntax highlighting for Malayalam (`ml`) localisation ([gherkin v27.0.0](https://github.com/cucumber/gherkin/releases/tag/v27.0.0))
+- (i18n) Syntax highlighting for `Rule` in Vietnamese, Irish, Danish, Dutch ([gherkin v27.0.0](https://github.com/cucumber/gherkin/releases/tag/v27.0.0), [gherkin v28.0.0](https://github.com/cucumber/gherkin/releases/tag/v28.0.0))
+
+### Fixed
+- (Python) Only match parameter types with names and regular expressions ([language-service#196](https://github.com/cucumber/language-service/pull/196))
+- (Python) Generate step definitions without redundant commas and spaces ([language-service#160](https://github.com/cucumber/language-service/issues/160))
+- (Python) Step definition patterns with explicit unicode strings (`u""`) ([language-service#173](https://github.com/cucumber/language-service/pull/173))
+- (Rust) Step definition patterns with `r#` raw strings ([language-service#176](https://github.com/cucumber/language-service/pull/176))
+- (Rust) Step definition patterns with line continuations ([language-service#179](https://github.com/cucumber/language-service/pull/179))
+- (Java) Step definition patterns with concatenated strings ([language-service#202](https://github.com/cucumber/language-service/pull/202))
+- Format empty headings without introducing trailing whitespace ([gherkin-utils#35](https://github.com/cucumber/gherkin-utils/pull/35))
+- Format trailing comments ([gherkin-utils#38](https://github.com/cucumber/gherkin-utils/pull/41))
+- Format tables with full-width characters ([gherkin-utils#53](https://github.com/cucumber/gherkin-utils/pull/53))
+- Verbose alternation in optional error message with Cucumber Expressions ([cucumber-expressions#260](https://github.com/cucumber/cucumber-expressions/pull/260), [cucumber-expressions#253](https://github.com/cucumber/cucumber-expressions/pull/253))
 
 ## [1.9.0] - 2024-03-24
 ### Added

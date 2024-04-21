@@ -25,10 +25,10 @@
   </a>
 </p>
 
+Maintained by the [Cucumber team](https://github.com/cucumber/) and powered by the [Cucumber Language Server](https://github.com/cucumber/language-server#readme).
+
 Available from the [Open VSX Registry](https://open-vsx.org/extension/CucumberOpen/cucumber-official) and
 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official).
-
-Maintained by the [Cucumber team](https://github.com/cucumber/) and powered by the [Cucumber Language Server](https://github.com/cucumber/language-server#readme).
 
 ## Features
 
@@ -40,7 +40,7 @@ Maintained by the [Cucumber team](https://github.com/cucumber/) and powered by t
 - 🌎 [Gherkin localisation](#gherkin-localisation)
 - 📖 [Language support](#language-support)
   - C#/SpecFlow
-  - [Go/Godog - help needed](https://github.com/cucumber/language-service/issues/72)
+  - Go/Godog
   - Java
   - JavaScript
   - PHP
@@ -48,6 +48,7 @@ Maintained by the [Cucumber team](https://github.com/cucumber/) and powered by t
   - Ruby
   - Rust
   - TypeScript
+- 🗂 [Document outline](#document-outline)
 - 🥒 [Feature file icons](#feature-file-icons)
 
 ### Autocomplete
@@ -176,18 +177,19 @@ Default value:
 ```json
 {
   "cucumber.glue": [
-    "src/test/**/*.java",
+    "*specs*/**/*.cs",
     "features/**/*.js",
     "features/**/*.jsx",
-    "features/**/*.ts",
-    "features/**/*.tsx",
     "features/**/*.php",
     "features/**/*.py",
-    "tests/**/*.py",
-    "tests/**/*.rs",
     "features/**/*.rs",
     "features/**/*.rb",
-    "*specs*/**/*.cs"
+    "features/**/*.ts",
+    "features/**/*.tsx",
+    "features/**/*_test.go",
+    "src/test/**/*.java",
+    "tests/**/*.py",
+    "tests/**/*.rs"
   ]
 }
 ```
