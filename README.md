@@ -178,18 +178,8 @@ Default value:
 {
   "cucumber.glue": [
     "*specs*/**/*.cs",
-    "features/**/*.js",
-    "features/**/*.jsx",
-    "features/**/*.php",
-    "features/**/*.py",
-    "features/**/*.rs",
-    "features/**/*.rb",
-    "features/**/*.ts",
-    "features/**/*.tsx",
-    "features/**/*_test.go",
-    "src/test/**/*.java",
-    "tests/**/*.py",
-    "tests/**/*.rs"
+    "features/**/*{.js,.jsx,.php,.py,.rb,.rs,.ts,.tsx,_test.go,.java}",
+    "tests/**/*{.py,.rs}"
   ]
 }
 ```
