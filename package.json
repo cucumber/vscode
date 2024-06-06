@@ -104,8 +104,7 @@
     "update-settings-docs": "./scripts/update-settings-docs.sh",
     "vscode-types-compatible": "./scripts/vscode-types-compatible.sh",
     "package": "vsce package",
-    "publish": "vsce publish",
-    "upgrade": "npm-check-updates --upgrade"
+    "publish": "vsce publish"
   },
   "lint-staged": {
     "README.md": "npm run update-settings-docs",
