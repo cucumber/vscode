@@ -2,7 +2,7 @@
 
 Welcome! 👋 We're happy to have you here. Thank you for your interest in contributing to the [Cucumber Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official).
 
-This guide will provide you with the information you need to start making awesome contributions to this project. If you encounter a problem, please reach out for help through our [Slack community](https://cucumber.io/community#slack) or feel free to [open an Issue](https://github.com/cucumber/vscode/issues).
+This guide will provide you with the information you need to start making awesome contributions to this project. If you encounter a problem, please reach out for help through our [Discord community](https://cucumber.io/docs/community/get-in-touch#discord) or feel free to [open an Issue](https://github.com/cucumber/vscode/issues).
 
 We look forward to supporting your contributions! 💖
 

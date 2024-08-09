@@ -115,7 +115,7 @@ New translations or updates are welcome and can be submitted through the [gherki
 
 Step definitions support is provided for [different languages and frameworks](#features).
 
-If you experience an issue with a supported language, please [raise a detailed bug report](https://github.com/cucumber/vscode/issues) or reach out for help through [our Slack community](https://cucumber.io/community#slack).
+If you experience an issue with a supported language, please [raise a detailed bug report](https://github.com/cucumber/vscode/issues) or reach out for help through [our Discord community](https://cucumber.io/docs/community/get-in-touch#discord).
 
 If your language or framework is unsupported, please [open an issue](https://github.com/cucumber/language-service/issues) or [raise a pull request](https://github.com/cucumber/language-service/pulls) in the [Cucumber Language Service](https://github.com/cucumber/language-service) - where language support is implemented.
 
