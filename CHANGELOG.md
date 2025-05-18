@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [1.11.0] - 2025-05-18
 ### Changed
 - Update dependency @cucumber/language-server to 1.7.0
 
@@ -189,7 +191,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - First release
 
-[Unreleased]: https://github.com/cucumber/vscode/compare/v1.10.0...HEAD
+[Unreleased]: https://github.com/cucumber/vscode/compare/v1.11.0...HEAD
+[1.11.0]: https://github.com/cucumber/vscode/compare/v1.10.0...v1.11.0
 [1.10.0]: https://github.com/cucumber/vscode/compare/v1.9.0...v1.10.0
 [1.9.0]: https://github.com/cucumber/vscode/compare/v1.8.1...v1.9.0
 [1.8.1]: https://github.com/cucumber/vscode/compare/v1.8.0...v1.8.1
