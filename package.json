@@ -132,7 +132,7 @@
     "glob": "11.0.2",
     "husky": "9.1.7",
     "lint-staged": "16.0.0",
-    "mocha": "11.3.0",
+    "mocha": "11.4.0",
     "prettier": "3.5.3",
     "typescript": "5.8.3"
   }
