@@ -1,8 +1,8 @@
 {
-  "name": "cucumber-official",
+  "name": "cucumber-official-wd",
   "displayName": "Cucumber",
   "description": "Cucumber for Visual Studio Code",
-  "version": "1.11.0",
+  "version": "1.11.0-1",
   "publisher": "CucumberOpen",
   "engines": {
     "vscode": "^1.82.0"
@@ -97,7 +97,7 @@
     "commands": [
       {
         "command": "cucumber.forceReindex",
-        "title": "Force Reindex",
+        "title": "Cucumber: Force Reindex",
         "description": "Force reindexing of the Cucumber Language Server"
       }
     ]
