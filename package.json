@@ -93,7 +93,14 @@
           "default": true
         }
       }
-    }
+    },
+    "commands": [
+      {
+        "command": "cucumber.forceReindex",
+        "title": "Force Reindex",
+        "description": "Force reindexing of the Cucumber Language Server"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run build",

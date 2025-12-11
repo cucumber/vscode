@@ -7,3 +7,5 @@ node_modules/
 *.vsix
 out/
 .DS_Store
+language-server/
+language-service/
