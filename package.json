@@ -85,6 +85,12 @@
           "type": "array",
           "required": false,
           "default": []
+        },
+        "cucumber.forceReindex": {
+          "markdownDescription": "The `cucumber.forceReindex` setting overrides whether the extension\nshould force reindexing of the Cucumber Language Server.\n\nDefault value:\n\n```json\n{\n  \"cucumber.forceReindex\": true\n}\n```",
+          "type": "boolean",
+          "required": false,
+          "default": true
         }
       }
     }

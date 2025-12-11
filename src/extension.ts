@@ -35,6 +35,7 @@ export async function activate(context: vscode.ExtensionContext) {
 
   client = new LanguageClient('Cucumber', 'Cucumber Language Server', serverOptions, clientOptions)
 
+  console.log('Connecting to Cucumber Language Server')
   await client.start()
 }
 
