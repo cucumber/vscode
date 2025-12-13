@@ -63,8 +63,10 @@ updateMarkdownDescription "cucumber.glue"
 updateResult2=$?
 updateMarkdownDescription "cucumber.parameterTypes"
 updateResult3=$?
+updateMarkdownDescription "cucumber.unescapeBackslashes"
+updateResult4=$?
 
-if [ "$updateResult1" -eq 1 ] || [ "$updateResult2" -eq 1 ] || [ "$updateResult3" -eq 1 ]; then
+if [ "$updateResult1" -eq 1 ] || [ "$updateResult2" -eq 1 ] || [ "$updateResult3" -eq 1 ] || [ "$updateResult4" -eq 1 ]; then
   echo "The settings descriptions and default values in 'package.json' do not match those specified in 'README.md'. Updating 'package.json' to match."
   exit 1
 else

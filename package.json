@@ -85,6 +85,12 @@
           "type": "array",
           "required": false,
           "default": []
+        },
+        "cucumber.unescapeBackslashes": {
+          "markdownDescription": "Enable the `cucumber.unescapeBackslashes` setting if you need to unescape backslashes\nin Cucumber Expression patterns from JavaScript or TypeScript step definitions.\n\nIn Cucumber Expressions, you need to escape a forward slash with a backslash (`\/`) for\n[alternative text behavior](https://github.com/cucumber/cucumber-expressions?tab=readme-ov-file#alternative-text).\nIn JavaScript source code, backslashes themselves must be escaped, so you write `\"\\/\"`\nto achieve `\/` at runtime. However, sometimes the library interprets `\\/` as `\\/`\n(two backslashes) instead of `\/` (one backslash). This setting converts escaped\nbackslashes (`\\\\`) back to regular backslashes (`\\`) for correct interpretation.\n\nDefault value:\n\n```json\n{\n  \"cucumber.unescapeBackslashes\": false\n}\n```",
+          "type": "boolean",
+          "required": false,
+          "default": false
         }
       }
     }

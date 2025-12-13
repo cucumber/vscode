@@ -4,6 +4,17 @@ import { FileSystem, Uri, workspace } from 'vscode'
 export class VscodeFiles implements Files {
   constructor(private readonly fs: FileSystem) {}
 
+  private shouldUnescapeBackslashes(): boolean {
+    return workspace.getConfiguration('cucumber').get<boolean>('unescapeBackslashes', false)
+  }
+
+  private unescapeBackslashesInContent(content: string): string {
+    if (this.shouldUnescapeBackslashes()) {
+      return content.replace(/\\\\/g, '\\')
+    }
+    return content
+  }
+
   async exists(uri: string): Promise<boolean> {
     try {
       await this.fs.stat(Uri.parse(uri))
@@ -15,7 +26,8 @@ export class VscodeFiles implements Files {
 
   async readFile(uri: string): Promise<string> {
     const data = await this.fs.readFile(Uri.parse(uri))
-    return new TextDecoder().decode(data)
+    const content = new TextDecoder().decode(data)
+    return this.unescapeBackslashesInContent(content)
   }
 
   async findUris(glob: string): Promise<readonly string[]> {
