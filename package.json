@@ -91,6 +91,12 @@
           "type": "boolean",
           "required": false,
           "default": true
+        },
+        "cucumber.buildSuggestions": {
+          "markdownDescription": "The `cucumber.buildSuggestions` setting overrides whether the extension\nshould build suggestions for the Cucumber Language Server.\n\nDefault value:\n\n```json\n{\n  \"cucumber.buildSuggestions\": true\n}\n```",
+          "type": "boolean",
+          "required": true,
+          "default": true
         }
       }
     },
