@@ -1,8 +1,8 @@
 {
-  "name": "cucumber-official",
+  "name": "cucumber-official-wd",
   "displayName": "Cucumber",
   "description": "Cucumber for Visual Studio Code",
-  "version": "1.12.0",
+  "version": "1.12.0-pre",
   "publisher": "CucumberOpen",
   "engines": {
     "vscode": "^1.82.0"
