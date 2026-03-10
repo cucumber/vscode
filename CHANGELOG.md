@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Added
+- Add `cucumber.unescapeBackslashes` configuration option to unescape backslashes in Cucumber Expression patterns from JavaScript step definitions
+
 ## [1.11.0] - 2025-05-18
 ### Changed
 - Update dependency @cucumber/language-server to 1.7.0
