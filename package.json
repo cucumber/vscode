@@ -2,7 +2,7 @@
   "name": "cucumber-official",
   "displayName": "Cucumber",
   "description": "Cucumber for Visual Studio Code",
-  "version": "1.11.0",
+  "version": "2.0.0-beta",
   "publisher": "CucumberOpen",
   "engines": {
     "vscode": "^1.82.0"
@@ -87,7 +87,14 @@
           "default": []
         }
       }
-    }
+    },
+    "commands": [
+      {
+        "command": "cucumber.forceReindex",
+        "title": "Cucumber: Force Reindex",
+        "description": "Force reindexing of the Cucumber Language Server"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run build",

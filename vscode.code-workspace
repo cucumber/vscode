@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+            "name": "cucumber-vscode",
+            "path": "."
+        },
+        {
+            "name": "language-service",
+            "path": "language-service"
+        },
+        {
+            "name": "language-server",
+            "path": "language-server"
+        }
+	],
+	"settings": {}
+}
