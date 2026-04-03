@@ -35,7 +35,40 @@ export async function activate(context: vscode.ExtensionContext) {
 
   client = new LanguageClient('Cucumber', 'Cucumber Language Server', serverOptions, clientOptions)
 
+  console.log('Connecting to Cucumber Language Server')
   await client.start()
+
+  // Register the force reindex command
+  const forceReindexCommand = vscode.commands.registerCommand('cucumber.forceReindex', async () => {
+    if (!client || !client.isRunning()) {
+      vscode.window.showWarningMessage('Cucumber Language Server is not running')
+      return
+    }
+
+    try {
+      await vscode.window.withProgress(
+        {
+          location: vscode.ProgressLocation.Notification,
+          title: 'Cucumber: Reindexing...',
+          cancellable: false,
+        },
+        async () => {
+          const result = await client.sendRequest<{ success: boolean; error?: string }>(
+            'cucumber/forceReindex'
+          )
+          if (result.success) {
+            vscode.window.showInformationMessage('Cucumber: Reindexing completed successfully')
+          } else {
+            vscode.window.showErrorMessage(`Cucumber: Reindexing failed - ${result.error}`)
+          }
+        }
+      )
+    } catch (error) {
+      vscode.window.showErrorMessage(`Cucumber: Failed to trigger reindex - ${error}`)
+    }
+  })
+
+  context.subscriptions.push(forceReindexCommand)
 }
 
 // this method is called when your extension is deactivated

@@ -27,13 +27,12 @@ Once you have completed [getting started](#getting-started), you may be wonderin
 
 This extension uses the _Language Server Protocol_ to communicate with Visual Studio Code, which is an open protocol that allows the development of a common implementation - called a __language server__ - that can communicate with different IDEs. This implementation is stored in the [Cucumber Language Server](https://github.com/cucumber/language-server) and the underlying [Cucumber Language Service](https://github.com/cucumber/language-service). Let's integrate local versions of each into our extension so we can modify them.
 
-1. First, clone the Language Server and the Language Service to the same directory in which you cloned the extension. Your directory structure should appear as follows:
+1. First, clone the Language Server and the Language Service in cloned extension directory (this is required in order to build a VSIX package). Your directory structure should appear as follows:
 
     ```console
-    directory/
+    vscode/
     ├── language-server/
-    ├── language-service/
-    └── vscode/
+    └── language-service/
     ```
 
 2. At this point, please [download and install docker](https://www.docker.com/products/docker-desktop/) if you have not already done so. A [docker installation is required](https://github.com/cucumber/language-service/blob/main/CONTRIBUTING.md#prerequisites) to build the Language Service.
@@ -69,7 +68,13 @@ This extension uses the _Language Server Protocol_ to communicate with Visual St
 
     ```console
     la node_modules/@cucumber
-    lrwxr-xr-x    1 username  staff     24 Jan 22 09:32 language-server -> ../../../language-server
+    lrwxr-xr-x    1 username  staff     24 Jan 22 09:32 language-server -> ../../language-server
+    ```
+
+    Convenience script was created: [reconfigure_local_modules.sh](./reconfigure_local_modules.sh)
+
+    ```bash
+    ./reconfigure_local_modules.sh
     ```
 
 4. Now open the extension repository in Visual Studio Code.
@@ -84,6 +89,12 @@ Phew! That was tough - but all going well, you did it! 🙌 You can now start mo
 If you need to make further changes to these packages, you have to rebuild them but relinking is not necessary e.g. you only need to run `npm run build` in the Language Service. To load your changes, either reload the window running the extension (`Ctrl+R` or `Cmd+R` on Mac) or relaunch the extension from the debug toolbar in the window that you are developing the extension.
 
 For debugging the extension, set breakpoints within the code. 🐞
+
+You can use convenience script - [rebuild.sh](./rebuild.sh)
+
+```bash
+./rebuild.sh
+```
 
 ### Check everything is working
 
