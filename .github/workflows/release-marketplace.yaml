@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: '22'
           package-manager-cache: false
-      - run: npm install-test
+      - run: npm install-ci-test
       - name: Show Dependency Manifest
         run: npm ls -a
       - name: Publish to Visual Studio Marketplace
