@@ -43,7 +43,13 @@
     ],
     "configurationDefaults": {
       "[cucumber]": {
-        "editor.semanticHighlighting.enabled": true
+        "editor.semanticHighlighting.enabled": true,
+        "editor.quickSuggestions": {
+          "other": true,
+          "comments": false,
+          "strings": false
+        },
+        "editor.suggestOnTriggerCharacters": true
       }
     },
     "configuration": {
@@ -115,8 +121,9 @@
     "vscode-languageclient": "9.0.1"
   },
   "devDependencies": {
-    "@types/glob": "8.1.0",
+    "@cucumber/language-service": "1.7.0",
     "@types/mocha": "10.0.10",
+    "@types/node": "^20.6.3",
     "@types/vscode": "1.82.0",
     "@typescript-eslint/eslint-plugin": "7.18.0",
     "@typescript-eslint/parser": "7.18.0",
