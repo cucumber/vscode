@@ -1,0 +1,146 @@
+{
+  "scopeName": "source.cucumber",
+  "fileTypes": ["feature"],
+  "patterns": [
+    {
+      "name": "meta.feature.cucumber",
+      "begin": "^\\s*(Feature)(:)(.*)",
+      "beginCaptures": {
+        "1": { "name": "entity.name.section.feature.cucumber" },
+        "2": { "name": "punctuation.separator.cucumber" },
+        "3": { "name": "string.unquoted.feature.cucumber" }
+      },
+      "end": "$"
+    },
+    {
+      "name": "meta.rule.cucumber",
+      "begin": "^\\s*(Rule)(:)(.*)",
+      "beginCaptures": {
+        "1": { "name": "entity.name.section.rule.cucumber" },
+        "2": { "name": "punctuation.separator.cucumber" },
+        "3": { "name": "string.unquoted.rule.cucumber" }
+      },
+      "end": "$"
+    },
+    {
+      "name": "meta.background.cucumber",
+      "begin": "^\\s*(Background)(:)(.*)",
+      "beginCaptures": {
+        "1": { "name": "keyword.control.background.cucumber" },
+        "2": { "name": "punctuation.separator.cucumber" },
+        "3": { "name": "string.unquoted.background.cucumber" }
+      },
+      "end": "$"
+    },
+    {
+      "name": "meta.scenario.cucumber",
+      "begin": "^\\s*(Scenario(?: Outline| Template)?|Example)(:)(.*)",
+      "beginCaptures": {
+        "1": { "name": "entity.name.section.scenario.cucumber" },
+        "2": { "name": "punctuation.separator.cucumber" },
+        "3": { "name": "string.unquoted.scenario.cucumber" }
+      },
+      "end": "$"
+    },
+    {
+      "name": "meta.step.cucumber",
+      "begin": "^\\s*(Given|When|Then|And|But|\\*) ",
+      "beginCaptures": {
+        "1": { "name": "keyword.other.step.cucumber" }
+      },
+      "patterns": [
+        {
+          "match": "(<)([^>]*)(>)",
+          "captures": {
+            "1": { "name": "punctuation.definition.variable.cucumber" },
+            "2": { "name": "variable.other.cucumber" },
+            "3": { "name": "punctuation.definition.variable.cucumber" }
+          }
+        },
+        {
+          "match": "[^<>]+",
+          "name": "string.unquoted.step.cucumber"
+        }
+      ],
+      "end": "$"
+    },
+    {
+      "name": "meta.examples.cucumber",
+      "begin": "^\\s*(Examples|Scenarios)(:)(.*)",
+      "beginCaptures": {
+        "1": { "name": "keyword.control.examples.cucumber" },
+        "2": { "name": "punctuation.separator.cucumber" },
+        "3": { "name": "string.unquoted.examples.cucumber" }
+      },
+      "end": "$"
+    },
+    {
+      "name": "meta.doc-string.cucumber",
+      "begin": "^\\s*(\"\"\"|```)\\s*$",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.doc-string.cucumber" }
+      },
+      "contentName": "string.quoted.doc-string.cucumber",
+      "end": "^\\s*(\"\"\"|```)",
+      "endCaptures": {
+        "1": { "name": "punctuation.definition.doc-string.cucumber" }
+      }
+    },
+    {
+      "name": "meta.doc-string.cucumber",
+      "begin": "^\\s*(\"\"\"|```)(\\w+)",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.doc-string.cucumber" },
+        "2": { "name": "fenced_code.block.language.cucumber" }
+      },
+      "contentName": "meta.embedded.block.$2",
+      "patterns": [
+        { "include": "source.json" },
+        { "include": "source.markdown" },
+        { "include": "source.xml" },
+        { "include": "source.yaml" }
+      ],
+      "end": "^\\s*(\"\"\"|```)",
+      "endCaptures": {
+        "1": { "name": "punctuation.definition.doc-string.cucumber" }
+      }
+    },
+    {
+      "name": "meta.table.cucumber",
+      "begin": "^\\s*(?=\\|)",
+      "patterns": [
+        {
+          "match": "\\|",
+          "name": "punctuation.definition.table.cucumber"
+        },
+        {
+          "match": "[^|\\n]+",
+          "name": "string.unquoted.table.cucumber"
+        }
+      ],
+      "end": "$"
+    },
+    {
+      "name": "meta.tags.cucumber",
+      "begin": "\\s*(@)(\\w*)",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.tag.cucumber" },
+        "2": { "name": "entity.name.tag.cucumber" }
+      },
+      "end": "\\s"
+    },
+    {
+      "name": "meta.comment.cucumber",
+      "begin": "^\\s*(#)(.*)",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.comment.cucumber" },
+        "2": { "name": "comment.line.number-sign.cucumber" }
+      },
+      "end": "$"
+    },
+    {
+      "match": ".*",
+      "name": "comment.block.cucumber"
+    }
+  ]
+}
