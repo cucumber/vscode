@@ -18,7 +18,7 @@ function getLanguageKeywords(languages) {
     examples: new Set(),
   }
   for (const lang in languages) {
-    const data = lang[language]
+    const data = languages[lang]
     data.feature.forEach((k) => keywords.feature.add(k.trim()))
     data.rule.forEach((k) => keywords.rule.add(k.trim()))
     data.background.forEach((k) => keywords.background.add(k.trim()))
