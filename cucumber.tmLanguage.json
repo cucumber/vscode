@@ -76,7 +76,7 @@
     },
     {
       "name": "meta.doc-string.cucumber",
-      "begin": "^\\s*(\"\"\"|```)\\s*$",
+      "begin": "^\\s*(\"\"\"|```)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.doc-string.cucumber" }
       },
