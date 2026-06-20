@@ -131,7 +131,7 @@
     "eslint-plugin-simple-import-sort": "12.1.1",
     "glob": "13.0.6",
     "husky": "9.1.7",
-    "lint-staged": "17.0.7",
+    "lint-staged": "17.0.8",
     "mocha": "11.7.6",
     "prettier": "3.8.4",
     "typescript": "5.9.3"
