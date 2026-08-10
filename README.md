@@ -224,6 +224,29 @@ For example, if you're using the `actor` parameter type from [@cucumber/screenpl
 
 [//]: # (</cucumber.parameterTypes>)
 
+### `cucumber.unescapeBackslashes`
+
+[//]: # (<cucumber.unescapeBackslashes>)
+Enable the `cucumber.unescapeBackslashes` setting if you need to unescape backslashes
+in Cucumber Expression patterns from JavaScript or TypeScript step definitions.
+
+In Cucumber Expressions, you need to escape a forward slash with a backslash (`\/`) for
+[alternative text behavior](https://github.com/cucumber/cucumber-expressions?tab=readme-ov-file#alternative-text).
+In JavaScript source code, backslashes themselves must be escaped, so you write `"\\/"`
+to achieve `\/` at runtime. However, sometimes the library interprets `\\/` as `\\/`
+(two backslashes) instead of `\/` (one backslash). This setting converts escaped
+backslashes (`\\`) back to regular backslashes (`\`) for correct interpretation.
+
+Default value:
+
+```json
+{
+  "cucumber.unescapeBackslashes": false
+}
+```
+
+[//]: # (</cucumber.unescapeBackslashes>)
+
 ## Feedback
 
 If you discover a bug, or have a suggestion for a feature request, please
