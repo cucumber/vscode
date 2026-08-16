@@ -8,12 +8,18 @@ let client: LanguageClient
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function activate(context: vscode.ExtensionContext) {
-  const serverOptions: ServerOptions = async () =>
-    startEmbeddedServer(
+  const outputChannel = vscode.window.createOutputChannel('Cucumber')
+  context.subscriptions.push(outputChannel)
+
+  const serverOptions: ServerOptions = async () => {
+    const embeddedServer = startEmbeddedServer(
       __dirname,
       () => new VscodeFiles(vscode.workspace.fs),
       () => undefined
     )
+
+    return embeddedServer
+  }
 
   const clientOptions: LanguageClientOptions = {
     // We need to list all supported languages here so that
@@ -31,6 +37,7 @@ export async function activate(context: vscode.ExtensionContext) {
       { scheme: 'file', language: 'python' },
       { scheme: 'file', language: 'rust' },
     ],
+    outputChannel,
   }
 
   client = new LanguageClient('Cucumber', 'Cucumber Language Server', serverOptions, clientOptions)
@@ -40,5 +47,5 @@ export async function activate(context: vscode.ExtensionContext) {
 
 // this method is called when your extension is deactivated
 export async function deactivate() {
-  await client.stop()
+  await client?.stop()
 }
