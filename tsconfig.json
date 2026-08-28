@@ -12,13 +12,13 @@
     "skipLibCheck": true,
     "strictNullChecks": true,
     "experimentalDecorators": true,
-    "module": "CommonJS",
+    "module": "Node16",
     "lib": [
       "ES6",
       "dom"
     ],
     "target": "ES6",
-    "moduleResolution": "node",
+    "moduleResolution": "Node16",
     "allowSyntheticDefaultImports": true,
     "jsx": "react"
   },
