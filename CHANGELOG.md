@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Fixed
+- Optimised default glue paths for improved indexing performance ([#232](https://github.com/cucumber/vscode/pull/232))
 
 ## [1.11.0] - 2025-05-18
 ### Changed
