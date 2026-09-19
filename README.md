@@ -86,6 +86,7 @@ to add it to.
 ![Syntax highlighting](https://raw.githubusercontent.com/cucumber/vscode/main/images/syntax-highlighting.gif)
 
 Gherkin keywords and step parameters are highlighted.
+All other text is classified using TextMate tokens (styled by VSCode color themes).
 Undefined steps and syntax errors are underlined.
 
 ### Formatting
