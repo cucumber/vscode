@@ -41,6 +41,20 @@
         }
       }
     ],
+    "grammars": [
+      {
+        "language": "cucumber",
+        "scopeName": "source.cucumber",
+        "path": "./out/cucumber.tmLanguage.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.json": "json",
+          "meta.embedded.block.markdown": "markdown",
+          "meta.embedded.block.md": "markdown",
+          "meta.embedded.block.xml": "xml",
+          "meta.embedded.block.yaml": "yaml"
+        }
+      }
+    ],
     "configurationDefaults": {
       "[cucumber]": {
         "editor.semanticHighlighting.enabled": true
@@ -92,7 +106,8 @@
   "scripts": {
     "vscode:prepublish": "npm run build",
     "esbuild-extension": "esbuild ./src/extension.ts --external:vscode --bundle --outfile=out/extension.js --format=cjs --platform=node --minify --sourcemap",
-    "build": "npm run esbuild-extension",
+    "update-grammar": "node ./scripts/update-grammar.js",
+    "build": "npm run esbuild-extension && npm run update-grammar",
     "compile": "tsc --build",
     "prepare": "husky && npm run copy-wasms",
     "copy-wasms": "mkdir -p out && cp node_modules/@cucumber/language-service/dist/*.wasm out",

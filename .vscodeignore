@@ -9,4 +9,5 @@
 !images/icon.png
 !images/icon.svg
 !out/*.js
+!out/*.json
 !out/*.wasm

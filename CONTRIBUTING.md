@@ -130,6 +130,7 @@ The following resources are useful in the development of this extension.
 - [Visual Studio Code Extension documentation](https://code.visualstudio.com/api) - Comprehensive documentation covering capabilities, guides and guidelines for Visual Studio Code extensions.
 - [Contributing Guidelines for the Cucumber Language Service](https://github.com/cucumber/language-service/blob/main/CONTRIBUTING.md) - Guidance for contributing to the [Cucumber Language Service](https://github.com/cucumber/language-service), the core component responsible for implementing the majority of features in this extension.
 - Type definitions for the Visual Studio Code Extension API release used by this extension can be found within the file `node_modules/@types/vscode/index.d.ts`.
+- [TextMate Language Grammars documentation](https://macromates.com/manual/en/language_grammars) - Guidance for when modifying `cucumber.tmLanguage.json` (and `scripts/update-grammar.js`).
 
 ## Code of Conduct
 
