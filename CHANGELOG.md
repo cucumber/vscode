@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- TextMate grammar rules ([#332](https://github.com/cucumber/vscode/pull/332))
 
 ## [1.11.0] - 2025-05-18
 ### Changed
