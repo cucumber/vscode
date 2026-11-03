@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- Bumped the minimum Code version requirement to 1.101.0, the first to bundle Node.js 22
 
 ## [1.11.0] - 2025-05-18
 ### Changed
