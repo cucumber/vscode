@@ -1,13 +1,16 @@
 import { startEmbeddedServer } from '@cucumber/language-server/wasm'
 import vscode from 'vscode'
-import { LanguageClient, LanguageClientOptions, ServerOptions } from 'vscode-languageclient/node'
+import {
+  LanguageClient,
+  type LanguageClientOptions,
+  type ServerOptions,
+} from 'vscode-languageclient/node'
 
 import { VscodeFiles } from './VscodeFiles'
 
 let client: LanguageClient
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export async function activate(context: vscode.ExtensionContext) {
+export async function activate(_context: vscode.ExtensionContext) {
   const serverOptions: ServerOptions = async () =>
     startEmbeddedServer(
       __dirname,

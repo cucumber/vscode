@@ -1,8 +1,8 @@
+import path from 'node:path'
 import { runTests } from '@vscode/test-electron'
-import path from 'path'
 
 async function main() {
-  if (process.env['CI']) {
+  if (process.env.CI) {
     // https://app.circleci.com/pipelines/github/cucumber/common/7908/workflows/10de1a58-5b66-4834-8a5e-e9ac11748e43/jobs/311298
     console.error('Skipping test of vscode plugin in CI')
     return
@@ -19,7 +19,7 @@ async function main() {
 
     // Download VS Code, unzip it and run the integration test
     await runTests({ extensionDevelopmentPath, extensionTestsPath })
-  } catch (err) {
+  } catch (_err) {
     console.error('Failed to run tests')
     process.exit(1)
   }

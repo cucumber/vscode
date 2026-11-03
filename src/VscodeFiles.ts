@@ -1,5 +1,5 @@
-import { Files } from '@cucumber/language-server'
-import { FileSystem, Uri, workspace } from 'vscode'
+import type { Files } from '@cucumber/language-server'
+import { type FileSystem, Uri, workspace } from 'vscode'
 
 export class VscodeFiles implements Files {
   constructor(private readonly fs: FileSystem) {}

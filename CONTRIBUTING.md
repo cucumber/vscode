@@ -17,7 +17,7 @@ The following steps will help you to get the extension up and running locally - 
 5. Open a `.feature` file - you should observe gherkin syntax highlighting.
 6. Finally, open the Output window to view logs from the extension under `Output -> Cucumber Language Server`.
 
-    ![Visual Studio Code Output](https://raw.githubusercontent.com/cucumber/vscode/main/images/vscode-output.png)
+   ![Visual Studio Code Output](https://raw.githubusercontent.com/cucumber/vscode/main/images/vscode-output.png)
 
 Achievement unlocked! You are now running the extension locally! 🏆
 
@@ -25,52 +25,52 @@ Achievement unlocked! You are now running the extension locally! 🏆
 
 Once you have completed [getting started](#getting-started), you may be wondering how you can begin modifying the implementation. 🤔
 
-This extension uses the _Language Server Protocol_ to communicate with Visual Studio Code, which is an open protocol that allows the development of a common implementation - called a __language server__ - that can communicate with different IDEs. This implementation is stored in the [Cucumber Language Server](https://github.com/cucumber/language-server) and the underlying [Cucumber Language Service](https://github.com/cucumber/language-service). Let's integrate local versions of each into our extension so we can modify them.
+This extension uses the _Language Server Protocol_ to communicate with Visual Studio Code, which is an open protocol that allows the development of a common implementation - called a **language server** - that can communicate with different IDEs. This implementation is stored in the [Cucumber Language Server](https://github.com/cucumber/language-server) and the underlying [Cucumber Language Service](https://github.com/cucumber/language-service). Let's integrate local versions of each into our extension so we can modify them.
 
 1. First, clone the Language Server and the Language Service to the same directory in which you cloned the extension. Your directory structure should appear as follows:
 
-    ```console
-    directory/
-    ├── language-server/
-    ├── language-service/
-    └── vscode/
-    ```
+   ```console
+   directory/
+   ├── language-server/
+   ├── language-service/
+   └── vscode/
+   ```
 
 2. At this point, please [download and install docker](https://www.docker.com/products/docker-desktop/) if you have not already done so. A [docker installation is required](https://github.com/cucumber/language-service/blob/main/CONTRIBUTING.md#prerequisites) to build the Language Service.
 3. Now for the tricky part - we need to build and link to the packages of the repositories we've just cloned.
 
-    a. Inside the __Language Service__ repository, build and link the package to your global node modules.
+   a. Inside the **Language Service** repository, build and link the package to your global node modules.
 
-    When you run `npm link` in the package directory, npm creates a symlink in the global node modules directory that links to the package. This makes the package appear as if it's globally installed on your system.
+   When you run `npm link` in the package directory, npm creates a symlink in the global node modules directory that links to the package. This makes the package appear as if it's globally installed on your system.
 
-    ```console
-    npm install
-    npm link
-    npm run build
-    ```
+   ```console
+   npm install
+   npm link
+   npm run build
+   ```
 
-    b. Repeat the same inside the __Language Server__ repository, this time linking back to the Language Service we just built - so the Language Server uses our local version.
+   b. Repeat the same inside the **Language Server** repository, this time linking back to the Language Service we just built - so the Language Server uses our local version.
 
-    ```console
-    npm install
-    npm link @cucumber/language-service
-    npm link
-    npm run build
-    ```
+   ```console
+   npm install
+   npm link @cucumber/language-service
+   npm link
+   npm run build
+   ```
 
-    c. Finally, within the __extension__ repository, link back to the Language Server we just built.
+   c. Finally, within the **extension** repository, link back to the Language Server we just built.
 
-    ```console
-    npm install
-    npm link @cucumber/language-server
-    ```
+   ```console
+   npm install
+   npm link @cucumber/language-server
+   ```
 
-    You can verify that links are correctly configured by executing the below command in each respective repository
+   You can verify that links are correctly configured by executing the below command in each respective repository
 
-    ```console
-    la node_modules/@cucumber
-    lrwxr-xr-x    1 username  staff     24 Jan 22 09:32 language-server -> ../../../language-server
-    ```
+   ```console
+   la node_modules/@cucumber
+   lrwxr-xr-x    1 username  staff     24 Jan 22 09:32 language-server -> ../../../language-server
+   ```
 
 4. Now open the extension repository in Visual Studio Code.
 5. As before, press `F5` to build and run the extension in a new window.
@@ -99,23 +99,23 @@ Before submitting a pull request, there are a few actions that we must ensure to
 
 - Format all code to align with project coding standards. This is executed by the pre-commit hook by default.
 
-    ```console
-    npm run eslint-fix
-    ```
+  ```console
+  npm run fix
+  ```
 
 - Run the update command for any modifications to [extension settings](README.md#extension-settings) in `README.md`, to ensure they are reflected in `package.json`. This is executed by the pre-commit hook by default.
 
-    ```console
-    npm run update-settings-docs
-    ```
+  ```console
+  npm run update-settings-docs
+  ```
 
 - Update `.vscodeignore` with the paths of any new or modified files or directories that should be included in the packaged version of the extension.
 
 - Package the extension locally and ensure the command runs without error - see [Packaging Extensions](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#packaging-extensions) for more detail.
 
-    ```console
-    npm run package
-    ```
+  ```console
+  npm run package
+  ```
 
 - [Perform manual testing](RELEASING.md#perform-manual-testing) and verify that the [extension features](README.md#features) are working as expected.
 

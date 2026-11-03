@@ -5,12 +5,8 @@
       "name": "Run Extension",
       "type": "extensionHost",
       "request": "launch",
-      "args": [
-        "--extensionDevelopmentPath=${workspaceFolder}"
-      ],
-      "outFiles": [
-        "${workspaceFolder}/dist/**/*.js"
-      ],
+      "args": ["--extensionDevelopmentPath=${workspaceFolder}"],
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
       "log": true,
       "preLaunchTask": {
         "type": "npm",
@@ -25,9 +21,7 @@
         "--extensionDevelopmentPath=${workspaceFolder}",
         "--extensionTestsPath=${workspaceFolder}/dist/src/test/suite/index"
       ],
-      "outFiles": [
-        "${workspaceFolder}/dist/src/test/**/*.js"
-      ],
+      "outFiles": ["${workspaceFolder}/dist/src/test/**/*.js"],
       "preLaunchTask": "${defaultBuildTask}"
     }
   ]

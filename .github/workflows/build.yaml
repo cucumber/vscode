@@ -21,25 +21,25 @@ jobs:
           - ubuntu-latest
           - macos-latest
         node-version:
-          - '22.x'
-          - '24.x'
-          - '26.x'
-          
+          - "22.x"
+          - "24.x"
+          - "26.x"
+
     steps:
-    - name: set git core.autocrlf to 'input'
-      run: git config --global core.autocrlf input
-    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      with:
-        persist-credentials: false
-    - name: with Node.js ${{ matrix.node-version }} on ${{ matrix.os }}
-      uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-        cache-dependency-path: package-lock.json
-    - run: npm install-ci-test
-    - run: npm run vscode-types-compatible
-    - run: npm run update-settings-docs
-    - run: npm run build
-    - run: npm run package
-    - run: npm run eslint
+      - name: set git core.autocrlf to 'input'
+        run: git config --global core.autocrlf input
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: with Node.js ${{ matrix.node-version }} on ${{ matrix.os }}
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+          cache-dependency-path: package-lock.json
+      - run: npm install-ci-test
+      - run: npm run vscode-types-compatible
+      - run: npm run update-settings-docs
+      - run: npm run build
+      - run: npm run package
+      - run: npm run lint
