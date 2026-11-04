@@ -2,7 +2,7 @@
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "extends": ["./node_modules/@cucumber/biome-config/base.json"],
   "files": {
-    "includes": ["!README.md"]
+    "includes": ["!README.md", "!CHANGELOG.md"]
   },
   "linter": {
     "rules": {
