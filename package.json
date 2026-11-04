@@ -61,13 +61,17 @@
           ]
         },
         "cucumber.glue": {
-          "markdownDescription": "The `cucumber.glue` setting overrides where the extension\nshould look for source code where step definitions and\nparameter types are defined.\n\nIf no glue files are found, [autocomplete](#autocomplete)\nwill not work, and all Gherkin steps will be underlined as\nundefined. [Generate step definition](#generate-step-definition)\nwill not work either.\n\nDefault value:\n\n```json\n{\n  \"cucumber.glue\": [\n    \"*specs*/**/*.cs\",\n    \"features/**/*.js\",\n    \"features/**/*.jsx\",\n    \"features/**/*.php\",\n    \"features/**/*.py\",\n    \"features/**/*.rs\",\n    \"features/**/*.rb\",\n    \"features/**/*.ts\",\n    \"features/**/*.tsx\",\n    \"features/**/*_test.go\",\n    \"src/test/**/*.java\",\n    \"tests/**/*.py\",\n    \"tests/**/*.rs\"\n  ]\n}\n```",
+          "markdownDescription": "The `cucumber.glue` setting overrides where the extension\nshould look for source code where step definitions and\nparameter types are defined.\n\nIf no glue files are found, [autocomplete](#autocomplete)\nwill not work, and all Gherkin steps will be underlined as\nundefined. [Generate step definition](#generate-step-definition)\nwill not work either.\n\nDefault value:\n\n```json\n{\n  \"cucumber.glue\": [\n    \"*specs*/**/*.cs\",\n    \"features/**/*.cjs\",\n    \"features/**/*.cts\",\n    \"features/**/*.js\",\n    \"features/**/*.jsx\",\n    \"features/**/*.mjs\",\n    \"features/**/*.mts\",\n    \"features/**/*.php\",\n    \"features/**/*.py\",\n    \"features/**/*.rs\",\n    \"features/**/*.rb\",\n    \"features/**/*.ts\",\n    \"features/**/*.tsx\",\n    \"features/**/*_test.go\",\n    \"src/test/**/*.java\",\n    \"tests/**/*.py\",\n    \"tests/**/*.rs\"\n  ]\n}\n```",
           "type": "array",
           "required": false,
           "default": [
             "*specs*/**/*.cs",
+            "features/**/*.cjs",
+            "features/**/*.cts",
             "features/**/*.js",
             "features/**/*.jsx",
+            "features/**/*.mjs",
+            "features/**/*.mts",
             "features/**/*.php",
             "features/**/*.py",
             "features/**/*.rs",
