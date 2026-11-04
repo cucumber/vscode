@@ -2,12 +2,6 @@
   "comments": {
     "lineComment": "#"
   },
-  "autoClosingPairs": [
-    ["\"\"\"", "\"\"\""],
-    ["```", "```"]
-  ],
-  "surroundingPairs": [
-    ["\"\"\"", "\"\"\""],
-    ["```", "```"]
-  ]
+  "autoClosingPairs": [["\"\"\"", "\"\"\""], ["```", "```"]],
+  "surroundingPairs": [["\"\"\"", "\"\"\""], ["```", "```"]]
 }

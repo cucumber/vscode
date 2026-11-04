@@ -13,18 +13,11 @@
     "strictNullChecks": true,
     "experimentalDecorators": true,
     "module": "CommonJS",
-    "lib": [
-      "ES6",
-      "dom"
-    ],
+    "lib": ["ES6", "dom"],
     "target": "ES6",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "jsx": "react"
   },
-  "include": [
-    "package.json",
-    "src",
-    "test"
-  ]
+  "include": ["package.json", "src", "test"]
 }
