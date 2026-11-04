@@ -178,8 +178,12 @@ Default value:
 {
   "cucumber.glue": [
     "*specs*/**/*.cs",
+    "features/**/*.cjs",
+    "features/**/*.cts",
     "features/**/*.js",
     "features/**/*.jsx",
+    "features/**/*.mjs",
+    "features/**/*.mts",
     "features/**/*.php",
     "features/**/*.py",
     "features/**/*.rs",
