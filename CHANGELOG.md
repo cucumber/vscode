@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Default `cucumber.glue` globs miss `.cjs`, `.mjs`, `.cts` and `.mts` files
+- Editing Go step definitions doesn't trigger reindexing
 
 ## [1.11.0] - 2025-05-18
 ### Changed
