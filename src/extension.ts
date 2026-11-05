@@ -25,6 +25,7 @@ export async function activate(_context: vscode.ExtensionContext) {
     documentSelector: [
       { scheme: 'file', language: 'csharp' },
       { scheme: 'file', language: 'cucumber' },
+      { scheme: 'file', language: 'go' },
       { scheme: 'file', language: 'java' },
       { scheme: 'file', language: 'javascript' },
       { scheme: 'file', language: 'php' },

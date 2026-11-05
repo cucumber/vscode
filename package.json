@@ -96,7 +96,7 @@
   },
   "scripts": {
     "vscode:prepublish": "npm run build",
-    "esbuild-extension": "esbuild ./src/extension.ts --external:vscode --bundle --outfile=out/extension.js --format=cjs --platform=node --minify --sourcemap",
+    "esbuild-extension": "esbuild ./src/extension.ts --external:vscode --bundle --outfile=out/extension.js --format=cjs --platform=node --inject:./src/importMetaUrl.ts --define:import.meta.url=importMetaUrl --minify --sourcemap",
     "build": "npm run esbuild-extension",
     "compile": "tsc --project tsconfig.build.json",
     "prepare": "husky && npm run copy-wasms",

@@ -11,9 +11,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Bumped the minimum Code version requirement to 1.101.0, the first to bundle Node.js 22
+- Provide `import.meta.url` to ESM dependencies bundled into the extension
 
 ### Fixed
 - Default `cucumber.glue` globs miss `.cjs`, `.mjs`, `.cts` and `.mts` files
+- Editing Go step definitions doesn't trigger reindexing
 
 ## [1.11.0] - 2025-05-18
 ### Changed
