@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Support Scala step definitions, found in `src/test/**/*.scala` by default
+
 ### Changed
 - Bumped the minimum Code version requirement to 1.101.0, the first to bundle Node.js 22
 
