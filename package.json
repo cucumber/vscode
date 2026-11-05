@@ -116,7 +116,7 @@
     "*": "biome check --fix --no-errors-on-unmatched --error-on-warnings"
   },
   "dependencies": {
-    "@cucumber/language-server": "1.7.0",
+    "@cucumber/language-server": "2.0.0",
     "vscode-languageclient": "9.0.1"
   },
   "devDependencies": {
