@@ -192,6 +192,7 @@ Default value:
     "features/**/*.tsx",
     "features/**/*_test.go",
     "src/test/**/*.java",
+    "src/test/**/*.scala",
     "tests/**/*.py",
     "tests/**/*.rs"
   ]

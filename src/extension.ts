@@ -34,6 +34,7 @@ export async function activate(_context: vscode.ExtensionContext) {
       { scheme: 'file', language: 'typescriptreact' },
       { scheme: 'file', language: 'python' },
       { scheme: 'file', language: 'rust' },
+      { scheme: 'file', language: 'scala' },
     ],
   }
 

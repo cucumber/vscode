@@ -6,9 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Support Scala step definitions, found in `src/test/**/*.scala` by default
+
 ### Changed
 - Bumped the minimum Code version requirement to 1.101.0, the first to bundle Node.js 22
 - Provide `import.meta.url` to ESM dependencies bundled into the extension
+- Update dependency @cucumber/language-server to 2.0.0
 
 ### Fixed
 - Default `cucumber.glue` globs miss `.cjs`, `.mjs`, `.cts` and `.mts` files
