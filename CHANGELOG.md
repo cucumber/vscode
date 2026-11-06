@@ -7,16 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Added
-- Support Scala step definitions, found in `src/test/**/*.scala` by default
+- Support Scala step definitions, found in `src/test/**/*.scala` by default (https://github.com/cucumber/language-service/pull/237)
 
 ### Changed
-- Bumped the minimum Code version requirement to 1.101.0, the first to bundle Node.js 22
-- Provide `import.meta.url` to ESM dependencies bundled into the extension
-- Update dependency @cucumber/language-server to 2.0.0
+- Bump minimum VS Code version requirement to 1.101.0, the first to bundle Node.js 22 (https://github.com/cucumber/vscode/pull/361)
 
 ### Fixed
-- Default `cucumber.glue` globs miss `.cjs`, `.mjs`, `.cts` and `.mts` files
-- Editing Go step definitions doesn't trigger reindexing
+- Default globs for JavaScript now include `.cjs`, `.mjs`, `.cts` and `.mts` files (https://github.com/cucumber/language-server/pull/154)
+- Editing Go step definitions now triggers reindexing (https://github.com/cucumber/vscode/pull/368)
+- Parameters in Scenario Outline steps are tokenised correctly (https://github.com/cucumber/language-service/issues/246)
+- Snippet templates in config are handled correctly (https://github.com/cucumber/language-server/pull/113)
 
 ## [1.11.0] - 2025-05-18
 ### Changed
