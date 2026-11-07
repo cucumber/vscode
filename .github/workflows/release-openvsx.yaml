@@ -26,4 +26,4 @@ jobs:
       - name: Show Dependency Manifest
         run: npm ls -a
       - name: Publish to Open VSX Registry
-        run: npx --yes ovsx@1.3.0 publish --trusted-publishing
+        run: npx ovsx publish --trusted-publishing
