@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -1.92 39.61 39.61">
+    <!-- The size, position and viewBox are calibrated by hand so the logo looks right as a file icon in the VS Code editor. Don't change them without checking there. -->
     <title>Cucumber logo</title>
     <g fill="none" fill-rule="evenodd">
         <path d="M-4-1h40v40H-4z"/>
