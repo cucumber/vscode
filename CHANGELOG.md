@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Fixed
+- Restore previous extension icon PNG ([#377](https://github.com/cucumber/vscode/pull/377))
 
 ## [1.12.1] - 2026-11-07
 ### Changed
