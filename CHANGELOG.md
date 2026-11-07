@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [1.12.1] - 2026-11-07
 ### Changed
 - Switch marketplace releases to trusted publishing (https://github.com/cucumber/vscode/pull/374)
 
@@ -206,7 +208,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - First release
 
-[Unreleased]: https://github.com/cucumber/vscode/compare/v1.12.0...HEAD
+[Unreleased]: https://github.com/cucumber/vscode/compare/v1.12.1...HEAD
+[1.12.1]: https://github.com/cucumber/vscode/compare/v1.12.0...v1.12.1
 [1.12.0]: https://github.com/cucumber/vscode/compare/v1.11.0...v1.12.0
 [1.11.0]: https://github.com/cucumber/vscode/compare/v1.10.0...v1.11.0
 [1.10.0]: https://github.com/cucumber/vscode/compare/v1.9.0...v1.10.0
