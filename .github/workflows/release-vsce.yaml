@@ -1,0 +1,29 @@
+name: Release to Visual Studio Marketplace
+
+permissions: {}
+
+on:
+  push:
+    branches: [ release/* ]
+
+jobs:
+  publish-vsce:
+    name: Release to Visual Studio Marketplace
+    runs-on: ubuntu-latest
+    environment: Release
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: "26.x"
+          package-manager-cache: false
+      - run: npm install-ci-test
+      - name: Show Dependency Manifest
+        run: npm ls -a
+      - name: Publish to Visual Studio Marketplace
+        run: npx vsce publish --oidc
