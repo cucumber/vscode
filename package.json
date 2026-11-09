@@ -130,7 +130,7 @@
     "@vscode/test-electron": "3.1.0",
     "@vscode/vsce": "4.1.0",
     "esbuild": "0.28.2",
-    "glob": "14.0.3",
+    "glob": "14.0.4",
     "husky": "9.1.7",
     "lint-staged": "17.6.0",
     "mocha": "12.0.3",
